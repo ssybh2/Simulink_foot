@@ -1,0 +1,151 @@
+[0.024s] Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': /usr/bin/cmake /home/uonaim/matlab_ws/FOOT/src/custom_msgs -DALIAS_ROS2_TF2=1 -G Ninja -DCMAKE_MAKE_PROGRAM=/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_INSTALL_PREFIX=/home/uonaim/matlab_ws/FOOT/install
+[0.092s] -- The C compiler identification is GNU 10.5.0
+[0.150s] -- The CXX compiler identification is GNU 10.5.0
+[0.159s] -- Detecting C compiler ABI info
+[0.217s] -- Detecting C compiler ABI info - done
+[0.221s] -- Check for working C compiler: /usr/bin/gcc - skipped
+[0.221s] -- Detecting C compile features
+[0.221s] -- Detecting C compile features - done
+[0.224s] -- Detecting CXX compiler ABI info
+[0.299s] -- Detecting CXX compiler ABI info - done
+[0.303s] -- Check for working CXX compiler: /usr/bin/g++ - skipped
+[0.303s] -- Detecting CXX compile features
+[0.304s] -- Detecting CXX compile features - done
+[0.306s] -- Found ament_cmake: 1.3.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake/cmake)
+[0.763s] -- Found Python3: /root/.matlab/R2023b/ros2/glnxa64/venv/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.839s] -- Found ament_cmake_ros: 0.10.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake_ros/cmake)
+[0.846s] -- Found rosidl_typesupport_c: 2.0.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_c/cmake)
+[0.846s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.852s] -- Found rosidl_adapter: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_adapter/cmake)
+[0.892s] -- Found rosidl_typesupport_cpp: 2.0.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_cpp/cmake)
+[0.892s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.918s] -- Found rosidl_default_generators: 1.2.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_default_generators/cmake)
+[0.922s] -- Found builtin_interfaces: 1.2.1 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/builtin_interfaces/cmake)
+[0.938s] -- Found std_msgs: 4.2.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/std_msgs/cmake)
+[1.401s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.659s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.668s] -- Configuring done
+[1.687s] -- Generating done
+[1.698s] -- Build files have been written to: /home/uonaim/matlab_ws/FOOT/build/custom_msgs
+[1.709s] Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': /usr/bin/cmake /home/uonaim/matlab_ws/FOOT/src/custom_msgs -DALIAS_ROS2_TF2=1 -G Ninja -DCMAKE_MAKE_PROGRAM=/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_INSTALL_PREFIX=/home/uonaim/matlab_ws/FOOT/install
+[1.710s] Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': /usr/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/custom_msgs -- -j14 -l14
+[1.897s] [1/22] Generating C++ code for ROS interfaces
+[1.898s] [2/22] Generating C code for ROS interfaces
+[1.974s] [3/22] Building C object CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/read_dm_motor__functions.c.o
+[1.996s] [4/22] Linking C shared library libcustom_msgs__rosidl_generator_c.so
+[2.063s] [5/22] Generating C++ type support dispatch for ROS interfaces
+[2.072s] [6/22] Generating C++ introspection for ROS interfaces
+[2.082s] [7/22] Generating C++ type support for eProsima Fast-RTPS
+[2.182s] [8/22] Generating C type support dispatch for ROS interfaces
+[2.191s] [9/22] Generating C introspection for ROS interfaces
+[2.209s] [10/22] Generating C type support for eProsima Fast-RTPS
+[2.214s] [11/22] Building CXX object CMakeFiles/custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_msgs/msg/read_dm_motor__type_support.cpp.o
+[2.241s] [12/22] Building C object CMakeFiles/custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_msgs/msg/detail/read_dm_motor__type_support.c.o
+[2.249s] [13/22] Linking CXX shared library libcustom_msgs__rosidl_typesupport_c.so
+[2.259s] [14/22] Linking C shared library libcustom_msgs__rosidl_typesupport_introspection_c.so
+[2.367s] [15/22] Building CXX object CMakeFiles/custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_msgs/msg/read_dm_motor__type_support.cpp.o
+[2.394s] [16/22] Linking CXX shared library libcustom_msgs__rosidl_typesupport_cpp.so
+[2.486s] [17/22] Building CXX object CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/read_dm_motor__type_support.cpp.o
+[2.525s] [18/22] Building CXX object CMakeFiles/custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_msgs/msg/detail/read_dm_motor__type_support.cpp.o
+[2.554s] [19/22] Linking CXX shared library libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.570s] [20/22] Building CXX object CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_msgs/msg/detail/read_dm_motor__type_support_c.cpp.o
+[2.575s] [21/22] Linking CXX shared library libcustom_msgs__rosidl_typesupport_introspection_cpp.so
+[2.631s] [22/22] Linking CXX shared library libcustom_msgs__rosidl_typesupport_fastrtps_c.so
+[2.634s] Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': /usr/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/custom_msgs -- -j14 -l14
+[2.671s] Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': /usr/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/custom_msgs
+[2.679s] -- Install configuration: "Release"
+[2.680s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/rosidl_interfaces/custom_msgs
+[2.680s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs
+[2.680s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg
+[2.680s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/read_dm_motor.h
+[2.680s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail
+[2.680s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__functions.h
+[2.680s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__functions.c
+[2.680s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__struct.h
+[2.680s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__type_support.h
+[2.681s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.681s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/library_path.sh
+[2.681s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/library_path.dsv
+[2.681s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_generator_c.so
+[2.681s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs
+[2.681s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg
+[2.681s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.682s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail
+[2.682s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_fastrtps_c.h
+[2.682s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so
+[2.682s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs
+[2.682s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg
+[2.682s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.682s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail
+[2.682s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__type_support.c
+[2.683s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_introspection_c.h
+[2.683s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so
+[2.683s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_c.so
+[2.683s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs
+[2.684s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg
+[2.684s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/read_dm_motor.hpp
+[2.684s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail
+[2.684s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__struct.hpp
+[2.684s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__traits.hpp
+[2.684s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__builder.hpp
+[2.684s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs
+[2.684s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg
+[2.685s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.685s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail
+[2.685s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/dds_fastrtps
+[2.685s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_fastrtps_cpp.hpp
+[2.685s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.685s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs
+[2.685s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg
+[2.686s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail
+[2.686s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__type_support.cpp
+[2.686s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_introspection_cpp.hpp
+[2.686s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so
+[2.686s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_cpp.so
+[2.686s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/ReadDmMotor.idl
+[2.687s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/ReadDmMotor.msg
+[2.687s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/package_run_dependencies/custom_msgs
+[2.687s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/parent_prefix_path/custom_msgs
+[2.687s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/ament_prefix_path.sh
+[2.687s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/ament_prefix_path.dsv
+[2.687s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/path.sh
+[2.687s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/path.dsv
+[2.688s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.bash
+[2.688s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.sh
+[2.688s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.zsh
+[2.688s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.dsv
+[2.688s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.dsv
+[2.689s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/packages/custom_msgs
+[2.689s] -- Old export file "/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake" will be replaced.  Removing files [/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-release.cmake].
+[2.689s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake
+[2.689s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-release.cmake
+[2.690s] -- Old export file "/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake" will be replaced.  Removing files [/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake].
+[2.690s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.690s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake
+[2.690s] -- Old export file "/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake" will be replaced.  Removing files [/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-release.cmake].
+[2.690s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.690s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+[2.690s] -- Old export file "/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake" will be replaced.  Removing files [/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-release.cmake].
+[2.691s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake
+[2.691s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-release.cmake
+[2.691s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake
+[2.691s] -- Old export file "/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake" will be replaced.  Removing files [/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake].
+[2.691s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.692s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[2.692s] -- Old export file "/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake" will be replaced.  Removing files [/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-release.cmake].
+[2.692s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.692s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+[2.692s] -- Old export file "/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake" will be replaced.  Removing files [/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-release.cmake].
+[2.692s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake
+[2.693s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-release.cmake
+[2.693s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/rosidl_cmake-extras.cmake
+[2.693s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.693s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.693s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.694s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.694s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.694s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.694s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgsConfig.cmake
+[2.694s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgsConfig-version.cmake
+[2.695s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.xml
+[2.699s] Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': /usr/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/custom_msgs

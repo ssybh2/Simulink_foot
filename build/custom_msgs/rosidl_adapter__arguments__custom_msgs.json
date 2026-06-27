@@ -1,0 +1,8 @@
+{
+  "package_name": "custom_msgs",
+  "non_idl_tuples": [
+    "/home/uonaim/matlab_ws/FOOT/src/custom_msgs:msg/ReadDJIRC.msg",
+    "/home/uonaim/matlab_ws/FOOT/src/custom_msgs:msg/ReadDmMotor.msg",
+    "/home/uonaim/matlab_ws/FOOT/src/custom_msgs:msg/WriteDmMotorMITControl.msg"
+  ]
+}

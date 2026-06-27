@@ -1,0 +1,6 @@
+Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': /usr/bin/cmake /home/uonaim/matlab_ws/FOOT/src/custom_msgs -DALIAS_ROS2_TF2=1 -G Ninja -DCMAKE_MAKE_PROGRAM=/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_INSTALL_PREFIX=/home/uonaim/matlab_ws/FOOT/install
+Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': /usr/bin/cmake /home/uonaim/matlab_ws/FOOT/src/custom_msgs -DALIAS_ROS2_TF2=1 -G Ninja -DCMAKE_MAKE_PROGRAM=/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_INSTALL_PREFIX=/home/uonaim/matlab_ws/FOOT/install
+Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': /usr/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/custom_msgs -- -j14 -l14
+Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': /usr/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/custom_msgs -- -j14 -l14
+Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': /usr/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/custom_msgs
+Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': /usr/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/custom_msgs

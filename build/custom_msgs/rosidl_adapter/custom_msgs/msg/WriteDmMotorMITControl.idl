@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from custom_msgs/msg/WriteDmMotorMITControl.msg
+// generated code does not contain a copyright notice
+
+
+module custom_msgs {
+  module msg {
+    struct WriteDmMotorMITControl {
+      uint8 enable;
+
+      float p_des;
+
+      float v_des;
+
+      float kp;
+
+      float kd;
+
+      float torque;
+    };
+  };
+};
