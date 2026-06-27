@@ -9,7 +9,7 @@
 //
 // Model version                  : 1.43
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Sat Jun 27 22:20:33 2026
+// C/C++ source code generated on : Sat Jun 27 23:29:02 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -19,22 +19,6 @@
 #ifndef RTW_HEADER_testing_DM_hby_types_h_
 #define RTW_HEADER_testing_DM_hby_types_h_
 #include "rtwtypes.h"
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
-
-// MsgType=custom_msgs/WriteDmMotorMITControl
-struct SL_Bus_custom_msgs_WriteDmMotorMITControl
-{
-  uint8_T enable;
-  real32_T p_des;
-  real32_T v_des;
-  real32_T kp;
-  real32_T kd;
-  real32_T torque;
-};
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_SL_Bus_builtin_interfaces_Time_
 #define DEFINED_TYPEDEF_FOR_SL_Bus_builtin_interfaces_Time_
 
@@ -103,46 +87,6 @@ struct SL_Bus_custom_msgs_ReadDmMotor
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDJIRC_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDJIRC_
-
-// MsgType=custom_msgs/ReadDJIRC
-struct SL_Bus_custom_msgs_ReadDJIRC
-{
-  // MsgType=std_msgs/Header
-  SL_Bus_std_msgs_Header header;
-  uint8_T online;
-  real32_T left_x;
-  real32_T left_y;
-  real32_T right_x;
-  real32_T right_y;
-  real32_T dial;
-  uint8_T left_switch;
-  uint8_T right_switch;
-  uint8_T w;
-  uint8_T s;
-  uint8_T a;
-  uint8_T d;
-  uint8_T q;
-  uint8_T e;
-  uint8_T r;
-  uint8_T f;
-  uint8_T g;
-  uint8_T z;
-  uint8_T x;
-  uint8_T c;
-  uint8_T v;
-  uint8_T b;
-  uint8_T shift;
-  uint8_T ctrl;
-  int16_T mouse_x;
-  int16_T mouse_y;
-  uint8_T mouse_left_clicked;
-  uint8_T mouse_right_clicked;
-};
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_struct_DZAeZYKomWJ9aajLaQqeiD_
 #define DEFINED_TYPEDEF_FOR_struct_DZAeZYKomWJ9aajLaQqeiD_
 
@@ -168,20 +112,8 @@ struct struct_DZAeZYKomWJ9aajLaQqeiD
 
 #endif
 
-// Custom Type definition for MATLABSystem: '<S14>/SourceBlock'
+// Custom Type definition for MATLABSystem: '<S11>/SourceBlock'
 #include "rmw/qos_profiles.h"
-#ifndef struct_ros_slros2_internal_block_Pub_T
-#define struct_ros_slros2_internal_block_Pub_T
-
-struct ros_slros2_internal_block_Pub_T
-{
-  boolean_T matlabCodegenIsDeleted;
-  int32_T isInitialized;
-  boolean_T isSetupComplete;
-};
-
-#endif                                // struct_ros_slros2_internal_block_Pub_T
-
 #ifndef struct_ros_slros2_internal_block_Sub_T
 #define struct_ros_slros2_internal_block_Sub_T
 

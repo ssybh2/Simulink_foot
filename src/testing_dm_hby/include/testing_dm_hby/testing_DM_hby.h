@@ -9,7 +9,7 @@
 //
 // Model version                  : 1.43
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Sat Jun 27 22:20:33 2026
+// C/C++ source code generated on : Sat Jun 27 23:29:02 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -57,143 +57,84 @@ extern "C"
 #define rtmGetTPtr(rtm)                ((rtm)->Timing.t)
 #endif
 
-// Block states (default storage) for system '<Root>/Motor_Target_Velocity_LA'
-struct DW_Motor_Target_Velocity_LA_t_T {
-  real32_T p_previous;                 // '<Root>/Motor_Target_Velocity_LA'
-  real32_T v_previous;                 // '<Root>/Motor_Target_Velocity_LA'
-  boolean_T was_enabled;               // '<Root>/Motor_Target_Velocity_LA'
-};
-
 // Block signals (default storage)
 struct B_testing_DM_hby_T {
-  SL_Bus_custom_msgs_ReadDJIRC In1;    // '<S16>/In1'
-  SL_Bus_custom_msgs_ReadDJIRC b_varargout_2;
-  SL_Bus_custom_msgs_ReadDmMotor In1_p;// '<S17>/In1'
-  SL_Bus_custom_msgs_ReadDmMotor In1_m;// '<S15>/In1'
-  SL_Bus_custom_msgs_ReadDmMotor b_varargout_2_m;
-  SL_Bus_custom_msgs_WriteDmMotorMITControl BusCreator1;// '<Root>/Bus Creator1' 
-  SL_Bus_custom_msgs_WriteDmMotorMITControl BusCreator2;// '<Root>/Bus Creator2' 
-  real_T u;
-  real_T blend;
-  real_T Clock4;                       // '<Root>/Clock4'
+  SL_Bus_custom_msgs_ReadDmMotor In1;  // '<S19>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_i;// '<S18>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_m;// '<S17>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_b;// '<S16>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor b_varargout_2;
+  real32_T q_joint_e;
+  real32_T q_joint;
 };
 
 // Block states (default storage) for system '<Root>'
 struct DW_testing_DM_hby_T {
-  ros_slros2_internal_block_Pub_T obj; // '<S11>/SinkBlock'
-  ros_slros2_internal_block_Pub_T obj_i;// '<S10>/SinkBlock'
-  ros_slros2_internal_block_Sub_T obj_a;// '<S14>/SourceBlock'
-  ros_slros2_internal_block_Sub_T obj_n;// '<S13>/SourceBlock'
-  ros_slros2_internal_block_Sub_T obj_n3;// '<S12>/SourceBlock'
-  real_T t_phase_start;                // '<Root>/Foot_Home_Then_Sine'
-  real_T tolerance_start_time;         // '<Root>/Foot_Home_Then_Sine'
-  real32_T x_begin;                    // '<Root>/Foot_Home_Then_Sine'
-  real32_T y_begin;                    // '<Root>/Foot_Home_Then_Sine'
-  uint8_T state;                       // '<Root>/Foot_Home_Then_Sine'
-  boolean_T last_enable;               // '<Root>/Foot_Home_Then_Sine'
-  DW_Motor_Target_Velocity_LA_t_T sf_Motor_Target_Velocity_LB;// '<Root>/Motor_Target_Velocity_LB' 
-  DW_Motor_Target_Velocity_LA_t_T sf_Motor_Target_Velocity_LA;// '<Root>/Motor_Target_Velocity_LA' 
+  ros_slros2_internal_block_Sub_T obj; // '<S11>/SourceBlock'
+  ros_slros2_internal_block_Sub_T obj_o;// '<S10>/SourceBlock'
+  ros_slros2_internal_block_Sub_T obj_h;// '<S9>/SourceBlock'
+  ros_slros2_internal_block_Sub_T obj_l;// '<S8>/SourceBlock'
 };
 
 // Parameters (default storage)
 struct P_testing_DM_hby_T_ {
   struct_DZAeZYKomWJ9aajLaQqeiD CAL;   // Variable: CAL
                                           //  Referenced by:
-                                          //    '<Root>/Constant10'
-                                          //    '<Root>/Constant11'
-                                          //    '<Root>/Constant12'
-                                          //    '<Root>/Constant13'
-                                          //    '<Root>/Constant14'
-                                          //    '<Root>/Constant7'
-                                          //    '<Root>/Constant8'
-                                          //    '<Root>/Constant9'
+                                          //    '<S4>/motor_ratio'
+                                          //    '<S4>/motor_sign'
+                                          //    '<S4>/q_joint_ref'
+                                          //    '<S4>/q_motor_ref'
+                                          //    '<S5>/motor_ratio'
+                                          //    '<S5>/motor_sign'
+                                          //    '<S5>/q_joint_ref'
+                                          //    '<S5>/q_motor_ref'
+                                          //    '<S6>/motor_ratio'
+                                          //    '<S6>/motor_sign'
+                                          //    '<S6>/q_joint_ref'
+                                          //    '<S6>/q_motor_ref'
+                                          //    '<S7>/motor_ratio'
+                                          //    '<S7>/motor_sign'
+                                          //    '<S7>/q_joint_ref'
+                                          //    '<S7>/q_motor_ref'
 
-  SL_Bus_custom_msgs_ReadDJIRC Out1_Y0;// Computed Parameter: Out1_Y0
-                                          //  Referenced by: '<S16>/Out1'
+  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0;// Computed Parameter: Out1_Y0
+                                            //  Referenced by: '<S16>/Out1'
 
-  SL_Bus_custom_msgs_ReadDJIRC Constant_Value;// Computed Parameter: Constant_Value
-                                                 //  Referenced by: '<S13>/Constant'
-
-  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_g;// Computed Parameter: Out1_Y0_g
-                                              //  Referenced by: '<S15>/Out1'
-
-  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_p;// Computed Parameter: Out1_Y0_p
+  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_m;// Computed Parameter: Out1_Y0_m
                                               //  Referenced by: '<S17>/Out1'
 
-  SL_Bus_custom_msgs_ReadDmMotor Constant_Value_h;// Computed Parameter: Constant_Value_h
-                                                     //  Referenced by: '<S14>/Constant'
+  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_d;// Computed Parameter: Out1_Y0_d
+                                              //  Referenced by: '<S18>/Out1'
 
-  SL_Bus_custom_msgs_ReadDmMotor Constant_Value_hk;// Computed Parameter: Constant_Value_hk
-                                                      //  Referenced by: '<S12>/Constant'
+  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_k;// Computed Parameter: Out1_Y0_k
+                                              //  Referenced by: '<S19>/Out1'
 
-  real_T Constant23_Value;             // Expression: 1
-                                          //  Referenced by: '<Root>/Constant23'
+  SL_Bus_custom_msgs_ReadDmMotor Constant_Value;// Computed Parameter: Constant_Value
+                                                   //  Referenced by: '<S9>/Constant'
 
-  real_T Constant24_Value;             // Expression: 0
-                                          //  Referenced by: '<Root>/Constant24'
+  SL_Bus_custom_msgs_ReadDmMotor Constant_Value_j;// Computed Parameter: Constant_Value_j
+                                                     //  Referenced by: '<S8>/Constant'
 
-  real_T L11_Value;                    // Expression: 0.0804
-                                          //  Referenced by: '<Root>/L11'
+  SL_Bus_custom_msgs_ReadDmMotor Constant_Value_a;// Computed Parameter: Constant_Value_a
+                                                     //  Referenced by: '<S10>/Constant'
 
-  real_T L12_Value;                    // Expression: 0.12
-                                          //  Referenced by: '<Root>/L12'
+  SL_Bus_custom_msgs_ReadDmMotor Constant_Value_l;// Computed Parameter: Constant_Value_l
+                                                     //  Referenced by: '<S11>/Constant'
 
-  real_T L13_Value;                    // Expression: 0.12
-                                          //  Referenced by: '<Root>/L13'
+  real_T L6_Value;                     // Expression: 0.0804
+                                          //  Referenced by: '<Root>/L6'
 
-  real_T L14_Value;                    // Expression: 0.0804
-                                          //  Referenced by: '<Root>/L14'
+  real_T L9_Value;                     // Expression: 0.0804
+                                          //  Referenced by: '<Root>/L9'
 
-  real_T L15_Value;                    // Expression: 0.07
-                                          //  Referenced by: '<Root>/L15'
+  real_T L10_Value;                    // Expression: 0.07
+                                          //  Referenced by: '<Root>/L10'
 
-  real_T Constant26_Value;             // Expression: 3.3
-                                          //  Referenced by: '<Root>/Constant26'
+  real_T L7_Value;                     // Expression: 0.12
+                                          //  Referenced by: '<Root>/L7'
 
-  real_T Constant27_Value;             // Expression: 0.09
-                                          //  Referenced by: '<Root>/Constant27'
-
-  real_T A_Value;                      // Expression: -0.24
-                                          //  Referenced by: '<Root>/A'
-
-  real_T B_Value;                      // Expression: 0.24
-                                          //  Referenced by: '<Root>/B'
-
-  real32_T Constant19_Value;           // Expression: single(0.035)
-                                          //  Referenced by: '<Root>/Constant19'
-
-  real32_T Constant20_Value;           // Expression: single(0.1)
-                                          //  Referenced by: '<Root>/Constant20'
-
-  real32_T Constant21_Value;           // Expression: single(5.0)
-                                          //  Referenced by: '<Root>/Constant21'
-
-  real32_T Constant22_Value;           // Expression: single(0.003)
-                                          //  Referenced by: '<Root>/Constant22'
-
-  real32_T Constant25_Value;           // Expression: single(0.5)
-                                          //  Referenced by: '<Root>/Constant25'
-
-  real32_T Constant16_Value;           // Expression: single(0.05)
-                                          //  Referenced by: '<Root>/Constant16'
-
-  real32_T Constant17_Value;           // Expression: single(0.02)
-                                          //  Referenced by: '<Root>/Constant17'
-
-  real32_T Constant18_Value;           // Expression: single(20)
-                                          //  Referenced by: '<Root>/Constant18'
-
-  real32_T Constant29_Value;           // Expression: single(0.003)
-                                          //  Referenced by: '<Root>/Constant29'
-
-  real32_T Constant30_Value;           // Expression: single(8.0)
-                                          //  Referenced by: '<Root>/Constant30'
-
-  real32_T Constant31_Value;           // Expression: single(0.5)
-                                          //  Referenced by: '<Root>/Constant31'
-
-  uint8_T Switch1_Threshold;           // Computed Parameter: Switch1_Threshold
-                                          //  Referenced by: '<Root>/Switch1'
+  real_T L8_Value;                     // Expression: 0.12
+                                          //  Referenced by: '<Root>/L8'
 
 };
 
@@ -251,23 +192,22 @@ class testing_DM_hby
   // Tunable parameters
   static P_testing_DM_hby_T testing_DM_hby_P;
 
-  // private member function(s) for subsystem '<Root>/Motor_Position_To_Joint_LA'
-  static void test_Motor_Position_To_Joint_LA(real32_T rtu_q_motor, real32_T
-    rtu_qm0, real32_T rtu_qj0, real32_T rtu_motor_sign, real32_T rtu_motor_ratio,
-    real32_T *rty_q_joint, boolean_T *rty_valid);
+  // private member function(s) for subsystem '<Root>/FiveBar_FK_Left_Actual'
+  static void testing__FiveBar_FK_Left_Actual(real32_T rtu_alpha, real32_T
+    rtu_beta, real32_T rtu_L1, real32_T rtu_L2, real32_T rtu_L3, real32_T rtu_L4,
+    real32_T rtu_L5, real32_T *rty_x, real32_T *rty_y, real32_T *rty_leg_length,
+    real32_T *rty_leg_angle, boolean_T *rty_valid);
 
-  // private member function(s) for subsystem '<Root>/Motor_Target_Velocity_LA'
-  static void testin_Motor_Target_Velocity_LA(real32_T rtu_p_cmd, uint8_T
-    rtu_enable, real32_T rtu_Ts, real32_T rtu_cutoff_hz, real32_T
-    rtu_max_velocity, real32_T *rty_v_des, boolean_T *rty_valid,
-    DW_Motor_Target_Velocity_LA_t_T *localDW);
+  // private member function(s) for subsystem '<S4>/Motor_Position_To_Joint'
+  static void testing_Motor_Position_To_Joint(real32_T rtu_q_motor, real32_T
+    rtu_q_motor_ref, real32_T rtu_q_joint_ref, real32_T rtu_motor_sign, real32_T
+    rtu_motor_ratio, real32_T *rty_q_joint);
 
   // private member function(s) for subsystem '<Root>'
-  void testing_DM_SystemCore_setup_d01(ros_slros2_internal_block_Sub_T *obj);
-  void testing_D_SystemCore_setup_d01g(ros_slros2_internal_block_Sub_T *obj);
+  void testing_DM_h_SystemCore_setup_d(ros_slros2_internal_block_Sub_T *obj);
+  void testing_DM_hby_SystemCore_setup(ros_slros2_internal_block_Sub_T *obj);
   void testing_DM__SystemCore_setup_d0(ros_slros2_internal_block_Sub_T *obj);
-  void testing_DM_hby_SystemCore_setup(ros_slros2_internal_block_Pub_T *obj);
-  void testing_DM_h_SystemCore_setup_d(ros_slros2_internal_block_Pub_T *obj);
+  void testing_DM_SystemCore_setup_d01(ros_slros2_internal_block_Sub_T *obj);
 
   // Real-Time Model
   RT_MODEL_testing_DM_hby_T testing_DM_hby_M;
@@ -279,22 +219,19 @@ extern volatile boolean_T runModel;
 //-
 //  These blocks were eliminated from the model due to optimizations:
 //
-//  Block '<Root>/Clock3' : Unused code path elimination
-//  Block '<Root>/Constant15' : Unused code path elimination
-//  Block '<Root>/Constant32' : Unused code path elimination
-//  Block '<Root>/Display12' : Unused code path elimination
-//  Block '<Root>/Display13' : Unused code path elimination
-//  Block '<Root>/Sum' : Unused code path elimination
-//  Block '<Root>/Sum1' : Unused code path elimination
-//  Block '<Root>/Switch2' : Unused code path elimination
-//  Block '<Root>/position_err_A' : Unused code path elimination
-//  Block '<Root>/position_err_B' : Unused code path elimination
-//  Block '<Root>/Data Type Conversion35' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion36' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion37' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion38' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion39' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion40' : Eliminate redundant data type conversion
+//  Block '<Root>/Display10' : Unused code path elimination
+//  Block '<Root>/Display11' : Unused code path elimination
+//  Block '<Root>/Display6' : Unused code path elimination
+//  Block '<Root>/Display7' : Unused code path elimination
+//  Block '<Root>/Display8' : Unused code path elimination
+//  Block '<Root>/Display9' : Unused code path elimination
+//  Block '<Root>/Scope3' : Unused code path elimination
+//  Block '<Root>/Scope4' : Unused code path elimination
+//  Block '<Root>/Scope5' : Unused code path elimination
+//  Block '<Root>/Data Type Conversion15' : Eliminate redundant data type conversion
+//  Block '<Root>/Data Type Conversion22' : Eliminate redundant data type conversion
+//  Block '<Root>/Data Type Conversion23' : Eliminate redundant data type conversion
+//  Block '<Root>/Data Type Conversion24' : Eliminate redundant data type conversion
 
 
 //-
@@ -312,23 +249,25 @@ extern volatile boolean_T runModel;
 //  Here is the system hierarchy for this model
 //
 //  '<Root>' : 'testing_DM_hby'
-//  '<S1>'   : 'testing_DM_hby/FiveBar_Animation_Compare'
-//  '<S2>'   : 'testing_DM_hby/FiveBar_FK1'
-//  '<S3>'   : 'testing_DM_hby/FiveBar_IK1'
-//  '<S4>'   : 'testing_DM_hby/Foot_Home_Then_Sine'
-//  '<S5>'   : 'testing_DM_hby/Left_Joint_To_Motor_L'
-//  '<S6>'   : 'testing_DM_hby/Motor_Position_To_Joint_LA'
-//  '<S7>'   : 'testing_DM_hby/Motor_Position_To_Joint_LB'
-//  '<S8>'   : 'testing_DM_hby/Motor_Target_Velocity_LA'
-//  '<S9>'   : 'testing_DM_hby/Motor_Target_Velocity_LB'
-//  '<S10>'  : 'testing_DM_hby/Publish1'
-//  '<S11>'  : 'testing_DM_hby/Publish2'
-//  '<S12>'  : 'testing_DM_hby/Subscribe3'
-//  '<S13>'  : 'testing_DM_hby/Subscribe4'
-//  '<S14>'  : 'testing_DM_hby/Subscribe_LA1'
-//  '<S15>'  : 'testing_DM_hby/Subscribe3/Enabled Subsystem'
-//  '<S16>'  : 'testing_DM_hby/Subscribe4/Enabled Subsystem'
-//  '<S17>'  : 'testing_DM_hby/Subscribe_LA1/Enabled Subsystem'
+//  '<S1>'   : 'testing_DM_hby/FiveBar_Animation_Left_Actual'
+//  '<S2>'   : 'testing_DM_hby/FiveBar_FK_Left_Actual'
+//  '<S3>'   : 'testing_DM_hby/FiveBar_FK_Right_Actual'
+//  '<S4>'   : 'testing_DM_hby/Motor_To_Joint_LA'
+//  '<S5>'   : 'testing_DM_hby/Motor_To_Joint_LB'
+//  '<S6>'   : 'testing_DM_hby/Motor_To_Joint_RA'
+//  '<S7>'   : 'testing_DM_hby/Motor_To_Joint_RB'
+//  '<S8>'   : 'testing_DM_hby/Subscribe2'
+//  '<S9>'   : 'testing_DM_hby/Subscribe_LA'
+//  '<S10>'  : 'testing_DM_hby/Subscribe_RA'
+//  '<S11>'  : 'testing_DM_hby/Subscribe_RB'
+//  '<S12>'  : 'testing_DM_hby/Motor_To_Joint_LA/Motor_Position_To_Joint'
+//  '<S13>'  : 'testing_DM_hby/Motor_To_Joint_LB/Motor_Position_To_Joint'
+//  '<S14>'  : 'testing_DM_hby/Motor_To_Joint_RA/Motor_Position_To_Joint'
+//  '<S15>'  : 'testing_DM_hby/Motor_To_Joint_RB/Motor_Position_To_Joint'
+//  '<S16>'  : 'testing_DM_hby/Subscribe2/Enabled Subsystem'
+//  '<S17>'  : 'testing_DM_hby/Subscribe_LA/Enabled Subsystem'
+//  '<S18>'  : 'testing_DM_hby/Subscribe_RA/Enabled Subsystem'
+//  '<S19>'  : 'testing_DM_hby/Subscribe_RB/Enabled Subsystem'
 
 #endif                                 // RTW_HEADER_testing_DM_hby_h_
 

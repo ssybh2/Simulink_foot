@@ -9,7 +9,7 @@
 //
 // Model version                  : 1.43
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Sat Jun 27 22:20:33 2026
+// C/C++ source code generated on : Sat Jun 27 23:29:02 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -19,6 +19,10 @@
 #include "testing_DM_hby.h"
 #include "rtwtypes.h"
 #include "testing_DM_hby_types.h"
+#include <math.h>
+#include "testing_DM_hby_private.h"
+#include "rmw/qos_profiles.h"
+#include <stddef.h>
 
 extern "C"
 {
@@ -27,110 +31,7 @@ extern "C"
 
 }
 
-#include <math.h>
-#include "testing_DM_hby_private.h"
-#include "rmw/qos_profiles.h"
-#include <stddef.h>
 #include "rt_defines.h"
-
-//
-// Output and update for atomic system:
-//    '<Root>/Motor_Position_To_Joint_LA'
-//    '<Root>/Motor_Position_To_Joint_LB'
-//
-void testing_DM_hby::test_Motor_Position_To_Joint_LA(real32_T rtu_q_motor,
-  real32_T rtu_qm0, real32_T rtu_qj0, real32_T rtu_motor_sign, real32_T
-  rtu_motor_ratio, real32_T *rty_q_joint, boolean_T *rty_valid)
-{
-  real32_T q_joint;
-  q_joint = rtu_qj0;
-  *rty_valid = false;
-  if ((!rtIsInfF(rtu_q_motor)) && (!rtIsNaNF(rtu_q_motor)) && ((!rtIsInfF
-        (rtu_qm0)) && (!rtIsNaNF(rtu_qm0))) && ((!rtIsInfF(rtu_qj0)) &&
-       (!rtIsNaNF(rtu_qj0))) && ((!rtIsInfF(rtu_motor_sign)) && (!rtIsNaNF
-        (rtu_motor_sign))) && ((!rtIsInfF(rtu_motor_ratio)) && (!rtIsNaNF
-        (rtu_motor_ratio))) && (!(static_cast<real32_T>(fabs(static_cast<real_T>
-          (rtu_motor_ratio))) < 1.0E-6F))) {
-    q_joint = (rtu_q_motor - rtu_qm0) * rtu_motor_sign / rtu_motor_ratio +
-      rtu_qj0;
-    *rty_valid = ((!rtIsInfF(q_joint)) && (!rtIsNaNF(q_joint)));
-  }
-
-  *rty_q_joint = q_joint;
-}
-
-//
-// Output and update for atomic system:
-//    '<Root>/Motor_Target_Velocity_LA'
-//    '<Root>/Motor_Target_Velocity_LB'
-//
-void testing_DM_hby::testin_Motor_Target_Velocity_LA(real32_T rtu_p_cmd, uint8_T
-  rtu_enable, real32_T rtu_Ts, real32_T rtu_cutoff_hz, real32_T rtu_max_velocity,
-  real32_T *rty_v_des, boolean_T *rty_valid, DW_Motor_Target_Velocity_LA_t_T
-  *localDW)
-{
-  real32_T u0;
-  u0 = 0.0F;
-  *rty_valid = false;
-  if (rtu_enable == 0) {
-    localDW->p_previous = rtu_p_cmd;
-    localDW->v_previous = 0.0F;
-    localDW->was_enabled = false;
-  } else if ((!rtIsInfF(rtu_p_cmd)) && (!rtIsNaNF(rtu_p_cmd)) && ((!rtIsInfF
-               (rtu_Ts)) && (!rtIsNaNF(rtu_Ts))) && ((!rtIsInfF(rtu_cutoff_hz)) &&
-              (!rtIsNaNF(rtu_cutoff_hz)))) {
-    boolean_T tmp;
-    tmp = !rtIsNaNF(rtu_max_velocity);
-    if ((!rtIsInfF(rtu_max_velocity)) && tmp && (!(rtu_Ts <= 1.0E-6F))) {
-      if (!localDW->was_enabled) {
-        localDW->p_previous = rtu_p_cmd;
-        localDW->v_previous = 0.0F;
-        localDW->was_enabled = true;
-        *rty_valid = true;
-      } else {
-        if (rtu_cutoff_hz > 0.0F) {
-          real32_T filter_coefficient;
-          filter_coefficient = static_cast<real32_T>(exp(static_cast<real_T>
-            (-6.28318548F * rtu_cutoff_hz * rtu_Ts)));
-          u0 = (rtu_p_cmd - localDW->p_previous) / rtu_Ts;
-          if ((!(u0 >= -rtu_max_velocity)) && (!rtIsNaNF(-rtu_max_velocity))) {
-            u0 = -rtu_max_velocity;
-          }
-
-          if ((!(u0 <= rtu_max_velocity)) && tmp) {
-            u0 = rtu_max_velocity;
-          }
-
-          u0 = (1.0F - filter_coefficient) * u0 + filter_coefficient *
-            localDW->v_previous;
-        } else {
-          u0 = (rtu_p_cmd - localDW->p_previous) / rtu_Ts;
-          if ((!(u0 >= -rtu_max_velocity)) && (!rtIsNaNF(-rtu_max_velocity))) {
-            u0 = -rtu_max_velocity;
-          }
-
-          if ((!(u0 <= rtu_max_velocity)) && tmp) {
-            u0 = rtu_max_velocity;
-          }
-        }
-
-        if ((!(u0 >= -rtu_max_velocity)) && (!rtIsNaNF(-rtu_max_velocity))) {
-          u0 = -rtu_max_velocity;
-        }
-
-        if ((!(u0 <= rtu_max_velocity)) && tmp) {
-          u0 = rtu_max_velocity;
-        }
-
-        localDW->p_previous = rtu_p_cmd;
-        localDW->v_previous = u0;
-        *rty_valid = ((!rtIsInfF(u0)) && (!rtIsNaNF(u0)));
-      }
-    }
-  }
-
-  *rty_v_des = u0;
-}
 
 real32_T rt_atan2f_snf(real32_T u0, real32_T u1)
 {
@@ -170,128 +71,15 @@ real32_T rt_atan2f_snf(real32_T u0, real32_T u1)
   return y;
 }
 
-void testing_DM_hby::testing_DM_SystemCore_setup_d01
-  (ros_slros2_internal_block_Sub_T *obj)
-{
-  rmw_qos_profile_t qos_profile;
-  char_T b_zeroDelimTopic[26];
-  static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app1/read";
-
-  // Start for MATLABSystem: '<S13>/SourceBlock'
-  obj->isInitialized = 1;
-  qos_profile = rmw_qos_profile_default;
-
-  // Start for MATLABSystem: '<S13>/SourceBlock'
-  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
-                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
-                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
-  for (int32_T i = 0; i < 26; i++) {
-    // Start for MATLABSystem: '<S13>/SourceBlock'
-    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
-  }
-
-  Sub_testing_DM_hby_244.createSubscriber(&b_zeroDelimTopic[0], qos_profile);
-  obj->isSetupComplete = true;
-}
-
-void testing_DM_hby::testing_D_SystemCore_setup_d01g
-  (ros_slros2_internal_block_Sub_T *obj)
-{
-  rmw_qos_profile_t qos_profile;
-  char_T b_zeroDelimTopic[26];
-  static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app2/read";
-
-  // Start for MATLABSystem: '<S14>/SourceBlock'
-  obj->isInitialized = 1;
-  qos_profile = rmw_qos_profile_default;
-
-  // Start for MATLABSystem: '<S14>/SourceBlock'
-  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
-                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
-                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
-  for (int32_T i = 0; i < 26; i++) {
-    // Start for MATLABSystem: '<S14>/SourceBlock'
-    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
-  }
-
-  Sub_testing_DM_hby_168.createSubscriber(&b_zeroDelimTopic[0], qos_profile);
-  obj->isSetupComplete = true;
-}
-
-void testing_DM_hby::testing_DM__SystemCore_setup_d0
-  (ros_slros2_internal_block_Sub_T *obj)
-{
-  rmw_qos_profile_t qos_profile;
-  char_T b_zeroDelimTopic[26];
-  static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app3/read";
-
-  // Start for MATLABSystem: '<S12>/SourceBlock'
-  obj->isInitialized = 1;
-  qos_profile = rmw_qos_profile_default;
-
-  // Start for MATLABSystem: '<S12>/SourceBlock'
-  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
-                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
-                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
-  for (int32_T i = 0; i < 26; i++) {
-    // Start for MATLABSystem: '<S12>/SourceBlock'
-    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
-  }
-
-  Sub_testing_DM_hby_175.createSubscriber(&b_zeroDelimTopic[0], qos_profile);
-  obj->isSetupComplete = true;
-}
-
-void testing_DM_hby::testing_DM_hby_SystemCore_setup
-  (ros_slros2_internal_block_Pub_T *obj)
-{
-  rmw_qos_profile_t qos_profile;
-  char_T b_zeroDelimTopic[27];
-  static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app2/write";
-
-  // Start for MATLABSystem: '<S10>/SinkBlock'
-  obj->isInitialized = 1;
-  qos_profile = rmw_qos_profile_default;
-
-  // Start for MATLABSystem: '<S10>/SinkBlock'
-  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
-                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
-                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
-  for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S10>/SinkBlock'
-    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
-  }
-
-  Pub_testing_DM_hby_229.createPublisher(&b_zeroDelimTopic[0], qos_profile);
-  obj->isSetupComplete = true;
-}
-
-void testing_DM_hby::testing_DM_h_SystemCore_setup_d
-  (ros_slros2_internal_block_Pub_T *obj)
-{
-  rmw_qos_profile_t qos_profile;
-  char_T b_zeroDelimTopic[27];
-  static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app3/write";
-
-  // Start for MATLABSystem: '<S11>/SinkBlock'
-  obj->isInitialized = 1;
-  qos_profile = rmw_qos_profile_default;
-
-  // Start for MATLABSystem: '<S11>/SinkBlock'
-  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
-                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
-                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
-  for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S11>/SinkBlock'
-    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
-  }
-
-  Pub_testing_DM_hby_230.createPublisher(&b_zeroDelimTopic[0], qos_profile);
-  obj->isSetupComplete = true;
-}
-
-// Model step function
-void testing_DM_hby::step()
+//
+// Output and update for atomic system:
+//    '<Root>/FiveBar_FK_Left_Actual'
+//    '<Root>/FiveBar_FK_Right_Actual'
+//
+void testing_DM_hby::testing__FiveBar_FK_Left_Actual(real32_T rtu_alpha,
+  real32_T rtu_beta, real32_T rtu_L1, real32_T rtu_L2, real32_T rtu_L3, real32_T
+  rtu_L4, real32_T rtu_L5, real32_T *rty_x, real32_T *rty_y, real32_T
+  *rty_leg_length, real32_T *rty_leg_angle, boolean_T *rty_valid)
 {
   real32_T Ax;
   real32_T Ay;
@@ -302,161 +90,21 @@ void testing_DM_hby::step()
   real32_T dy;
   real32_T h;
   real32_T h2;
-  real32_T q_joint;
-  real32_T q_joint_g;
-  uint8_T enable_k;
-  boolean_T rtb_valid_ht;
-
-  // MATLABSystem: '<S13>/SourceBlock'
-  rtb_valid_ht = Sub_testing_DM_hby_244.getLatestMessage
-    (&testing_DM_hby_B.b_varargout_2);
-
-  // Outputs for Enabled SubSystem: '<S13>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S16>/Enable'
-
-  // Start for MATLABSystem: '<S13>/SourceBlock'
-  if (rtb_valid_ht) {
-    // SignalConversion generated from: '<S16>/In1'
-    testing_DM_hby_B.In1 = testing_DM_hby_B.b_varargout_2;
-  }
-
-  // End of Start for MATLABSystem: '<S13>/SourceBlock'
-  // End of Outputs for SubSystem: '<S13>/Enabled Subsystem'
-
-  // Switch: '<Root>/Switch1'
-  if (testing_DM_hby_B.In1.right_switch > testing_DM_hby_P.Switch1_Threshold) {
-    // DataTypeConversion: '<Root>/Data Type Conversion41' incorporates:
-    //   Constant: '<Root>/Constant23'
-
-    testing_DM_hby_B.Clock4 = floor(testing_DM_hby_P.Constant23_Value);
-    if (rtIsNaN(testing_DM_hby_B.Clock4) || rtIsInf(testing_DM_hby_B.Clock4)) {
-      testing_DM_hby_B.Clock4 = 0.0;
-    } else {
-      testing_DM_hby_B.Clock4 = fmod(testing_DM_hby_B.Clock4, 256.0);
-    }
-
-    if (testing_DM_hby_B.Clock4 < 0.0) {
-      // DataTypeConversion: '<Root>/Data Type Conversion41'
-      enable_k = static_cast<uint8_T>(-static_cast<int8_T>(static_cast<uint8_T>(
-        -testing_DM_hby_B.Clock4)));
-    } else {
-      // DataTypeConversion: '<Root>/Data Type Conversion41'
-      enable_k = static_cast<uint8_T>(testing_DM_hby_B.Clock4);
-    }
-  } else {
-    // DataTypeConversion: '<Root>/Data Type Conversion41' incorporates:
-    //   Constant: '<Root>/Constant24'
-
-    testing_DM_hby_B.Clock4 = floor(testing_DM_hby_P.Constant24_Value);
-    if (rtIsNaN(testing_DM_hby_B.Clock4) || rtIsInf(testing_DM_hby_B.Clock4)) {
-      testing_DM_hby_B.Clock4 = 0.0;
-    } else {
-      testing_DM_hby_B.Clock4 = fmod(testing_DM_hby_B.Clock4, 256.0);
-    }
-
-    if (testing_DM_hby_B.Clock4 < 0.0) {
-      // DataTypeConversion: '<Root>/Data Type Conversion41'
-      enable_k = static_cast<uint8_T>(-static_cast<int8_T>(static_cast<uint8_T>(
-        -testing_DM_hby_B.Clock4)));
-    } else {
-      // DataTypeConversion: '<Root>/Data Type Conversion41'
-      enable_k = static_cast<uint8_T>(testing_DM_hby_B.Clock4);
-    }
-  }
-
-  // End of Switch: '<Root>/Switch1'
-
-  // Clock: '<Root>/Clock4'
-  testing_DM_hby_B.Clock4 = (&testing_DM_hby_M)->Timing.t[0];
-
-  // MATLABSystem: '<S14>/SourceBlock'
-  rtb_valid_ht = Sub_testing_DM_hby_168.getLatestMessage
-    (&testing_DM_hby_B.b_varargout_2_m);
-
-  // Outputs for Enabled SubSystem: '<S14>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S17>/Enable'
-
-  // Start for MATLABSystem: '<S14>/SourceBlock'
-  if (rtb_valid_ht) {
-    // SignalConversion generated from: '<S17>/In1'
-    testing_DM_hby_B.In1_p = testing_DM_hby_B.b_varargout_2_m;
-  }
-
-  // End of Start for MATLABSystem: '<S14>/SourceBlock'
-  // End of Outputs for SubSystem: '<S14>/Enabled Subsystem'
-
-  // MATLAB Function: '<Root>/Motor_Position_To_Joint_LA' incorporates:
-  //   Constant: '<Root>/Constant10'
-  //   Constant: '<Root>/Constant7'
-  //   Constant: '<Root>/Constant8'
-  //   Constant: '<Root>/Constant9'
-
-  test_Motor_Position_To_Joint_LA(testing_DM_hby_B.In1_p.position,
-    testing_DM_hby_P.CAL.qm0_LA, testing_DM_hby_P.CAL.qj0_LA,
-    testing_DM_hby_P.CAL.sign_LA, testing_DM_hby_P.CAL.ratio_LA, &q_joint_g,
-    &rtb_valid_ht);
-
-  // MATLABSystem: '<S12>/SourceBlock'
-  rtb_valid_ht = Sub_testing_DM_hby_175.getLatestMessage
-    (&testing_DM_hby_B.b_varargout_2_m);
-
-  // Outputs for Enabled SubSystem: '<S12>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S15>/Enable'
-
-  // Start for MATLABSystem: '<S12>/SourceBlock'
-  if (rtb_valid_ht) {
-    // SignalConversion generated from: '<S15>/In1'
-    testing_DM_hby_B.In1_m = testing_DM_hby_B.b_varargout_2_m;
-  }
-
-  // End of Start for MATLABSystem: '<S12>/SourceBlock'
-  // End of Outputs for SubSystem: '<S12>/Enabled Subsystem'
-
-  // MATLAB Function: '<Root>/Motor_Position_To_Joint_LB' incorporates:
-  //   Constant: '<Root>/Constant11'
-  //   Constant: '<Root>/Constant12'
-  //   Constant: '<Root>/Constant13'
-  //   Constant: '<Root>/Constant14'
-
-  test_Motor_Position_To_Joint_LA(testing_DM_hby_B.In1_m.position,
-    testing_DM_hby_P.CAL.qm0_LB, testing_DM_hby_P.CAL.qj0_LB,
-    testing_DM_hby_P.CAL.sign_LB, testing_DM_hby_P.CAL.ratio_LB, &q_joint,
-    &rtb_valid_ht);
-
-  // MATLAB Function: '<Root>/FiveBar_FK1' incorporates:
-  //   Constant: '<Root>/L11'
-  //   Constant: '<Root>/L12'
-  //   Constant: '<Root>/L13'
-  //   Constant: '<Root>/L14'
-  //   Constant: '<Root>/L15'
-  //   DataTypeConversion: '<Root>/Data Type Conversion30'
-  //   DataTypeConversion: '<Root>/Data Type Conversion31'
-  //   DataTypeConversion: '<Root>/Data Type Conversion32'
-  //   DataTypeConversion: '<Root>/Data Type Conversion33'
-  //   DataTypeConversion: '<Root>/Data Type Conversion34'
-
   h = 0.0F;
   My = 0.0F;
-  Ax = static_cast<real32_T>(testing_DM_hby_P.L11_Value) * static_cast<real32_T>
-    (cos(static_cast<real_T>(q_joint_g)));
-  Ay = static_cast<real32_T>(testing_DM_hby_P.L11_Value) * static_cast<real32_T>
-    (sin(static_cast<real_T>(q_joint_g)));
-  dx = (static_cast<real32_T>(testing_DM_hby_P.L14_Value) * static_cast<real32_T>
-        (cos(static_cast<real_T>(q_joint))) + static_cast<real32_T>
-        (testing_DM_hby_P.L15_Value)) - Ax;
-  dy = static_cast<real32_T>(testing_DM_hby_P.L14_Value) * static_cast<real32_T>
-    (sin(static_cast<real_T>(q_joint))) - Ay;
+  *rty_leg_length = 0.0F;
+  *rty_leg_angle = 0.0F;
+  *rty_valid = false;
+  Ax = rtu_L1 * static_cast<real32_T>(cos(static_cast<real_T>(rtu_alpha)));
+  Ay = rtu_L1 * static_cast<real32_T>(sin(static_cast<real_T>(rtu_alpha)));
+  dx = (rtu_L4 * static_cast<real32_T>(cos(static_cast<real_T>(rtu_beta))) +
+        rtu_L5) - Ax;
+  dy = rtu_L4 * static_cast<real32_T>(sin(static_cast<real_T>(rtu_beta))) - Ay;
   Dac = static_cast<real32_T>(sqrt(static_cast<real_T>(dx * dx + dy * dy)));
-  if ((!(Dac < 1.0E-6F)) && (!(Dac > static_cast<real32_T>
-        (testing_DM_hby_P.L12_Value) + static_cast<real32_T>
-        (testing_DM_hby_P.L13_Value))) && (!(Dac < static_cast<real32_T>(fabs(
-          static_cast<real_T>(static_cast<real32_T>(testing_DM_hby_P.L12_Value)
-           - static_cast<real32_T>(testing_DM_hby_P.L13_Value))))))) {
-    h2 = static_cast<real32_T>(testing_DM_hby_P.L12_Value) *
-      static_cast<real32_T>(testing_DM_hby_P.L12_Value);
-    a = ((h2 - static_cast<real32_T>(testing_DM_hby_P.L13_Value) *
-          static_cast<real32_T>(testing_DM_hby_P.L13_Value)) + Dac * Dac) /
-      (2.0F * Dac);
+  if ((!(Dac < 1.0E-6F)) && (!(Dac > rtu_L2 + rtu_L3)) && (!(Dac <
+        static_cast<real32_T>(fabs(static_cast<real_T>(rtu_L2 - rtu_L3)))))) {
+    h2 = rtu_L2 * rtu_L2;
+    a = ((h2 - rtu_L3 * rtu_L3) + Dac * Dac) / (2.0F * Dac);
     h2 -= a * a;
     if (!(h2 < -1.0E-7F)) {
       if (h2 < 0.0F) {
@@ -476,300 +124,288 @@ void testing_DM_hby::step()
       } else {
         h = (a * dx + Ax) + h * dy;
       }
+
+      Ax = h - rtu_L5 / 2.0F;
+      *rty_leg_length = Ax * Ax + My * My;
+      *rty_leg_length = static_cast<real32_T>(sqrt(static_cast<real_T>
+        (*rty_leg_length)));
+      *rty_leg_angle = rt_atan2f_snf(Ax, My);
+      *rty_valid = true;
     }
   }
 
-  // MATLAB Function: '<Root>/Foot_Home_Then_Sine' incorporates:
-  //   Constant: '<Root>/Constant16'
-  //   Constant: '<Root>/Constant17'
-  //   Constant: '<Root>/Constant18'
-  //   Constant: '<Root>/Constant19'
-  //   Constant: '<Root>/Constant20'
-  //   Constant: '<Root>/Constant21'
-  //   Constant: '<Root>/Constant22'
-  //   Constant: '<Root>/Constant25'
-  //   MATLAB Function: '<Root>/FiveBar_FK1'
+  *rty_x = h;
+  *rty_y = My;
+}
 
-  a = h;
-  Ax = My;
-  if (rtIsInfF(h) || rtIsNaNF(h) || (rtIsInfF(My) || rtIsNaNF(My) || (rtIsInfF
-        (testing_DM_hby_P.Constant19_Value) || rtIsNaNF
-        (testing_DM_hby_P.Constant19_Value) || (rtIsInfF
-         (testing_DM_hby_P.Constant20_Value) || rtIsNaNF
-         (testing_DM_hby_P.Constant20_Value) || (rtIsInfF
-          (testing_DM_hby_P.Constant21_Value) || rtIsNaNF
-          (testing_DM_hby_P.Constant21_Value) || (rtIsInfF
-           (testing_DM_hby_P.Constant22_Value) || rtIsNaNF
-           (testing_DM_hby_P.Constant22_Value) || (rtIsInfF
-            (testing_DM_hby_P.Constant25_Value) || rtIsNaNF
-            (testing_DM_hby_P.Constant25_Value) || (rtIsInfF
-             (testing_DM_hby_P.Constant16_Value) || rtIsNaNF
-             (testing_DM_hby_P.Constant16_Value) || (rtIsInfF
-              (testing_DM_hby_P.Constant17_Value) || rtIsNaNF
-              (testing_DM_hby_P.Constant17_Value) || (rtIsInfF
-               (testing_DM_hby_P.Constant18_Value) || rtIsNaNF
-               (testing_DM_hby_P.Constant18_Value))))))))))) {
-    testing_DM_hby_DW.state = 0U;
-    testing_DM_hby_DW.last_enable = false;
-  } else if ((testing_DM_hby_P.Constant21_Value <= 0.01F) ||
-             (testing_DM_hby_P.Constant22_Value <= 0.0F) ||
-             (testing_DM_hby_P.Constant25_Value < 0.0F) ||
-             (testing_DM_hby_P.Constant18_Value <= 0.01F)) {
-    testing_DM_hby_DW.state = 0U;
-    testing_DM_hby_DW.last_enable = false;
-  } else if (enable_k == 0) {
-    testing_DM_hby_DW.state = 0U;
-    testing_DM_hby_DW.last_enable = false;
-    testing_DM_hby_DW.tolerance_start_time = -1.0;
-  } else {
-    if (!testing_DM_hby_DW.last_enable) {
-      testing_DM_hby_DW.state = 1U;
-      testing_DM_hby_DW.t_phase_start = testing_DM_hby_B.Clock4;
-      testing_DM_hby_DW.x_begin = h;
-      testing_DM_hby_DW.y_begin = My;
-      testing_DM_hby_DW.tolerance_start_time = -1.0;
-    }
+//
+// Output and update for atomic system:
+//    '<S4>/Motor_Position_To_Joint'
+//    '<S5>/Motor_Position_To_Joint'
+//    '<S6>/Motor_Position_To_Joint'
+//    '<S7>/Motor_Position_To_Joint'
+//
+void testing_DM_hby::testing_Motor_Position_To_Joint(real32_T rtu_q_motor,
+  real32_T rtu_q_motor_ref, real32_T rtu_q_joint_ref, real32_T rtu_motor_sign,
+  real32_T rtu_motor_ratio, real32_T *rty_q_joint)
+{
+  *rty_q_joint = rtu_q_joint_ref;
+  if (static_cast<real32_T>(fabs(static_cast<real_T>(rtu_motor_ratio))) >
+      1.0E-6F) {
+    *rty_q_joint = (rtu_q_motor - rtu_q_motor_ref) * rtu_motor_sign /
+      rtu_motor_ratio + rtu_q_joint_ref;
+  }
+}
 
-    testing_DM_hby_DW.last_enable = true;
-    switch (testing_DM_hby_DW.state) {
-     case 1:
-      testing_DM_hby_B.u = (testing_DM_hby_B.Clock4 -
-                            testing_DM_hby_DW.t_phase_start) /
-        testing_DM_hby_P.Constant21_Value;
-      if (testing_DM_hby_B.u < 0.0) {
-        testing_DM_hby_B.u = 0.0;
-      } else if (testing_DM_hby_B.u > 1.0) {
-        testing_DM_hby_B.u = 1.0;
-      }
+void testing_DM_hby::testing_DM_h_SystemCore_setup_d
+  (ros_slros2_internal_block_Sub_T *obj)
+{
+  rmw_qos_profile_t qos_profile;
+  char_T b_zeroDelimTopic[26];
+  static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app2/read";
 
-      testing_DM_hby_B.blend = 0.5 - cos(3.1415926535897931 * testing_DM_hby_B.u)
-        * 0.5;
-      a = (testing_DM_hby_P.Constant19_Value - testing_DM_hby_DW.x_begin) *
-        static_cast<real32_T>(testing_DM_hby_B.blend) +
-        testing_DM_hby_DW.x_begin;
-      Ax = (testing_DM_hby_P.Constant20_Value - testing_DM_hby_DW.y_begin) *
-        static_cast<real32_T>(testing_DM_hby_B.blend) +
-        testing_DM_hby_DW.y_begin;
-      if (testing_DM_hby_B.u >= 1.0) {
-        h -= testing_DM_hby_P.Constant19_Value;
-        Ay = My - testing_DM_hby_P.Constant20_Value;
-        if (static_cast<real32_T>(sqrt(static_cast<real_T>(h * h + Ay * Ay))) <=
-            testing_DM_hby_P.Constant22_Value) {
-          if (testing_DM_hby_DW.tolerance_start_time < 0.0) {
-            testing_DM_hby_DW.tolerance_start_time = testing_DM_hby_B.Clock4;
-          }
+  // Start for MATLABSystem: '<S9>/SourceBlock'
+  obj->isInitialized = 1;
+  qos_profile = rmw_qos_profile_default;
 
-          if (testing_DM_hby_B.Clock4 - testing_DM_hby_DW.tolerance_start_time >=
-              testing_DM_hby_P.Constant25_Value) {
-            testing_DM_hby_DW.state = 2U;
-            testing_DM_hby_DW.t_phase_start = testing_DM_hby_B.Clock4;
-            a = testing_DM_hby_P.Constant19_Value;
-            Ax = testing_DM_hby_P.Constant20_Value;
-          }
-        } else {
-          testing_DM_hby_DW.tolerance_start_time = -1.0;
-        }
-      }
-      break;
-
-     case 2:
-      testing_DM_hby_B.u = testing_DM_hby_B.Clock4 -
-        testing_DM_hby_DW.t_phase_start;
-      if (testing_DM_hby_B.u < 0.0) {
-        testing_DM_hby_B.u = 0.0;
-      }
-
-      testing_DM_hby_B.Clock4 = testing_DM_hby_B.u;
-      if (testing_DM_hby_P.Constant18_Value == 0.0F) {
-        if (testing_DM_hby_B.u == 0.0) {
-          testing_DM_hby_B.Clock4 = testing_DM_hby_P.Constant18_Value;
-        }
-      } else if (rtIsNaN(testing_DM_hby_B.u)) {
-        testing_DM_hby_B.Clock4 = (rtNaN);
-      } else if (rtIsNaN(static_cast<real_T>(testing_DM_hby_P.Constant18_Value)))
-      {
-        testing_DM_hby_B.Clock4 = (rtNaN);
-      } else if (rtIsInf(testing_DM_hby_B.u)) {
-        testing_DM_hby_B.Clock4 = (rtNaN);
-      } else if (testing_DM_hby_B.u == 0.0) {
-        testing_DM_hby_B.Clock4 = 0.0 / testing_DM_hby_P.Constant18_Value;
-      } else if (rtIsInf(static_cast<real_T>(testing_DM_hby_P.Constant18_Value)))
-      {
-        if (testing_DM_hby_P.Constant18_Value < 0.0F) {
-          testing_DM_hby_B.Clock4 = testing_DM_hby_P.Constant18_Value;
-        }
-      } else {
-        testing_DM_hby_B.Clock4 = fmod(testing_DM_hby_B.u, static_cast<real_T>
-          (testing_DM_hby_P.Constant18_Value));
-        rtb_valid_ht = (testing_DM_hby_B.Clock4 == 0.0);
-        if ((!rtb_valid_ht) && (testing_DM_hby_P.Constant18_Value > floor(
-              static_cast<real_T>(testing_DM_hby_P.Constant18_Value)))) {
-          testing_DM_hby_B.u = fabs(testing_DM_hby_B.u /
-            testing_DM_hby_P.Constant18_Value);
-          rtb_valid_ht = !(fabs(testing_DM_hby_B.u - floor(testing_DM_hby_B.u +
-            0.5)) > 2.2204460492503131E-16 * testing_DM_hby_B.u);
-        }
-
-        if (rtb_valid_ht) {
-          testing_DM_hby_B.Clock4 = testing_DM_hby_P.Constant18_Value * 0.0;
-        } else if (testing_DM_hby_P.Constant18_Value < 0.0F) {
-          testing_DM_hby_B.Clock4 += testing_DM_hby_P.Constant18_Value;
-        }
-      }
-
-      My = static_cast<real32_T>(0.5 - cos(6.2831853071795862 *
-        testing_DM_hby_B.Clock4 / testing_DM_hby_P.Constant18_Value) * 0.5);
-      a = My * testing_DM_hby_P.Constant16_Value +
-        testing_DM_hby_P.Constant19_Value;
-      Ax = static_cast<real32_T>(sin(static_cast<real_T>(My * 6.28318548F))) *
-        testing_DM_hby_P.Constant17_Value + testing_DM_hby_P.Constant20_Value;
-      break;
-
-     default:
-      testing_DM_hby_DW.state = 0U;
-      break;
-    }
+  // Start for MATLABSystem: '<S9>/SourceBlock'
+  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
+                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
+                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
+  for (int32_T i = 0; i < 26; i++) {
+    // Start for MATLABSystem: '<S9>/SourceBlock'
+    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
-  // End of MATLAB Function: '<Root>/Foot_Home_Then_Sine'
+  Sub_testing_DM_hby_82.createSubscriber(&b_zeroDelimTopic[0], qos_profile);
+  obj->isSetupComplete = true;
+}
 
-  // MATLAB Function: '<Root>/FiveBar_IK1' incorporates:
-  //   Constant: '<Root>/L11'
-  //   Constant: '<Root>/L12'
-  //   Constant: '<Root>/L13'
-  //   Constant: '<Root>/L14'
-  //   Constant: '<Root>/L15'
-  //   DataTypeConversion: '<Root>/Data Type Conversion30'
-  //   DataTypeConversion: '<Root>/Data Type Conversion31'
-  //   DataTypeConversion: '<Root>/Data Type Conversion32'
-  //   DataTypeConversion: '<Root>/Data Type Conversion33'
-  //   DataTypeConversion: '<Root>/Data Type Conversion34'
+void testing_DM_hby::testing_DM_hby_SystemCore_setup
+  (ros_slros2_internal_block_Sub_T *obj)
+{
+  rmw_qos_profile_t qos_profile;
+  char_T b_zeroDelimTopic[26];
+  static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app3/read";
 
-  My = Ax * Ax;
-  h = static_cast<real32_T>(sqrt(static_cast<real_T>(a * a + My)));
-  if (!(h < 1.0E-6F)) {
-    Ay = ((h * h + static_cast<real32_T>(testing_DM_hby_P.L11_Value) *
-           static_cast<real32_T>(testing_DM_hby_P.L11_Value)) -
-          static_cast<real32_T>(testing_DM_hby_P.L12_Value) *
-          static_cast<real32_T>(testing_DM_hby_P.L12_Value)) / (2.0F *
-      static_cast<real32_T>(testing_DM_hby_P.L11_Value) * h);
-    if ((!(Ay > 1.0F)) && (!(Ay < -1.0F))) {
-      h = rt_atan2f_snf(Ax, a);
-      if (!(Ay >= -1.0F)) {
-        Ay = -1.0F;
-      }
+  // Start for MATLABSystem: '<S8>/SourceBlock'
+  obj->isInitialized = 1;
+  qos_profile = rmw_qos_profile_default;
 
-      Ay = static_cast<real32_T>(acos(static_cast<real_T>(Ay)));
-      dy = h + Ay;
-      Dac = h - Ay;
-      h = dy - q_joint_g;
-      Ay = Dac - q_joint_g;
-      if (static_cast<real32_T>(fabs(static_cast<real_T>(rt_atan2f_snf(
-              static_cast<real32_T>(sin(static_cast<real_T>(h))),
-              static_cast<real32_T>(cos(static_cast<real_T>(h))))))) <=
-          static_cast<real32_T>(fabs(static_cast<real_T>(rt_atan2f_snf(
-              static_cast<real32_T>(sin(static_cast<real_T>(Ay))), static_cast<
-              real32_T>(cos(static_cast<real_T>(Ay)))))))) {
-        q_joint_g = dy;
-      } else {
-        q_joint_g = Dac;
-      }
-
-      a -= static_cast<real32_T>(testing_DM_hby_P.L15_Value);
-      My = static_cast<real32_T>(sqrt(static_cast<real_T>(a * a + My)));
-      if (!(My < 1.0E-6F)) {
-        My = ((My * My + static_cast<real32_T>(testing_DM_hby_P.L14_Value) *
-               static_cast<real32_T>(testing_DM_hby_P.L14_Value)) - static_cast<
-              real32_T>(testing_DM_hby_P.L13_Value) * static_cast<real32_T>
-              (testing_DM_hby_P.L13_Value)) / (2.0F * static_cast<real32_T>
-          (testing_DM_hby_P.L14_Value) * My);
-        if ((!(My > 1.0F)) && (!(My < -1.0F))) {
-          Ax = rt_atan2f_snf(Ax, a);
-          if (!(My >= -1.0F)) {
-            My = -1.0F;
-          }
-
-          a = static_cast<real32_T>(acos(static_cast<real_T>(My)));
-          My = Ax + a;
-          Ax -= a;
-          h = My - q_joint;
-          Ay = Ax - q_joint;
-          if (static_cast<real32_T>(fabs(static_cast<real_T>(rt_atan2f_snf(
-                  static_cast<real32_T>(sin(static_cast<real_T>(h))),
-                  static_cast<real32_T>(cos(static_cast<real_T>(h))))))) <=
-              static_cast<real32_T>(fabs(static_cast<real_T>(rt_atan2f_snf(
-                  static_cast<real32_T>(sin(static_cast<real_T>(Ay))),
-                  static_cast<real32_T>(cos(static_cast<real_T>(Ay)))))))) {
-            q_joint = My;
-          } else {
-            q_joint = Ax;
-          }
-        }
-      }
-    }
+  // Start for MATLABSystem: '<S8>/SourceBlock'
+  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
+                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
+                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
+  for (int32_T i = 0; i < 26; i++) {
+    // Start for MATLABSystem: '<S8>/SourceBlock'
+    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
-  // End of MATLAB Function: '<Root>/FiveBar_IK1'
+  Sub_testing_DM_hby_163.createSubscriber(&b_zeroDelimTopic[0], qos_profile);
+  obj->isSetupComplete = true;
+}
 
-  // BusCreator: '<Root>/Bus Creator1' incorporates:
-  //   Constant: '<Root>/A'
-  //   Constant: '<Root>/Constant26'
-  //   Constant: '<Root>/Constant27'
-  //   Constant: '<Root>/Constant29'
-  //   Constant: '<Root>/Constant30'
-  //   Constant: '<Root>/Constant31'
-  //   DataTypeConversion: '<Root>/Data Type Conversion46'
-  //   DataTypeConversion: '<Root>/Data Type Conversion47'
-  //   DataTypeConversion: '<Root>/Data Type Conversion48'
-  //   MATLAB Function: '<Root>/Left_Joint_To_Motor_L'
-  //   MATLAB Function: '<Root>/Motor_Target_Velocity_LA'
+void testing_DM_hby::testing_DM__SystemCore_setup_d0
+  (ros_slros2_internal_block_Sub_T *obj)
+{
+  rmw_qos_profile_t qos_profile;
+  char_T b_zeroDelimTopic[26];
+  static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app5/read";
 
-  testin_Motor_Target_Velocity_LA(-0.340847969F - (q_joint_g - 3.50454569F),
-    enable_k, testing_DM_hby_P.Constant29_Value,
-    testing_DM_hby_P.Constant30_Value, testing_DM_hby_P.Constant31_Value,
-    &testing_DM_hby_B.BusCreator1.v_des, &rtb_valid_ht,
-    &testing_DM_hby_DW.sf_Motor_Target_Velocity_LA);
-  testing_DM_hby_B.BusCreator1.enable = enable_k;
-  testing_DM_hby_B.BusCreator1.p_des = -0.340847969F - (q_joint_g - 3.50454569F);
-  testing_DM_hby_B.BusCreator1.kp = static_cast<real32_T>
-    (testing_DM_hby_P.Constant26_Value);
-  testing_DM_hby_B.BusCreator1.kd = static_cast<real32_T>
-    (testing_DM_hby_P.Constant27_Value);
-  testing_DM_hby_B.BusCreator1.torque = static_cast<real32_T>
-    (testing_DM_hby_P.A_Value);
+  // Start for MATLABSystem: '<S10>/SourceBlock'
+  obj->isInitialized = 1;
+  qos_profile = rmw_qos_profile_default;
 
-  // MATLABSystem: '<S10>/SinkBlock'
-  Pub_testing_DM_hby_229.publish(&testing_DM_hby_B.BusCreator1);
+  // Start for MATLABSystem: '<S10>/SourceBlock'
+  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
+                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
+                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
+  for (int32_T i = 0; i < 26; i++) {
+    // Start for MATLABSystem: '<S10>/SourceBlock'
+    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
+  }
 
-  // BusCreator: '<Root>/Bus Creator2' incorporates:
-  //   Constant: '<Root>/B'
-  //   Constant: '<Root>/Constant26'
-  //   Constant: '<Root>/Constant27'
-  //   Constant: '<Root>/Constant29'
-  //   Constant: '<Root>/Constant30'
-  //   Constant: '<Root>/Constant31'
-  //   DataTypeConversion: '<Root>/Data Type Conversion42'
-  //   DataTypeConversion: '<Root>/Data Type Conversion46'
-  //   DataTypeConversion: '<Root>/Data Type Conversion47'
-  //   MATLAB Function: '<Root>/Left_Joint_To_Motor_L'
-  //   MATLAB Function: '<Root>/Motor_Target_Velocity_LB'
+  Sub_testing_DM_hby_84.createSubscriber(&b_zeroDelimTopic[0], qos_profile);
+  obj->isSetupComplete = true;
+}
 
-  testin_Motor_Target_Velocity_LA(-0.629243851F - (q_joint - 0.899913073F),
-    enable_k, testing_DM_hby_P.Constant29_Value,
-    testing_DM_hby_P.Constant30_Value, testing_DM_hby_P.Constant31_Value,
-    &testing_DM_hby_B.BusCreator2.v_des, &rtb_valid_ht,
-    &testing_DM_hby_DW.sf_Motor_Target_Velocity_LB);
-  testing_DM_hby_B.BusCreator2.enable = enable_k;
-  testing_DM_hby_B.BusCreator2.p_des = -0.629243851F - (q_joint - 0.899913073F);
-  testing_DM_hby_B.BusCreator2.kp = static_cast<real32_T>
-    (testing_DM_hby_P.Constant26_Value);
-  testing_DM_hby_B.BusCreator2.kd = static_cast<real32_T>
-    (testing_DM_hby_P.Constant27_Value);
-  testing_DM_hby_B.BusCreator2.torque = static_cast<real32_T>
-    (testing_DM_hby_P.B_Value);
+void testing_DM_hby::testing_DM_SystemCore_setup_d01
+  (ros_slros2_internal_block_Sub_T *obj)
+{
+  rmw_qos_profile_t qos_profile;
+  char_T b_zeroDelimTopic[26];
+  static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app6/read";
 
-  // MATLABSystem: '<S11>/SinkBlock'
-  Pub_testing_DM_hby_230.publish(&testing_DM_hby_B.BusCreator2);
+  // Start for MATLABSystem: '<S11>/SourceBlock'
+  obj->isInitialized = 1;
+  qos_profile = rmw_qos_profile_default;
+
+  // Start for MATLABSystem: '<S11>/SourceBlock'
+  SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
+                 RMW_QOS_POLICY_DURABILITY_VOLATILE,
+                 RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
+  for (int32_T i = 0; i < 26; i++) {
+    // Start for MATLABSystem: '<S11>/SourceBlock'
+    b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
+  }
+
+  Sub_testing_DM_hby_85.createSubscriber(&b_zeroDelimTopic[0], qos_profile);
+  obj->isSetupComplete = true;
+}
+
+// Model step function
+void testing_DM_hby::step()
+{
+  real32_T rtb_leg_angle_m;
+  real32_T rtb_leg_length_h;
+  real32_T x;
+  real32_T y;
+  boolean_T valid;
+
+  // MATLABSystem: '<S9>/SourceBlock'
+  valid = Sub_testing_DM_hby_82.getLatestMessage(&testing_DM_hby_B.b_varargout_2);
+
+  // Outputs for Enabled SubSystem: '<S9>/Enabled Subsystem' incorporates:
+  //   EnablePort: '<S17>/Enable'
+
+  // Start for MATLABSystem: '<S9>/SourceBlock'
+  if (valid) {
+    // SignalConversion generated from: '<S17>/In1'
+    testing_DM_hby_B.In1_m = testing_DM_hby_B.b_varargout_2;
+  }
+
+  // End of Start for MATLABSystem: '<S9>/SourceBlock'
+  // End of Outputs for SubSystem: '<S9>/Enabled Subsystem'
+
+  // MATLAB Function: '<S4>/Motor_Position_To_Joint' incorporates:
+  //   Constant: '<S4>/motor_ratio'
+  //   Constant: '<S4>/motor_sign'
+  //   Constant: '<S4>/q_joint_ref'
+  //   Constant: '<S4>/q_motor_ref'
+  //   SignalConversion generated from: '<Root>/Bus Selector2'
+
+  testing_Motor_Position_To_Joint(testing_DM_hby_B.In1_m.position,
+    testing_DM_hby_P.CAL.qm0_LA, testing_DM_hby_P.CAL.qj0_LA,
+    testing_DM_hby_P.CAL.sign_LA, testing_DM_hby_P.CAL.ratio_LA,
+    &testing_DM_hby_B.q_joint_e);
+
+  // MATLABSystem: '<S8>/SourceBlock'
+  valid = Sub_testing_DM_hby_163.getLatestMessage
+    (&testing_DM_hby_B.b_varargout_2);
+
+  // Outputs for Enabled SubSystem: '<S8>/Enabled Subsystem' incorporates:
+  //   EnablePort: '<S16>/Enable'
+
+  // Start for MATLABSystem: '<S8>/SourceBlock'
+  if (valid) {
+    // SignalConversion generated from: '<S16>/In1'
+    testing_DM_hby_B.In1_b = testing_DM_hby_B.b_varargout_2;
+  }
+
+  // End of Start for MATLABSystem: '<S8>/SourceBlock'
+  // End of Outputs for SubSystem: '<S8>/Enabled Subsystem'
+
+  // MATLAB Function: '<S5>/Motor_Position_To_Joint' incorporates:
+  //   Constant: '<S5>/motor_ratio'
+  //   Constant: '<S5>/motor_sign'
+  //   Constant: '<S5>/q_joint_ref'
+  //   Constant: '<S5>/q_motor_ref'
+  //   SignalConversion generated from: '<Root>/Bus Selector4'
+
+  testing_Motor_Position_To_Joint(testing_DM_hby_B.In1_b.position,
+    testing_DM_hby_P.CAL.qm0_LB, testing_DM_hby_P.CAL.qj0_LB,
+    testing_DM_hby_P.CAL.sign_LB, testing_DM_hby_P.CAL.ratio_LB,
+    &testing_DM_hby_B.q_joint);
+
+  // MATLAB Function: '<Root>/FiveBar_FK_Left_Actual' incorporates:
+  //   Constant: '<Root>/L10'
+  //   Constant: '<Root>/L6'
+  //   Constant: '<Root>/L7'
+  //   Constant: '<Root>/L8'
+  //   Constant: '<Root>/L9'
+  //   DataTypeConversion: '<Root>/Data Type Conversion25'
+  //   DataTypeConversion: '<Root>/Data Type Conversion26'
+  //   DataTypeConversion: '<Root>/Data Type Conversion27'
+  //   DataTypeConversion: '<Root>/Data Type Conversion28'
+  //   DataTypeConversion: '<Root>/Data Type Conversion29'
+
+  testing__FiveBar_FK_Left_Actual(testing_DM_hby_B.q_joint_e,
+    testing_DM_hby_B.q_joint, static_cast<real32_T>(testing_DM_hby_P.L6_Value),
+    static_cast<real32_T>(testing_DM_hby_P.L7_Value), static_cast<real32_T>
+    (testing_DM_hby_P.L8_Value), static_cast<real32_T>(testing_DM_hby_P.L9_Value),
+    static_cast<real32_T>(testing_DM_hby_P.L10_Value), &x, &y, &rtb_leg_length_h,
+    &rtb_leg_angle_m, &valid);
+
+  // MATLABSystem: '<S10>/SourceBlock'
+  valid = Sub_testing_DM_hby_84.getLatestMessage(&testing_DM_hby_B.b_varargout_2);
+
+  // Outputs for Enabled SubSystem: '<S10>/Enabled Subsystem' incorporates:
+  //   EnablePort: '<S18>/Enable'
+
+  // Start for MATLABSystem: '<S10>/SourceBlock'
+  if (valid) {
+    // SignalConversion generated from: '<S18>/In1'
+    testing_DM_hby_B.In1_i = testing_DM_hby_B.b_varargout_2;
+  }
+
+  // End of Start for MATLABSystem: '<S10>/SourceBlock'
+  // End of Outputs for SubSystem: '<S10>/Enabled Subsystem'
+
+  // MATLAB Function: '<S6>/Motor_Position_To_Joint' incorporates:
+  //   Constant: '<S6>/motor_ratio'
+  //   Constant: '<S6>/motor_sign'
+  //   Constant: '<S6>/q_joint_ref'
+  //   Constant: '<S6>/q_motor_ref'
+
+  testing_Motor_Position_To_Joint(testing_DM_hby_B.In1_i.position,
+    testing_DM_hby_P.CAL.qm0_RA, testing_DM_hby_P.CAL.qj0_RA,
+    testing_DM_hby_P.CAL.sign_RA, testing_DM_hby_P.CAL.ratio_RA,
+    &testing_DM_hby_B.q_joint_e);
+
+  // MATLABSystem: '<S11>/SourceBlock'
+  valid = Sub_testing_DM_hby_85.getLatestMessage(&testing_DM_hby_B.b_varargout_2);
+
+  // Outputs for Enabled SubSystem: '<S11>/Enabled Subsystem' incorporates:
+  //   EnablePort: '<S19>/Enable'
+
+  // Start for MATLABSystem: '<S11>/SourceBlock'
+  if (valid) {
+    // SignalConversion generated from: '<S19>/In1'
+    testing_DM_hby_B.In1 = testing_DM_hby_B.b_varargout_2;
+  }
+
+  // End of Start for MATLABSystem: '<S11>/SourceBlock'
+  // End of Outputs for SubSystem: '<S11>/Enabled Subsystem'
+
+  // MATLAB Function: '<S7>/Motor_Position_To_Joint' incorporates:
+  //   Constant: '<S7>/motor_ratio'
+  //   Constant: '<S7>/motor_sign'
+  //   Constant: '<S7>/q_joint_ref'
+  //   Constant: '<S7>/q_motor_ref'
+
+  testing_Motor_Position_To_Joint(testing_DM_hby_B.In1.position,
+    testing_DM_hby_P.CAL.qm0_RB, testing_DM_hby_P.CAL.qj0_RB,
+    testing_DM_hby_P.CAL.sign_RB, testing_DM_hby_P.CAL.ratio_RB,
+    &testing_DM_hby_B.q_joint);
+
+  // MATLAB Function: '<Root>/FiveBar_FK_Right_Actual' incorporates:
+  //   Constant: '<Root>/L10'
+  //   Constant: '<Root>/L6'
+  //   Constant: '<Root>/L7'
+  //   Constant: '<Root>/L8'
+  //   Constant: '<Root>/L9'
+  //   DataTypeConversion: '<Root>/Data Type Conversion25'
+  //   DataTypeConversion: '<Root>/Data Type Conversion26'
+  //   DataTypeConversion: '<Root>/Data Type Conversion27'
+  //   DataTypeConversion: '<Root>/Data Type Conversion28'
+  //   DataTypeConversion: '<Root>/Data Type Conversion29'
+
+  testing__FiveBar_FK_Left_Actual(testing_DM_hby_B.q_joint_e,
+    testing_DM_hby_B.q_joint, static_cast<real32_T>(testing_DM_hby_P.L6_Value),
+    static_cast<real32_T>(testing_DM_hby_P.L7_Value), static_cast<real32_T>
+    (testing_DM_hby_P.L8_Value), static_cast<real32_T>(testing_DM_hby_P.L9_Value),
+    static_cast<real32_T>(testing_DM_hby_P.L10_Value), &x, &y, &rtb_leg_length_h,
+    &rtb_leg_angle_m, &valid);
 
   // Update absolute time for base rate
   // The "clockTick0" counts the number of times the code of this task has
@@ -818,86 +454,81 @@ void testing_DM_hby::initialize()
   rtmSetTPtr((&testing_DM_hby_M), &(&testing_DM_hby_M)->Timing.tArray[0]);
   (&testing_DM_hby_M)->Timing.stepSize0 = 0.003;
 
-  // SystemInitialize for Enabled SubSystem: '<S13>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S16>/In1' incorporates:
-  //   Outport: '<S16>/Out1'
-
-  testing_DM_hby_B.In1 = testing_DM_hby_P.Out1_Y0;
-
-  // End of SystemInitialize for SubSystem: '<S13>/Enabled Subsystem'
-
-  // SystemInitialize for Enabled SubSystem: '<S14>/Enabled Subsystem'
+  // SystemInitialize for Enabled SubSystem: '<S9>/Enabled Subsystem'
   // SystemInitialize for SignalConversion generated from: '<S17>/In1' incorporates:
   //   Outport: '<S17>/Out1'
 
-  testing_DM_hby_B.In1_p = testing_DM_hby_P.Out1_Y0_p;
+  testing_DM_hby_B.In1_m = testing_DM_hby_P.Out1_Y0_m;
 
-  // End of SystemInitialize for SubSystem: '<S14>/Enabled Subsystem'
+  // End of SystemInitialize for SubSystem: '<S9>/Enabled Subsystem'
 
-  // SystemInitialize for Enabled SubSystem: '<S12>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S15>/In1' incorporates:
-  //   Outport: '<S15>/Out1'
+  // SystemInitialize for Enabled SubSystem: '<S8>/Enabled Subsystem'
+  // SystemInitialize for SignalConversion generated from: '<S16>/In1' incorporates:
+  //   Outport: '<S16>/Out1'
 
-  testing_DM_hby_B.In1_m = testing_DM_hby_P.Out1_Y0_g;
+  testing_DM_hby_B.In1_b = testing_DM_hby_P.Out1_Y0;
 
-  // End of SystemInitialize for SubSystem: '<S12>/Enabled Subsystem'
+  // End of SystemInitialize for SubSystem: '<S8>/Enabled Subsystem'
 
-  // SystemInitialize for MATLAB Function: '<Root>/Foot_Home_Then_Sine'
-  testing_DM_hby_DW.tolerance_start_time = -1.0;
+  // SystemInitialize for Enabled SubSystem: '<S10>/Enabled Subsystem'
+  // SystemInitialize for SignalConversion generated from: '<S18>/In1' incorporates:
+  //   Outport: '<S18>/Out1'
 
-  // Start for MATLABSystem: '<S13>/SourceBlock'
-  testing_DM_SystemCore_setup_d01(&testing_DM_hby_DW.obj_n);
+  testing_DM_hby_B.In1_i = testing_DM_hby_P.Out1_Y0_d;
 
-  // Start for MATLABSystem: '<S14>/SourceBlock'
-  testing_D_SystemCore_setup_d01g(&testing_DM_hby_DW.obj_a);
+  // End of SystemInitialize for SubSystem: '<S10>/Enabled Subsystem'
 
-  // Start for MATLABSystem: '<S12>/SourceBlock'
-  testing_DM__SystemCore_setup_d0(&testing_DM_hby_DW.obj_n3);
+  // SystemInitialize for Enabled SubSystem: '<S11>/Enabled Subsystem'
+  // SystemInitialize for SignalConversion generated from: '<S19>/In1' incorporates:
+  //   Outport: '<S19>/Out1'
 
-  // Start for MATLABSystem: '<S10>/SinkBlock'
-  testing_DM_hby_SystemCore_setup(&testing_DM_hby_DW.obj_i);
+  testing_DM_hby_B.In1 = testing_DM_hby_P.Out1_Y0_k;
 
-  // Start for MATLABSystem: '<S11>/SinkBlock'
-  testing_DM_h_SystemCore_setup_d(&testing_DM_hby_DW.obj);
+  // End of SystemInitialize for SubSystem: '<S11>/Enabled Subsystem'
+
+  // Start for MATLABSystem: '<S9>/SourceBlock'
+  testing_DM_h_SystemCore_setup_d(&testing_DM_hby_DW.obj_h);
+
+  // Start for MATLABSystem: '<S8>/SourceBlock'
+  testing_DM_hby_SystemCore_setup(&testing_DM_hby_DW.obj_l);
+
+  // Start for MATLABSystem: '<S10>/SourceBlock'
+  testing_DM__SystemCore_setup_d0(&testing_DM_hby_DW.obj_o);
+
+  // Start for MATLABSystem: '<S11>/SourceBlock'
+  testing_DM_SystemCore_setup_d01(&testing_DM_hby_DW.obj);
 }
 
 // Model terminate function
 void testing_DM_hby::terminate()
 {
-  // Terminate for MATLABSystem: '<S13>/SourceBlock'
-  if (!testing_DM_hby_DW.obj_n.matlabCodegenIsDeleted) {
-    testing_DM_hby_DW.obj_n.matlabCodegenIsDeleted = true;
+  // Terminate for MATLABSystem: '<S9>/SourceBlock'
+  if (!testing_DM_hby_DW.obj_h.matlabCodegenIsDeleted) {
+    testing_DM_hby_DW.obj_h.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S13>/SourceBlock'
+  // End of Terminate for MATLABSystem: '<S9>/SourceBlock'
 
-  // Terminate for MATLABSystem: '<S14>/SourceBlock'
-  if (!testing_DM_hby_DW.obj_a.matlabCodegenIsDeleted) {
-    testing_DM_hby_DW.obj_a.matlabCodegenIsDeleted = true;
+  // Terminate for MATLABSystem: '<S8>/SourceBlock'
+  if (!testing_DM_hby_DW.obj_l.matlabCodegenIsDeleted) {
+    testing_DM_hby_DW.obj_l.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S14>/SourceBlock'
+  // End of Terminate for MATLABSystem: '<S8>/SourceBlock'
 
-  // Terminate for MATLABSystem: '<S12>/SourceBlock'
-  if (!testing_DM_hby_DW.obj_n3.matlabCodegenIsDeleted) {
-    testing_DM_hby_DW.obj_n3.matlabCodegenIsDeleted = true;
+  // Terminate for MATLABSystem: '<S10>/SourceBlock'
+  if (!testing_DM_hby_DW.obj_o.matlabCodegenIsDeleted) {
+    testing_DM_hby_DW.obj_o.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S12>/SourceBlock'
+  // End of Terminate for MATLABSystem: '<S10>/SourceBlock'
 
-  // Terminate for MATLABSystem: '<S10>/SinkBlock'
-  if (!testing_DM_hby_DW.obj_i.matlabCodegenIsDeleted) {
-    testing_DM_hby_DW.obj_i.matlabCodegenIsDeleted = true;
-  }
-
-  // End of Terminate for MATLABSystem: '<S10>/SinkBlock'
-
-  // Terminate for MATLABSystem: '<S11>/SinkBlock'
+  // Terminate for MATLABSystem: '<S11>/SourceBlock'
   if (!testing_DM_hby_DW.obj.matlabCodegenIsDeleted) {
     testing_DM_hby_DW.obj.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S11>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S11>/SourceBlock'
 }
 
 // Constructor

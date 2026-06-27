@@ -30,9 +30,7 @@ set (CMAKE_BUILD_WITH_INSTALL_RPATH true)
 set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 set(msg_files
-  "msg/ReadDJIRC.msg"
   "msg/ReadDmMotor.msg"
-  "msg/WriteDmMotorMITControl.msg"
 )
 set(srv_files
 )
@@ -64,4 +62,4 @@ add_custom_command(
 				   )				   
 endforeach(file_i)
 ament_package()
-# Generated on Sat Jun 27 22:20:37 2026
+# Generated on Sat Jun 27 23:29:06 2026
