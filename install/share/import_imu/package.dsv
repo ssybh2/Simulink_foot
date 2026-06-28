@@ -1,0 +1,11 @@
+source;share/import_imu/hook/cmake_prefix_path.ps1
+source;share/import_imu/hook/cmake_prefix_path.dsv
+source;share/import_imu/hook/cmake_prefix_path.sh
+source;share/import_imu/hook/ld_library_path_lib.ps1
+source;share/import_imu/hook/ld_library_path_lib.dsv
+source;share/import_imu/hook/ld_library_path_lib.sh
+source;share/import_imu/local_setup.bash
+source;share/import_imu/local_setup.dsv
+source;share/import_imu/local_setup.ps1
+source;share/import_imu/local_setup.sh
+source;share/import_imu/local_setup.zsh

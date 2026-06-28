@@ -1,0 +1,45 @@
+[0.028s] Invoking command in '/home/uonaim/matlab_ws/FOOT/build/import_imu': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/import_imu -- -j14 -l14
+[0.036s] [0/1] Re-running CMake...
+[0.051s] -- Found ament_cmake: 1.3.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake/cmake)
+[0.168s] -- Found ament_cmake_ros: 0.10.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake_ros/cmake)
+[0.171s] -- Found custom_msgs: 0.0.0 (/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake)
+[0.202s] -- Found rosidl_generator_c: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_generator_c/cmake)
+[0.204s] -- Found rosidl_adapter: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_adapter/cmake)
+[0.213s] -- Found rosidl_generator_cpp: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_generator_cpp/cmake)
+[0.224s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.242s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.335s] -- Found rclcpp: 16.0.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rclcpp/cmake)
+[0.380s] -- Found rmw_implementation_cmake: 6.1.1 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rmw_implementation_cmake/cmake)
+[0.381s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rmw_cyclonedds_cpp/cmake)
+[0.407s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.588s] -- Configuring done
+[0.601s] -- Generating done
+[0.608s] -- Build files have been written to: /home/uonaim/matlab_ws/FOOT/build/import_imu
+[4.074s] [1/7] Building CXX object CMakeFiles/Import_IMU.dir/src/Import_IMU_data.cpp.o
+[4.263s] [2/7] Building CXX object CMakeFiles/Import_IMU.dir/src/slros_busmsg_conversion.cpp.o
+[4.603s] [3/7] Building CXX object CMakeFiles/Import_IMU.dir/src/ros2nodeinterface.cpp.o
+[4.889s] [4/7] Building CXX object CMakeFiles/Import_IMU.dir/src/slros2_initialize.cpp.o
+[4.889s] [5/7] Building CXX object CMakeFiles/Import_IMU.dir/src/main.cpp.o
+[9.561s] [6/7] Building CXX object CMakeFiles/Import_IMU.dir/src/Import_IMU.cpp.o
+[10.187s] [7/7] Linking CXX executable Import_IMU
+[10.189s] Invoked command in '/home/uonaim/matlab_ws/FOOT/build/import_imu' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/import_imu -- -j14 -l14
+[10.211s] Invoking command in '/home/uonaim/matlab_ws/FOOT/build/import_imu': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/import_imu
+[10.215s] -- Install configuration: "Release"
+[10.215s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/import_imu/Import_IMU
+[10.217s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/package_run_dependencies/import_imu
+[10.217s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/parent_prefix_path/import_imu
+[10.217s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/ament_prefix_path.sh
+[10.217s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/ament_prefix_path.dsv
+[10.217s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/path.sh
+[10.218s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/path.dsv
+[10.218s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.bash
+[10.218s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.sh
+[10.218s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.zsh
+[10.218s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.dsv
+[10.218s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.dsv
+[10.218s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/packages/import_imu
+[10.219s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.219s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/cmake/import_imuConfig.cmake
+[10.219s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/cmake/import_imuConfig-version.cmake
+[10.219s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.xml
+[10.226s] Invoked command in '/home/uonaim/matlab_ws/FOOT/build/import_imu' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/import_imu

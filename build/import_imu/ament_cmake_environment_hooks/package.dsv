@@ -1,0 +1,4 @@
+source;share/import_imu/local_setup.bash
+source;share/import_imu/local_setup.dsv
+source;share/import_imu/local_setup.sh
+source;share/import_imu/local_setup.zsh
