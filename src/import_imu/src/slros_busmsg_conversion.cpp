@@ -20,6 +20,79 @@ void convertToBus(SL_Bus_builtin_interfaces_Time* busPtr, const builtin_interfac
 }
 
 
+// Conversions between SL_Bus_custom_msgs_ReadDJIRC and custom_msgs::msg::ReadDJIRC
+
+void convertFromBus(custom_msgs::msg::ReadDJIRC& msgPtr, SL_Bus_custom_msgs_ReadDJIRC const* busPtr)
+{
+  const std::string rosMessageType("custom_msgs/ReadDJIRC");
+
+  msgPtr.a =  busPtr->a;
+  msgPtr.b =  busPtr->b;
+  msgPtr.c =  busPtr->c;
+  msgPtr.ctrl =  busPtr->ctrl;
+  msgPtr.d =  busPtr->d;
+  msgPtr.dial =  busPtr->dial;
+  msgPtr.e =  busPtr->e;
+  msgPtr.f =  busPtr->f;
+  msgPtr.g =  busPtr->g;
+  convertFromBus(msgPtr.header, &busPtr->header);
+  msgPtr.left_switch =  busPtr->left_switch;
+  msgPtr.left_x =  busPtr->left_x;
+  msgPtr.left_y =  busPtr->left_y;
+  msgPtr.mouse_left_clicked =  busPtr->mouse_left_clicked;
+  msgPtr.mouse_right_clicked =  busPtr->mouse_right_clicked;
+  msgPtr.mouse_x =  busPtr->mouse_x;
+  msgPtr.mouse_y =  busPtr->mouse_y;
+  msgPtr.online =  busPtr->online;
+  msgPtr.q =  busPtr->q;
+  msgPtr.r =  busPtr->r;
+  msgPtr.right_switch =  busPtr->right_switch;
+  msgPtr.right_x =  busPtr->right_x;
+  msgPtr.right_y =  busPtr->right_y;
+  msgPtr.s =  busPtr->s;
+  msgPtr.shift =  busPtr->shift;
+  msgPtr.v =  busPtr->v;
+  msgPtr.w =  busPtr->w;
+  msgPtr.x =  busPtr->x;
+  msgPtr.z =  busPtr->z;
+}
+
+void convertToBus(SL_Bus_custom_msgs_ReadDJIRC* busPtr, const custom_msgs::msg::ReadDJIRC& msgPtr)
+{
+  const std::string rosMessageType("custom_msgs/ReadDJIRC");
+
+  busPtr->a =  msgPtr.a;
+  busPtr->b =  msgPtr.b;
+  busPtr->c =  msgPtr.c;
+  busPtr->ctrl =  msgPtr.ctrl;
+  busPtr->d =  msgPtr.d;
+  busPtr->dial =  msgPtr.dial;
+  busPtr->e =  msgPtr.e;
+  busPtr->f =  msgPtr.f;
+  busPtr->g =  msgPtr.g;
+  convertToBus(&busPtr->header, msgPtr.header);
+  busPtr->left_switch =  msgPtr.left_switch;
+  busPtr->left_x =  msgPtr.left_x;
+  busPtr->left_y =  msgPtr.left_y;
+  busPtr->mouse_left_clicked =  msgPtr.mouse_left_clicked;
+  busPtr->mouse_right_clicked =  msgPtr.mouse_right_clicked;
+  busPtr->mouse_x =  msgPtr.mouse_x;
+  busPtr->mouse_y =  msgPtr.mouse_y;
+  busPtr->online =  msgPtr.online;
+  busPtr->q =  msgPtr.q;
+  busPtr->r =  msgPtr.r;
+  busPtr->right_switch =  msgPtr.right_switch;
+  busPtr->right_x =  msgPtr.right_x;
+  busPtr->right_y =  msgPtr.right_y;
+  busPtr->s =  msgPtr.s;
+  busPtr->shift =  msgPtr.shift;
+  busPtr->v =  msgPtr.v;
+  busPtr->w =  msgPtr.w;
+  busPtr->x =  msgPtr.x;
+  busPtr->z =  msgPtr.z;
+}
+
+
 // Conversions between SL_Bus_custom_msgs_ReadDmMotor and custom_msgs::msg::ReadDmMotor
 
 void convertFromBus(custom_msgs::msg::ReadDmMotor& msgPtr, SL_Bus_custom_msgs_ReadDmMotor const* busPtr)
@@ -64,6 +137,106 @@ void convertToBus(SL_Bus_custom_msgs_ReadDmMotor* busPtr, const custom_msgs::msg
   busPtr->torque =  msgPtr.torque;
   busPtr->undervoltage =  msgPtr.undervoltage;
   busPtr->velocity =  msgPtr.velocity;
+}
+
+
+// Conversions between SL_Bus_custom_msgs_WriteDmMotorMITControl and custom_msgs::msg::WriteDmMotorMITControl
+
+void convertFromBus(custom_msgs::msg::WriteDmMotorMITControl& msgPtr, SL_Bus_custom_msgs_WriteDmMotorMITControl const* busPtr)
+{
+  const std::string rosMessageType("custom_msgs/WriteDmMotorMITControl");
+
+  msgPtr.enable =  busPtr->enable;
+  msgPtr.kd =  busPtr->kd;
+  msgPtr.kp =  busPtr->kp;
+  msgPtr.p_des =  busPtr->p_des;
+  msgPtr.torque =  busPtr->torque;
+  msgPtr.v_des =  busPtr->v_des;
+}
+
+void convertToBus(SL_Bus_custom_msgs_WriteDmMotorMITControl* busPtr, const custom_msgs::msg::WriteDmMotorMITControl& msgPtr)
+{
+  const std::string rosMessageType("custom_msgs/WriteDmMotorMITControl");
+
+  busPtr->enable =  msgPtr.enable;
+  busPtr->kd =  msgPtr.kd;
+  busPtr->kp =  msgPtr.kp;
+  busPtr->p_des =  msgPtr.p_des;
+  busPtr->torque =  msgPtr.torque;
+  busPtr->v_des =  msgPtr.v_des;
+}
+
+
+// Conversions between SL_Bus_geometry_msgs_Quaternion and geometry_msgs::msg::Quaternion
+
+void convertFromBus(geometry_msgs::msg::Quaternion& msgPtr, SL_Bus_geometry_msgs_Quaternion const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Quaternion");
+
+  msgPtr.w =  busPtr->w;
+  msgPtr.x =  busPtr->x;
+  msgPtr.y =  busPtr->y;
+  msgPtr.z =  busPtr->z;
+}
+
+void convertToBus(SL_Bus_geometry_msgs_Quaternion* busPtr, const geometry_msgs::msg::Quaternion& msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Quaternion");
+
+  busPtr->w =  msgPtr.w;
+  busPtr->x =  msgPtr.x;
+  busPtr->y =  msgPtr.y;
+  busPtr->z =  msgPtr.z;
+}
+
+
+// Conversions between SL_Bus_geometry_msgs_Vector3 and geometry_msgs::msg::Vector3
+
+void convertFromBus(geometry_msgs::msg::Vector3& msgPtr, SL_Bus_geometry_msgs_Vector3 const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Vector3");
+
+  msgPtr.x =  busPtr->x;
+  msgPtr.y =  busPtr->y;
+  msgPtr.z =  busPtr->z;
+}
+
+void convertToBus(SL_Bus_geometry_msgs_Vector3* busPtr, const geometry_msgs::msg::Vector3& msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Vector3");
+
+  busPtr->x =  msgPtr.x;
+  busPtr->y =  msgPtr.y;
+  busPtr->z =  msgPtr.z;
+}
+
+
+// Conversions between SL_Bus_sensor_msgs_Imu and sensor_msgs::msg::Imu
+
+void convertFromBus(sensor_msgs::msg::Imu& msgPtr, SL_Bus_sensor_msgs_Imu const* busPtr)
+{
+  const std::string rosMessageType("sensor_msgs/Imu");
+
+  convertFromBus(msgPtr.angular_velocity, &busPtr->angular_velocity);
+  convertFromBusFixedPrimitiveArray(msgPtr.angular_velocity_covariance, busPtr->angular_velocity_covariance);
+  convertFromBus(msgPtr.header, &busPtr->header);
+  convertFromBus(msgPtr.linear_acceleration, &busPtr->linear_acceleration);
+  convertFromBusFixedPrimitiveArray(msgPtr.linear_acceleration_covariance, busPtr->linear_acceleration_covariance);
+  convertFromBus(msgPtr.orientation, &busPtr->orientation);
+  convertFromBusFixedPrimitiveArray(msgPtr.orientation_covariance, busPtr->orientation_covariance);
+}
+
+void convertToBus(SL_Bus_sensor_msgs_Imu* busPtr, const sensor_msgs::msg::Imu& msgPtr)
+{
+  const std::string rosMessageType("sensor_msgs/Imu");
+
+  convertToBus(&busPtr->angular_velocity, msgPtr.angular_velocity);
+  convertToBusFixedPrimitiveArray(busPtr->angular_velocity_covariance, msgPtr.angular_velocity_covariance, slros::NoopWarning());
+  convertToBus(&busPtr->header, msgPtr.header);
+  convertToBus(&busPtr->linear_acceleration, msgPtr.linear_acceleration);
+  convertToBusFixedPrimitiveArray(busPtr->linear_acceleration_covariance, msgPtr.linear_acceleration_covariance, slros::NoopWarning());
+  convertToBus(&busPtr->orientation, msgPtr.orientation);
+  convertToBusFixedPrimitiveArray(busPtr->orientation_covariance, msgPtr.orientation_covariance, slros::NoopWarning());
 }
 
 

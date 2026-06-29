@@ -21,6 +21,7 @@ find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_ros REQUIRED)
 find_package( custom_msgs REQUIRED)
 find_package( rclcpp REQUIRED)
+find_package( sensor_msgs REQUIRED)
 include_directories("include/import_imu")
 set (CMAKE_SKIP_BUILD_RPATH false)
 set (CMAKE_BUILD_WITH_INSTALL_RPATH true)
@@ -70,6 +71,7 @@ ament_target_dependencies(
   Import_IMU
   "custom_msgs"
   "rclcpp"
+  "sensor_msgs"
 )
 target_include_directories(Import_IMU PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -99,4 +101,4 @@ add_custom_command(
 				   )				   
 endforeach(file_i)
 ament_package()
-# Generated on Sun Jun 28 15:26:56 2026
+# Generated on Mon Jun 29 19:33:03 2026

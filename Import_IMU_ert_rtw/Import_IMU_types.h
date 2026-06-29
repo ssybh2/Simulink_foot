@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.2
+// Model version                  : 1.20
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Sun Jun 28 15:17:06 2026
+// C/C++ source code generated on : Mon Jun 29 19:32:58 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -60,6 +60,57 @@ struct SL_Bus_std_msgs_Header
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_Quaternion_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_Quaternion_
+
+// MsgType=geometry_msgs/Quaternion
+struct SL_Bus_geometry_msgs_Quaternion
+{
+  real_T x;
+  real_T y;
+  real_T z;
+  real_T w;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_Vector3_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_Vector3_
+
+// MsgType=geometry_msgs/Vector3
+struct SL_Bus_geometry_msgs_Vector3
+{
+  real_T x;
+  real_T y;
+  real_T z;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_sensor_msgs_Imu_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_sensor_msgs_Imu_
+
+// MsgType=sensor_msgs/Imu
+struct SL_Bus_sensor_msgs_Imu
+{
+  // MsgType=std_msgs/Header
+  SL_Bus_std_msgs_Header header;
+
+  // MsgType=geometry_msgs/Quaternion
+  SL_Bus_geometry_msgs_Quaternion orientation;
+  real_T orientation_covariance[9];
+
+  // MsgType=geometry_msgs/Vector3
+  SL_Bus_geometry_msgs_Vector3 angular_velocity;
+  real_T angular_velocity_covariance[9];
+
+  // MsgType=geometry_msgs/Vector3
+  SL_Bus_geometry_msgs_Vector3 linear_acceleration;
+  real_T linear_acceleration_covariance[9];
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
 #define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
 
@@ -83,6 +134,62 @@ struct SL_Bus_custom_msgs_ReadDmMotor
   real32_T torque;
   uint8_T mos_temperature;
   uint8_T rotor_temperature;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
+
+// MsgType=custom_msgs/WriteDmMotorMITControl
+struct SL_Bus_custom_msgs_WriteDmMotorMITControl
+{
+  uint8_T enable;
+  real32_T p_des;
+  real32_T v_des;
+  real32_T kp;
+  real32_T kd;
+  real32_T torque;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDJIRC_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDJIRC_
+
+// MsgType=custom_msgs/ReadDJIRC
+struct SL_Bus_custom_msgs_ReadDJIRC
+{
+  // MsgType=std_msgs/Header
+  SL_Bus_std_msgs_Header header;
+  uint8_T online;
+  real32_T left_x;
+  real32_T left_y;
+  real32_T right_x;
+  real32_T right_y;
+  real32_T dial;
+  uint8_T left_switch;
+  uint8_T right_switch;
+  uint8_T w;
+  uint8_T s;
+  uint8_T a;
+  uint8_T d;
+  uint8_T q;
+  uint8_T e;
+  uint8_T r;
+  uint8_T f;
+  uint8_T g;
+  uint8_T z;
+  uint8_T x;
+  uint8_T c;
+  uint8_T v;
+  uint8_T b;
+  uint8_T shift;
+  uint8_T ctrl;
+  int16_T mouse_x;
+  int16_T mouse_y;
+  uint8_T mouse_left_clicked;
+  uint8_T mouse_right_clicked;
 };
 
 #endif
@@ -112,7 +219,7 @@ struct struct_DZAeZYKomWJ9aajLaQqeiD
 
 #endif
 
-// Custom Type definition for MATLABSystem: '<S11>/SourceBlock'
+// Custom Type definition for MATLABSystem: '<S40>/SourceBlock'
 #include "rmw/qos_profiles.h"
 #ifndef struct_ros_slros2_internal_block_Sub_T
 #define struct_ros_slros2_internal_block_Sub_T
@@ -125,6 +232,18 @@ struct ros_slros2_internal_block_Sub_T
 };
 
 #endif                                // struct_ros_slros2_internal_block_Sub_T
+
+#ifndef struct_ros_slros2_internal_block_Pub_T
+#define struct_ros_slros2_internal_block_Pub_T
+
+struct ros_slros2_internal_block_Pub_T
+{
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+};
+
+#endif                                // struct_ros_slros2_internal_block_Pub_T
 
 // Parameters (default storage)
 typedef struct P_Import_IMU_T_ P_Import_IMU_T;

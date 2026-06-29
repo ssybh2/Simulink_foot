@@ -250,7 +250,7 @@ RMW_IMPLEMENTATION:STRING=rmw_cyclonedds_cpp
 SITE:STRING=uonaim-Mercury-series
 
 //Path to a library.
-_lib:FILEPATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake/cmake
@@ -326,6 +326,9 @@ fastcdr_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/cmake/fastcd
 
 //The directory containing a CMake configuration file for fastrtps_cmake_module.
 fastrtps_cmake_module_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/fastrtps_cmake_module/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 import_imu_BINARY_DIR:STATIC=/home/uonaim/matlab_ws/FOOT/build/import_imu
@@ -425,6 +428,9 @@ rosidl_typesupport_introspection_c_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/gl
 
 //The directory containing a CMake configuration file for rosidl_typesupport_introspection_cpp.
 rosidl_typesupport_introspection_cpp_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_introspection_cpp/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for spdlog.
 spdlog_DIR:PATH=/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/cmake/spdlog

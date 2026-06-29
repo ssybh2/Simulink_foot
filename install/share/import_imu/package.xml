@@ -9,10 +9,11 @@
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
   <depend>custom_msgs</depend>
   <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
 </package>
-<!-- Generated on Sun Jun 28 15:26:56 2026 -->
+<!-- Generated on Mon Jun 29 19:33:03 2026 -->

@@ -1,0 +1,261 @@
+[0.445s] DEBUG:colcon:Command line arguments: ['/root/.matlab/R2023b/ros2/glnxa64/venv/bin/colcon', 'build', '--merge-install', '--base-paths', '/home/uonaim/matlab_ws/FOOT/src', '--cmake-args', '-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++']
+[0.445s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=True, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=14, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/uonaim/matlab_ws/FOOT/src'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=['-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f3bcc9e58a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f3bcc90cf40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f3bcc90cf40>>)
+[0.493s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.493s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.493s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.493s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.493s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.493s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/uonaim/matlab_ws/FOOT/src'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extensions ['ignore', 'ignore_ament_install']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'ignore'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'ignore_ament_install'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extensions ['colcon_pkg']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'colcon_pkg'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extensions ['colcon_meta']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'colcon_meta'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extensions ['ros']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'ros'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extensions ['cmake', 'python']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'cmake'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'python'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extensions ['python_setup_py']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src) by extension 'python_setup_py'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extension 'ignore'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extension 'ignore_ament_install'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extensions ['colcon_pkg']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extension 'colcon_pkg'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extensions ['colcon_meta']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extension 'colcon_meta'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extensions ['ros']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/custom_msgs) by extension 'ros'
+[0.511s] DEBUG:colcon.colcon_core.package_identification:Package '/home/uonaim/matlab_ws/FOOT/src/custom_msgs' with type 'ros.ament_cmake' and name 'custom_msgs'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extensions ['ignore', 'ignore_ament_install']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extension 'ignore'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extension 'ignore_ament_install'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extensions ['colcon_pkg']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extension 'colcon_pkg'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extensions ['colcon_meta']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extension 'colcon_meta'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extensions ['ros']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/import_imu) by extension 'ros'
+[0.512s] DEBUG:colcon.colcon_core.package_identification:Package '/home/uonaim/matlab_ws/FOOT/src/import_imu' with type 'ros.ament_cmake' and name 'import_imu'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extensions ['ignore', 'ignore_ament_install']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extension 'ignore'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extension 'ignore_ament_install'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extensions ['colcon_pkg']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extension 'colcon_pkg'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extensions ['colcon_meta']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extension 'colcon_meta'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extensions ['ros']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby) by extension 'ros'
+[0.513s] DEBUG:colcon.colcon_core.package_identification:Package '/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby' with type 'ros.ament_cmake' and name 'testing_dm_hby'
+[0.513s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_args' from command line to '['-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++']'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_target' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.544s] DEBUG:colcon.colcon_core.verb:Building package 'custom_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uonaim/matlab_ws/FOOT/build/custom_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uonaim/matlab_ws/FOOT/install', 'merge_install': True, 'path': '/home/uonaim/matlab_ws/FOOT/src/custom_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'cmake_args' from command line to '['-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++']'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'cmake_target' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'cmake_clean_cache' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'cmake_clean_first' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'cmake_force_configure' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'ament_cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'catkin_cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'import_imu' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.550s] DEBUG:colcon.colcon_core.verb:Building package 'import_imu' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uonaim/matlab_ws/FOOT/build/import_imu', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uonaim/matlab_ws/FOOT/install', 'merge_install': True, 'path': '/home/uonaim/matlab_ws/FOOT/src/import_imu', 'symlink_install': False, 'test_result_base': None}
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'cmake_args' from command line to '['-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++']'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'cmake_target' from command line to 'None'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'cmake_clean_cache' from command line to 'False'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'cmake_clean_first' from command line to 'False'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'cmake_force_configure' from command line to 'False'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'ament_cmake_args' from command line to 'None'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'catkin_cmake_args' from command line to 'None'
+[0.555s] Level 5:colcon.colcon_core.verb:set package 'testing_dm_hby' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.555s] DEBUG:colcon.colcon_core.verb:Building package 'testing_dm_hby' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DALIAS_ROS2_TF2=1', '-G', 'Ninja', '-DCMAKE_C_COMPILER=/usr/bin/gcc', '-DCMAKE_CXX_COMPILER=/usr/bin/g++'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uonaim/matlab_ws/FOOT/install', 'merge_install': True, 'path': '/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby', 'symlink_install': False, 'test_result_base': None}
+[0.557s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.567s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.567s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uonaim/matlab_ws/FOOT/src/custom_msgs' with build type 'ament_cmake'
+[0.567s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uonaim/matlab_ws/FOOT/src/custom_msgs'
+[0.592s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.592s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.592s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/custom_msgs -- -j14 -l14
+[1.388s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/custom_msgs -- -j14 -l14
+[1.415s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/custom_msgs
+[1.427s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msgs)
+[1.429s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uonaim/matlab_ws/FOOT/build/custom_msgs' returned '0': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/custom_msgs
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake module files
+[1.436s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake config files
+[1.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'cmake_prefix_path')
+[1.440s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/cmake_prefix_path.ps1'
+[1.440s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/cmake_prefix_path.dsv'
+[1.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/cmake_prefix_path.sh'
+[1.441s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib'
+[1.442s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'ld_library_path_lib')
+[1.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/ld_library_path_lib.ps1'
+[1.445s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/ld_library_path_lib.dsv'
+[1.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/ld_library_path_lib.sh'
+[1.446s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.446s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/pkgconfig/custom_msgs.pc'
+[1.447s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/python3.10/site-packages'
+[1.447s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.ps1'
+[1.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.dsv'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.sh'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.bash'
+[1.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.zsh'
+[1.454s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uonaim/matlab_ws/FOOT/install/share/colcon-core/packages/custom_msgs)
+[1.478s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msgs)
+[1.483s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake module files
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake config files
+[1.484s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'cmake_prefix_path')
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/cmake_prefix_path.ps1'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/cmake_prefix_path.dsv'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/cmake_prefix_path.sh'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib'
+[1.489s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'ld_library_path_lib')
+[1.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/ld_library_path_lib.ps1'
+[1.493s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/ld_library_path_lib.dsv'
+[1.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/hook/ld_library_path_lib.sh'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/pkgconfig/custom_msgs.pc'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/python3.10/site-packages'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.ps1'
+[1.499s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.dsv'
+[1.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.sh'
+[1.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.bash'
+[1.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.zsh'
+[1.500s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uonaim/matlab_ws/FOOT/install/share/colcon-core/packages/custom_msgs)
+[1.500s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uonaim/matlab_ws/FOOT/src/import_imu' with build type 'ament_cmake'
+[1.500s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uonaim/matlab_ws/FOOT/src/import_imu'
+[1.505s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.505s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.517s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby' with build type 'ament_cmake'
+[1.517s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uonaim/matlab_ws/FOOT/src/testing_dm_hby'
+[1.521s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.521s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.535s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uonaim/matlab_ws/FOOT/build/import_imu': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/import_imu -- -j14 -l14
+[1.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby -- -j14 -l14
+[1.557s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby -- -j14 -l14
+[1.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby
+[1.582s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(testing_dm_hby)
+[1.587s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake module files
+[1.588s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby
+[1.588s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake config files
+[1.588s] Level 1:colcon.colcon_core.shell:create_environment_hook('testing_dm_hby', 'cmake_prefix_path')
+[1.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/cmake_prefix_path.ps1'
+[1.592s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/cmake_prefix_path.dsv'
+[1.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/cmake_prefix_path.sh'
+[1.593s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib'
+[1.593s] Level 1:colcon.colcon_core.shell:create_environment_hook('testing_dm_hby', 'ld_library_path_lib')
+[1.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/ld_library_path_lib.ps1'
+[1.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/ld_library_path_lib.dsv'
+[1.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/ld_library_path_lib.sh'
+[1.599s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.599s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/pkgconfig/testing_dm_hby.pc'
+[1.599s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/python3.10/site-packages'
+[1.599s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.ps1'
+[1.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.dsv'
+[1.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.sh'
+[1.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.bash'
+[1.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.zsh'
+[1.607s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uonaim/matlab_ws/FOOT/install/share/colcon-core/packages/testing_dm_hby)
+[1.634s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(testing_dm_hby)
+[1.642s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake module files
+[1.642s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake config files
+[1.643s] Level 1:colcon.colcon_core.shell:create_environment_hook('testing_dm_hby', 'cmake_prefix_path')
+[1.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/cmake_prefix_path.ps1'
+[1.650s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/cmake_prefix_path.dsv'
+[1.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/cmake_prefix_path.sh'
+[1.651s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib'
+[1.651s] Level 1:colcon.colcon_core.shell:create_environment_hook('testing_dm_hby', 'ld_library_path_lib')
+[1.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/ld_library_path_lib.ps1'
+[1.657s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/ld_library_path_lib.dsv'
+[1.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/hook/ld_library_path_lib.sh'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/pkgconfig/testing_dm_hby.pc'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/python3.10/site-packages'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[1.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.ps1'
+[1.665s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.dsv'
+[1.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.sh'
+[1.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.bash'
+[1.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.zsh'
+[1.666s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uonaim/matlab_ws/FOOT/install/share/colcon-core/packages/testing_dm_hby)
+[17.092s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uonaim/matlab_ws/FOOT/build/import_imu' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/import_imu -- -j14 -l14
+[17.113s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uonaim/matlab_ws/FOOT/build/import_imu': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/import_imu
+[17.122s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(import_imu)
+[17.128s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake module files
+[17.128s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uonaim/matlab_ws/FOOT/build/import_imu' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/import_imu
+[17.128s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake config files
+[17.129s] Level 1:colcon.colcon_core.shell:create_environment_hook('import_imu', 'cmake_prefix_path')
+[17.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/cmake_prefix_path.ps1'
+[17.133s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/cmake_prefix_path.dsv'
+[17.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/cmake_prefix_path.sh'
+[17.134s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib'
+[17.134s] Level 1:colcon.colcon_core.shell:create_environment_hook('import_imu', 'ld_library_path_lib')
+[17.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/ld_library_path_lib.ps1'
+[17.138s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/ld_library_path_lib.dsv'
+[17.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/ld_library_path_lib.sh'
+[17.139s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[17.139s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/pkgconfig/import_imu.pc'
+[17.139s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/python3.10/site-packages'
+[17.139s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[17.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.ps1'
+[17.143s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.dsv'
+[17.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.sh'
+[17.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.bash'
+[17.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.zsh'
+[17.144s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uonaim/matlab_ws/FOOT/install/share/colcon-core/packages/import_imu)
+[17.170s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(import_imu)
+[17.175s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake module files
+[17.175s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install' for CMake config files
+[17.176s] Level 1:colcon.colcon_core.shell:create_environment_hook('import_imu', 'cmake_prefix_path')
+[17.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/cmake_prefix_path.ps1'
+[17.180s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/cmake_prefix_path.dsv'
+[17.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/cmake_prefix_path.sh'
+[17.181s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib'
+[17.181s] Level 1:colcon.colcon_core.shell:create_environment_hook('import_imu', 'ld_library_path_lib')
+[17.185s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/ld_library_path_lib.ps1'
+[17.185s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/ld_library_path_lib.dsv'
+[17.185s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/hook/ld_library_path_lib.sh'
+[17.186s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[17.186s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/pkgconfig/import_imu.pc'
+[17.186s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/lib/python3.10/site-packages'
+[17.186s] Level 1:colcon.colcon_core.environment:checking '/home/uonaim/matlab_ws/FOOT/install/bin'
+[17.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.ps1'
+[17.190s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.dsv'
+[17.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.sh'
+[17.191s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.bash'
+[17.191s] INFO:colcon.colcon_core.shell:Creating package script '/home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.zsh'
+[17.191s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uonaim/matlab_ws/FOOT/install/share/colcon-core/packages/import_imu)
+[17.192s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[17.192s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[17.192s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[17.192s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[17.197s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify2': 'notify2' not found
+[17.197s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[17.197s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[17.197s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify_send'
+[17.204s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[17.209s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uonaim/matlab_ws/FOOT/install/local_setup.ps1'
+[17.210s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/uonaim/matlab_ws/FOOT/install/_local_setup_util_ps1.py'
+[17.210s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uonaim/matlab_ws/FOOT/install/setup.ps1'
+[17.214s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uonaim/matlab_ws/FOOT/install/local_setup.sh'
+[17.214s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/uonaim/matlab_ws/FOOT/install/_local_setup_util_sh.py'
+[17.215s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uonaim/matlab_ws/FOOT/install/setup.sh'
+[17.219s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uonaim/matlab_ws/FOOT/install/local_setup.bash'
+[17.219s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uonaim/matlab_ws/FOOT/install/setup.bash'
+[17.222s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uonaim/matlab_ws/FOOT/install/local_setup.zsh'
+[17.223s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uonaim/matlab_ws/FOOT/install/setup.zsh'

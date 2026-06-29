@@ -3,7 +3,9 @@
   "output_dir": "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_typesupport_introspection_cpp/custom_msgs",
   "template_dir": "/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_introspection_cpp/resource",
   "idl_tuples": [
-    "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_adapter/custom_msgs:msg/ReadDmMotor.idl"
+    "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_adapter/custom_msgs:msg/ReadDJIRC.idl",
+    "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_adapter/custom_msgs:msg/ReadDmMotor.idl",
+    "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_adapter/custom_msgs:msg/WriteDmMotorMITControl.idl"
   ],
   "ros_interface_dependencies": [
     "builtin_interfaces:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/builtin_interfaces/msg/Duration.idl",
@@ -48,7 +50,9 @@
     "/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
     "/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
     "/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_adapter/custom_msgs/msg/ReadDJIRC.idl",
     "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_adapter/custom_msgs/msg/ReadDmMotor.idl",
+    "/home/uonaim/matlab_ws/FOOT/build/custom_msgs/rosidl_adapter/custom_msgs/msg/WriteDmMotorMITControl.idl",
     "/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/builtin_interfaces/msg/Duration.idl",
     "/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/builtin_interfaces/msg/Time.idl",
     "/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/std_msgs/msg/Bool.idl",

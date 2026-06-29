@@ -4,9 +4,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.2
+// Model version                  : 1.20
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Sun Jun 28 15:26:54 2026
+// C/C++ source code generated on : Mon Jun 29 19:33:02 2026
 //
 #ifndef _ROS2_MATLAB_NODEINTERFACE_
 #define _ROS2_MATLAB_NODEINTERFACE_
@@ -30,7 +30,10 @@ class Import_IMU;
 #include "rtwtypes.h"
 #include "Import_IMU_types.h"
 #include "slros_busmsg_conversion.h"
+#include "custom_msgs/msg/read_djirc.hpp"
 #include "custom_msgs/msg/read_dm_motor.hpp"
+#include "custom_msgs/msg/write_dm_motor_mit_control.hpp"
+#include "sensor_msgs/msg/imu.hpp"
 namespace ros2 {
 namespace matlab {
   //Semaphore using std::CV and std::mutex
