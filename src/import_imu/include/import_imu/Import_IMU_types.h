@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.20
+// Model version                  : 1.31
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Mon Jun 29 19:32:58 2026
+// C/C++ source code generated on : Tue Jun 30 15:33:56 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -111,6 +111,22 @@ struct SL_Bus_sensor_msgs_Imu
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
+
+// MsgType=custom_msgs/WriteDmMotorMITControl
+struct SL_Bus_custom_msgs_WriteDmMotorMITControl
+{
+  uint8_T enable;
+  real32_T p_des;
+  real32_T v_des;
+  real32_T kp;
+  real32_T kd;
+  real32_T torque;
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
 #define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
 
@@ -134,22 +150,6 @@ struct SL_Bus_custom_msgs_ReadDmMotor
   real32_T torque;
   uint8_T mos_temperature;
   uint8_T rotor_temperature;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_WriteDmMotorMITControl_
-
-// MsgType=custom_msgs/WriteDmMotorMITControl
-struct SL_Bus_custom_msgs_WriteDmMotorMITControl
-{
-  uint8_T enable;
-  real32_T p_des;
-  real32_T v_des;
-  real32_T kp;
-  real32_T kd;
-  real32_T torque;
 };
 
 #endif
@@ -219,7 +219,7 @@ struct struct_DZAeZYKomWJ9aajLaQqeiD
 
 #endif
 
-// Custom Type definition for MATLABSystem: '<S40>/SourceBlock'
+// Custom Type definition for MATLABSystem: '<S49>/SourceBlock'
 #include "rmw/qos_profiles.h"
 #ifndef struct_ros_slros2_internal_block_Sub_T
 #define struct_ros_slros2_internal_block_Sub_T

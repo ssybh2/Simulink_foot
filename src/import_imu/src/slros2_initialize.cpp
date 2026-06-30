@@ -1,6 +1,10 @@
 // Copyright 2022-2023 The MathWorks, Inc.
-// Generated 29-Jun-2026 19:33:01
+// Generated 30-Jun-2026 15:34:05
 #include "slros2_initialize.h"
+// Import_IMU/Left/Publish
+SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_344;
+// Import_IMU/Right/Publish
+SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_369;
 // Import_IMU/Subsystem/Publish1
 SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_208;
 // Import_IMU/Subsystem/Publish2
@@ -19,5 +23,9 @@ SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor>
 SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor> Sub_Import_IMU_3;
 // Import_IMU/Subscribe_Motor4_RB
 SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor> Sub_Import_IMU_4;
+// Import_IMU/Subscribe_Wheel_Left
+SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor> Sub_Import_IMU_314;
+// Import_IMU/Subscribe_Wheel_Right
+SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor> Sub_Import_IMU_315;
 // Import_IMU/Switch/Subscribe
 SimulinkSubscriber<custom_msgs::msg::ReadDJIRC,SL_Bus_custom_msgs_ReadDJIRC> Sub_Import_IMU_104;
