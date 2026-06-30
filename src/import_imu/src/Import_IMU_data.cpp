@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.53
+// Model version                  : 1.54
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 21:29:01 2026
+// C/C++ source code generated on : Tue Jun 30 21:33:30 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -944,18 +944,18 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.0F,
 
-  // Computed Parameter: Gain3_Gain
-  //  Referenced by: '<Root>/Gain3'
+  // Computed Parameter: Gain4_Gain
+  //  Referenced by: '<Root>/Gain4'
 
   1.0F,
 
-  // Computed Parameter: Saturation1_UpperSat
-  //  Referenced by: '<S15>/Saturation1'
+  // Computed Parameter: Saturation2_UpperSat
+  //  Referenced by: '<S15>/Saturation2'
 
   1.0F,
 
-  // Computed Parameter: Saturation1_LowerSat
-  //  Referenced by: '<S15>/Saturation1'
+  // Computed Parameter: Saturation2_LowerSat
+  //  Referenced by: '<S15>/Saturation2'
 
   -1.0F,
 
@@ -1049,8 +1049,8 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   1.0F,
 
-  // Computed Parameter: Gain4_Gain
-  //  Referenced by: '<Root>/Gain4'
+  // Computed Parameter: Gain3_Gain
+  //  Referenced by: '<Root>/Gain3'
 
   1.0F
 };

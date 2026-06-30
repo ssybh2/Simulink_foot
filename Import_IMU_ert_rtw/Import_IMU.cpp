@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.53
+// Model version                  : 1.54
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 21:29:01 2026
+// C/C++ source code generated on : Tue Jun 30 21:33:30 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -995,23 +995,23 @@ void Import_IMU::step()
   Import_IMU_B.normSquared = Import_IMU_P.LPF_GyroY_NumCoef *
     Import_IMU_DW.LPF_GyroY_states;
 
-  // MATLAB Function: '<S15>/PWM' incorporates:
-  //   Gain: '<Root>/Gain3'
+  // MATLAB Function: '<S15>/PWM1' incorporates:
+  //   Gain: '<Root>/Gain4'
 
-  Import_IMU_PWM(Import_IMU_P.Gain3_Gain * Import_IMU_B.In1_j.right_x,
+  Import_IMU_PWM(Import_IMU_P.Gain4_Gain * Import_IMU_B.In1_j.right_y,
                  &Import_IMU_B.relativeX);
 
-  // MATLAB Function: '<S15>/Deadzone1'
+  // MATLAB Function: '<S15>/Deadzone2'
   Import_IMU_Deadzone(Import_IMU_B.relativeX, &Import_IMU_B.w);
 
-  // Saturate: '<S15>/Saturation1'
-  if (Import_IMU_B.w > Import_IMU_P.Saturation1_UpperSat) {
-    Import_IMU_B.w = Import_IMU_P.Saturation1_UpperSat;
-  } else if (Import_IMU_B.w < Import_IMU_P.Saturation1_LowerSat) {
-    Import_IMU_B.w = Import_IMU_P.Saturation1_LowerSat;
+  // Saturate: '<S15>/Saturation2'
+  if (Import_IMU_B.w > Import_IMU_P.Saturation2_UpperSat) {
+    Import_IMU_B.w = Import_IMU_P.Saturation2_UpperSat;
+  } else if (Import_IMU_B.w < Import_IMU_P.Saturation2_LowerSat) {
+    Import_IMU_B.w = Import_IMU_P.Saturation2_LowerSat;
   }
 
-  // End of Saturate: '<S15>/Saturation1'
+  // End of Saturate: '<S15>/Saturation2'
 
   // MATLABSystem: '<S23>/SourceBlock'
   valid_bj = Sub_Import_IMU_314.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
@@ -1634,13 +1634,13 @@ void Import_IMU::step()
   // MATLAB Function: '<S15>/Deadzone'
   Import_IMU_Deadzone(Import_IMU_B.relativeX, &Import_IMU_B.relativeNorm);
 
-  // MATLAB Function: '<S15>/PWM1' incorporates:
-  //   Gain: '<Root>/Gain4'
+  // MATLAB Function: '<S15>/PWM' incorporates:
+  //   Gain: '<Root>/Gain3'
 
-  Import_IMU_PWM(Import_IMU_P.Gain4_Gain * Import_IMU_B.In1_j.right_y,
+  Import_IMU_PWM(Import_IMU_P.Gain3_Gain * Import_IMU_B.In1_j.right_x,
                  &Import_IMU_B.relativeX);
 
-  // MATLAB Function: '<S15>/Deadzone2'
+  // MATLAB Function: '<S15>/Deadzone1'
   Import_IMU_Deadzone(Import_IMU_B.relativeX, &Import_IMU_B.relativeNorm);
 
   // Update for DiscreteTransferFcn: '<Root>/LPF_GyroZ'

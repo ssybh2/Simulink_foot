@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.53
+// Model version                  : 1.54
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 21:29:01 2026
+// C/C++ source code generated on : Tue Jun 30 21:33:30 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -302,14 +302,14 @@ struct P_Import_IMU_T_ {
                                   // Computed Parameter: LPF_GyroY_InitialStates
                                      //  Referenced by: '<Root>/LPF_GyroY'
 
-  real32_T Gain3_Gain;                 // Computed Parameter: Gain3_Gain
-                                          //  Referenced by: '<Root>/Gain3'
+  real32_T Gain4_Gain;                 // Computed Parameter: Gain4_Gain
+                                          //  Referenced by: '<Root>/Gain4'
 
-  real32_T Saturation1_UpperSat;     // Computed Parameter: Saturation1_UpperSat
-                                        //  Referenced by: '<S15>/Saturation1'
+  real32_T Saturation2_UpperSat;     // Computed Parameter: Saturation2_UpperSat
+                                        //  Referenced by: '<S15>/Saturation2'
 
-  real32_T Saturation1_LowerSat;     // Computed Parameter: Saturation1_LowerSat
-                                        //  Referenced by: '<S15>/Saturation1'
+  real32_T Saturation2_LowerSat;     // Computed Parameter: Saturation2_LowerSat
+                                        //  Referenced by: '<S15>/Saturation2'
 
   real32_T Gain_Gain;                  // Computed Parameter: Gain_Gain
                                           //  Referenced by: '<Root>/Gain'
@@ -366,8 +366,8 @@ struct P_Import_IMU_T_ {
   real32_T Gain2_Gain;                 // Computed Parameter: Gain2_Gain
                                           //  Referenced by: '<Root>/Gain2'
 
-  real32_T Gain4_Gain;                 // Computed Parameter: Gain4_Gain
-                                          //  Referenced by: '<Root>/Gain4'
+  real32_T Gain3_Gain;                 // Computed Parameter: Gain3_Gain
+                                          //  Referenced by: '<Root>/Gain3'
 
 };
 
@@ -489,7 +489,7 @@ extern volatile boolean_T runModel;
 //  Block '<S10>/position_err_A' : Unused code path elimination
 //  Block '<S10>/position_err_B' : Unused code path elimination
 //  Block '<S15>/Saturation' : Unused code path elimination
-//  Block '<S15>/Saturation2' : Unused code path elimination
+//  Block '<S15>/Saturation1' : Unused code path elimination
 //  Block '<S17>/Sum' : Unused code path elimination
 //  Block '<S17>/Sum1' : Unused code path elimination
 //  Block '<S17>/position_err_A' : Unused code path elimination
