@@ -1,5 +1,5 @@
 // Copyright 2022-2023 The MathWorks, Inc.
-// Generated 30-Jun-2026 17:47:33
+// Generated 30-Jun-2026 21:29:05
 #ifndef _SLROS2_INITIALIZE_H_
 #define _SLROS2_INITIALIZE_H_
 #include "Import_IMU_types.h"
@@ -45,6 +45,8 @@ extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_
 extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_246;
 // Import_IMU/IMU
 extern SimulinkSubscriber<sensor_msgs::msg::Imu,SL_Bus_sensor_msgs_Imu> Sub_Import_IMU_74;
+// Import_IMU/Subscribe
+extern SimulinkSubscriber<custom_msgs::msg::ReadDJIRC,SL_Bus_custom_msgs_ReadDJIRC> Sub_Import_IMU_412;
 // Import_IMU/Subscribe_Motor1_LA
 extern SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor> Sub_Import_IMU_1;
 // Import_IMU/Subscribe_Motor2_LB
@@ -57,6 +59,4 @@ extern SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadD
 extern SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor> Sub_Import_IMU_314;
 // Import_IMU/Subscribe_Wheel_Right
 extern SimulinkSubscriber<custom_msgs::msg::ReadDmMotor,SL_Bus_custom_msgs_ReadDmMotor> Sub_Import_IMU_315;
-// Import_IMU/Switch/Subscribe
-extern SimulinkSubscriber<custom_msgs::msg::ReadDJIRC,SL_Bus_custom_msgs_ReadDJIRC> Sub_Import_IMU_104;
 #endif

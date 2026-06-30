@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.45
+// Model version                  : 1.53
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 17:47:28 2026
+// C/C++ source code generated on : Tue Jun 30 21:29:01 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -127,33 +127,6 @@ struct SL_Bus_custom_msgs_WriteDmMotorMITControl
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
-
-// MsgType=custom_msgs/ReadDmMotor
-struct SL_Bus_custom_msgs_ReadDmMotor
-{
-  // MsgType=std_msgs/Header
-  SL_Bus_std_msgs_Header header;
-  uint8_T online;
-  uint8_T disabled;
-  uint8_T enabled;
-  uint8_T overvoltage;
-  uint8_T undervoltage;
-  uint8_T overcurrent;
-  uint8_T mos_overtemperature;
-  uint8_T rotor_overtemperature;
-  uint8_T communication_lost;
-  uint8_T overload;
-  real32_T position;
-  real32_T velocity;
-  real32_T torque;
-  uint8_T mos_temperature;
-  uint8_T rotor_temperature;
-};
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDJIRC_
 #define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDJIRC_
 
@@ -194,6 +167,33 @@ struct SL_Bus_custom_msgs_ReadDJIRC
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_custom_msgs_ReadDmMotor_
+
+// MsgType=custom_msgs/ReadDmMotor
+struct SL_Bus_custom_msgs_ReadDmMotor
+{
+  // MsgType=std_msgs/Header
+  SL_Bus_std_msgs_Header header;
+  uint8_T online;
+  uint8_T disabled;
+  uint8_T enabled;
+  uint8_T overvoltage;
+  uint8_T undervoltage;
+  uint8_T overcurrent;
+  uint8_T mos_overtemperature;
+  uint8_T rotor_overtemperature;
+  uint8_T communication_lost;
+  uint8_T overload;
+  real32_T position;
+  real32_T velocity;
+  real32_T torque;
+  uint8_T mos_temperature;
+  uint8_T rotor_temperature;
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_struct_DZAeZYKomWJ9aajLaQqeiD_
 #define DEFINED_TYPEDEF_FOR_struct_DZAeZYKomWJ9aajLaQqeiD_
 
@@ -219,7 +219,7 @@ struct struct_DZAeZYKomWJ9aajLaQqeiD
 
 #endif
 
-// Custom Type definition for MATLABSystem: '<S51>/SourceBlock'
+// Custom Type definition for MATLABSystem: '<S24>/SourceBlock'
 #include "rmw/qos_profiles.h"
 #ifndef struct_ros_slros2_internal_block_Sub_T
 #define struct_ros_slros2_internal_block_Sub_T

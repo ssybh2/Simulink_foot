@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.45
+// Model version                  : 1.53
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 17:47:28 2026
+// C/C++ source code generated on : Tue Jun 30 21:29:01 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -84,7 +84,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   0.07F,
 
   // Computed Parameter: Out1_Y0
-  //  Referenced by: '<S27>/Out1'
+  //  Referenced by: '<S29>/Out1'
 
   {
     {
@@ -201,7 +201,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
     // linear_acceleration_covariance
   },
 
-  // Computed Parameter: Out1_Y0_a
+  // Computed Parameter: Out1_Y0_l
   //  Referenced by: '<S52>/Out1'
 
   {
@@ -257,8 +257,8 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
     0U                                 // mouse_right_clicked
   },
 
-  // Computed Parameter: Constant_Value_f
-  //  Referenced by: '<S51>/Constant'
+  // Computed Parameter: Constant_Value_l
+  //  Referenced by: '<S18>/Constant'
 
   {
     {
@@ -314,7 +314,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_f
-  //  Referenced by: '<S44>/Out1'
+  //  Referenced by: '<S53>/Out1'
 
   {
     {
@@ -357,7 +357,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_e
-  //  Referenced by: '<S45>/Out1'
+  //  Referenced by: '<S54>/Out1'
 
   {
     {
@@ -400,7 +400,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_fs
-  //  Referenced by: '<S46>/Out1'
+  //  Referenced by: '<S55>/Out1'
 
   {
     {
@@ -443,7 +443,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_h
-  //  Referenced by: '<S47>/Out1'
+  //  Referenced by: '<S56>/Out1'
 
   {
     {
@@ -486,7 +486,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_j
-  //  Referenced by: '<S48>/Out1'
+  //  Referenced by: '<S57>/Out1'
 
   {
     {
@@ -529,7 +529,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_p
-  //  Referenced by: '<S49>/Out1'
+  //  Referenced by: '<S58>/Out1'
 
   {
     {
@@ -572,7 +572,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Constant_Value_o
-  //  Referenced by: '<S21>/Constant'
+  //  Referenced by: '<S23>/Constant'
 
   {
     {
@@ -615,7 +615,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Constant_Value_d
-  //  Referenced by: '<S22>/Constant'
+  //  Referenced by: '<S24>/Constant'
 
   {
     {
@@ -658,92 +658,6 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Constant_Value_dx
-  //  Referenced by: '<S17>/Constant'
-
-  {
-    {
-      {
-        0,                             // sec
-        0U                             // nanosec
-      },                               // stamp
-
-      {
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U }
-      ,                                // frame_id
-
-      {
-        0U,                            // CurrentLength
-        0U                             // ReceivedLength
-      }                                // frame_id_SL_Info
-    },                                 // header
-    0U,                                // online
-    0U,                                // disabled
-    0U,                                // enabled
-    0U,                                // overvoltage
-    0U,                                // undervoltage
-    0U,                                // overcurrent
-    0U,                                // mos_overtemperature
-    0U,                                // rotor_overtemperature
-    0U,                                // communication_lost
-    0U,                                // overload
-    0.0F,                              // position
-    0.0F,                              // velocity
-    0.0F,                              // torque
-    0U,                                // mos_temperature
-    0U                                 // rotor_temperature
-  },
-
-  // Computed Parameter: Constant_Value_h
-  //  Referenced by: '<S18>/Constant'
-
-  {
-    {
-      {
-        0,                             // sec
-        0U                             // nanosec
-      },                               // stamp
-
-      {
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U }
-      ,                                // frame_id
-
-      {
-        0U,                            // CurrentLength
-        0U                             // ReceivedLength
-      }                                // frame_id_SL_Info
-    },                                 // header
-    0U,                                // online
-    0U,                                // disabled
-    0U,                                // enabled
-    0U,                                // overvoltage
-    0U,                                // undervoltage
-    0U,                                // overcurrent
-    0U,                                // mos_overtemperature
-    0U,                                // rotor_overtemperature
-    0U,                                // communication_lost
-    0U,                                // overload
-    0.0F,                              // position
-    0.0F,                              // velocity
-    0.0F,                              // torque
-    0U,                                // mos_temperature
-    0U                                 // rotor_temperature
-  },
-
-  // Computed Parameter: Constant_Value_j
   //  Referenced by: '<S19>/Constant'
 
   {
@@ -786,7 +700,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
     0U                                 // rotor_temperature
   },
 
-  // Computed Parameter: Constant_Value_dl
+  // Computed Parameter: Constant_Value_h
   //  Referenced by: '<S20>/Constant'
 
   {
@@ -829,25 +743,91 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
     0U                                 // rotor_temperature
   },
 
-  // Expression: 0
-  //  Referenced by: '<Root>/KpVelocity'
+  // Computed Parameter: Constant_Value_j
+  //  Referenced by: '<S21>/Constant'
 
-  0.0,
+  {
+    {
+      {
+        0,                             // sec
+        0U                             // nanosec
+      },                               // stamp
 
-  // Expression: 0.2
-  //  Referenced by: '<Root>/KpPitch'
+      {
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U }
+      ,                                // frame_id
 
-  0.2,
+      {
+        0U,                            // CurrentLength
+        0U                             // ReceivedLength
+      }                                // frame_id_SL_Info
+    },                                 // header
+    0U,                                // online
+    0U,                                // disabled
+    0U,                                // enabled
+    0U,                                // overvoltage
+    0U,                                // undervoltage
+    0U,                                // overcurrent
+    0U,                                // mos_overtemperature
+    0U,                                // rotor_overtemperature
+    0U,                                // communication_lost
+    0U,                                // overload
+    0.0F,                              // position
+    0.0F,                              // velocity
+    0.0F,                              // torque
+    0U,                                // mos_temperature
+    0U                                 // rotor_temperature
+  },
 
-  // Expression: 0.05
-  //  Referenced by: '<Root>/KdPitch'
+  // Computed Parameter: Constant_Value_dl
+  //  Referenced by: '<S22>/Constant'
 
-  0.05,
+  {
+    {
+      {
+        0,                             // sec
+        0U                             // nanosec
+      },                               // stamp
 
-  // Expression: 0.1
-  //  Referenced by: '<Root>/TorqueLimit'
+      {
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U }
+      ,                                // frame_id
 
-  0.1,
+      {
+        0U,                            // CurrentLength
+        0U                             // ReceivedLength
+      }                                // frame_id_SL_Info
+    },                                 // header
+    0U,                                // online
+    0U,                                // disabled
+    0U,                                // enabled
+    0U,                                // overvoltage
+    0U,                                // undervoltage
+    0U,                                // overcurrent
+    0U,                                // mos_overtemperature
+    0U,                                // rotor_overtemperature
+    0U,                                // communication_lost
+    0U,                                // overload
+    0.0F,                              // position
+    0.0F,                              // velocity
+    0.0F,                              // torque
+    0U,                                // mos_temperature
+    0U                                 // rotor_temperature
+  },
 
   // Expression: 0.5
   //  Referenced by: '<Root>/KpYaw'
@@ -863,6 +843,26 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   //  Referenced by: '<Root>/YawTorqueLimit'
 
   0.5,
+
+  // Expression: 0.2
+  //  Referenced by: '<Root>/KpVelocity'
+
+  0.2,
+
+  // Expression: 0.2
+  //  Referenced by: '<Root>/KpPitch'
+
+  0.2,
+
+  // Expression: 0.05
+  //  Referenced by: '<Root>/KdPitch'
+
+  0.05,
+
+  // Expression: 0.1
+  //  Referenced by: '<Root>/TorqueLimit'
+
+  0.1,
 
   // Expression: 2
   //  Referenced by: '<Root>/Constant4'
@@ -914,6 +914,21 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.24,
 
+  // Computed Parameter: LPF_GyroZ_NumCoef
+  //  Referenced by: '<Root>/LPF_GyroZ'
+
+  0.314077795F,
+
+  // Computed Parameter: LPF_GyroZ_DenCoef
+  //  Referenced by: '<Root>/LPF_GyroZ'
+
+  { 1.0F, -0.685922205F },
+
+  // Computed Parameter: LPF_GyroZ_InitialStates
+  //  Referenced by: '<Root>/LPF_GyroZ'
+
+  0.0F,
+
   // Computed Parameter: LPF_GyroY_NumCoef
   //  Referenced by: '<Root>/LPF_GyroY'
 
@@ -929,6 +944,21 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.0F,
 
+  // Computed Parameter: Gain3_Gain
+  //  Referenced by: '<Root>/Gain3'
+
+  1.0F,
+
+  // Computed Parameter: Saturation1_UpperSat
+  //  Referenced by: '<S15>/Saturation1'
+
+  1.0F,
+
+  // Computed Parameter: Saturation1_LowerSat
+  //  Referenced by: '<S15>/Saturation1'
+
+  -1.0F,
+
   // Computed Parameter: Gain_Gain
   //  Referenced by: '<Root>/Gain'
 
@@ -938,6 +968,11 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   //  Referenced by: '<Root>/Gain1'
 
   1.0F,
+
+  // Computed Parameter: Left_wheel_Gain
+  //  Referenced by: '<Root>/Left_wheel'
+
+  -1.0F,
 
   // Computed Parameter: p_des_Value
   //  Referenced by: '<Root>/p_des'
@@ -958,26 +993,6 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   //  Referenced by: '<Root>/kd'
 
   0.0F,
-
-  // Computed Parameter: LPF_GyroZ_NumCoef
-  //  Referenced by: '<Root>/LPF_GyroZ'
-
-  0.314077795F,
-
-  // Computed Parameter: LPF_GyroZ_DenCoef
-  //  Referenced by: '<Root>/LPF_GyroZ'
-
-  { 1.0F, -0.685922205F },
-
-  // Computed Parameter: LPF_GyroZ_InitialStates
-  //  Referenced by: '<Root>/LPF_GyroZ'
-
-  0.0F,
-
-  // Computed Parameter: Left_wheel_Gain
-  //  Referenced by: '<Root>/Left_wheel'
-
-  -1.0F,
 
   // Computed Parameter: Right_wheel_Gain
   //  Referenced by: '<Root>/Right_wheel'
@@ -1015,19 +1030,29 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   0.5F,
 
   // Expression: single(0.003)
-  //  Referenced by: '<S16>/Constant29'
+  //  Referenced by: '<S17>/Constant29'
 
   0.003F,
 
   // Expression: single(8.0)
-  //  Referenced by: '<S16>/Constant30'
+  //  Referenced by: '<S17>/Constant30'
 
   8.0F,
 
   // Expression: single(0.5)
-  //  Referenced by: '<S16>/Constant31'
+  //  Referenced by: '<S17>/Constant31'
 
-  0.5F
+  0.5F,
+
+  // Computed Parameter: Gain2_Gain
+  //  Referenced by: '<Root>/Gain2'
+
+  1.0F,
+
+  // Computed Parameter: Gain4_Gain
+  //  Referenced by: '<Root>/Gain4'
+
+  1.0F
 };
 
 //
