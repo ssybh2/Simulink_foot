@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.31
+// Model version                  : 1.45
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 15:33:56 2026
+// C/C++ source code generated on : Tue Jun 30 17:47:28 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)

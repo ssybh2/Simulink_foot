@@ -1,5 +1,5 @@
 // Copyright 2022-2023 The MathWorks, Inc.
-// Generated 30-Jun-2026 15:34:05
+// Generated 30-Jun-2026 17:47:33
 #ifndef _SLROS2_INITIALIZE_H_
 #define _SLROS2_INITIALIZE_H_
 #include "Import_IMU_types.h"
@@ -33,15 +33,15 @@ inline rclcpp::QoS getQOSSettingsFromRMW(const rmw_qos_profile_t& qosProfile) {
 }
 // Import_IMU/Left/Publish
 extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_344;
+// Import_IMU/Left_leg/Publish1
+extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_208;
+// Import_IMU/Left_leg/Publish2
+extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_209;
 // Import_IMU/Right/Publish
 extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_369;
-// Import_IMU/Subsystem/Publish1
-extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_208;
-// Import_IMU/Subsystem/Publish2
-extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_209;
-// Import_IMU/Subsystem1/Publish1
+// Import_IMU/Right_leg/Publish1
 extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_245;
-// Import_IMU/Subsystem1/Publish2
+// Import_IMU/Right_leg/Publish2
 extern SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_246;
 // Import_IMU/IMU
 extern SimulinkSubscriber<sensor_msgs::msg::Imu,SL_Bus_sensor_msgs_Imu> Sub_Import_IMU_74;
