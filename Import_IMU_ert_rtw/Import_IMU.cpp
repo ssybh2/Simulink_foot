@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.47
+// Model version                  : 1.66
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 12:27:08 2026
+// C/C++ source code generated on : Wed Jul  1 14:17:20 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -702,15 +702,14 @@ void Import_IMU::Import_IMU_SystemCore_setup_iuf(ros_slros2_internal_block_Pub_T
 // Model step function
 void Import_IMU::step()
 {
-  boolean_T captureEnable;
+  uint32_T qY;
   boolean_T enable_safe;
-  boolean_T tmp;
+  boolean_T rtb_valid_m;
   boolean_T valid;
   boolean_T valid_bj;
   boolean_T wheelEnable_tmp;
   boolean_T wheelEnable_tmp_0;
   boolean_T wheelEnable_tmp_1;
-  boolean_T wheelEnable_tmp_2;
 
   // MATLABSystem: '<S51>/SourceBlock'
   valid_bj = Sub_Import_IMU_104.getLatestMessage(&Import_IMU_B.b_varargout_2_m);
@@ -727,12 +726,12 @@ void Import_IMU::step()
     Import_IMU_DW.missedCount = 0U;
     Import_IMU_DW.receivedOnce = true;
   } else if (Import_IMU_DW.missedCount < 1000000U) {
-    Import_IMU_B.qY = Import_IMU_DW.missedCount + /*MW:OvSatOk*/ 1U;
+    qY = Import_IMU_DW.missedCount + /*MW:OvSatOk*/ 1U;
     if (Import_IMU_DW.missedCount + 1U < Import_IMU_DW.missedCount) {
-      Import_IMU_B.qY = MAX_uint32_T;
+      qY = MAX_uint32_T;
     }
 
-    Import_IMU_DW.missedCount = Import_IMU_B.qY;
+    Import_IMU_DW.missedCount = qY;
   }
 
   // End of Outputs for SubSystem: '<S51>/Enabled Subsystem'
@@ -765,7 +764,6 @@ void Import_IMU::step()
   // MATLAB Function: '<Root>/IMU_Relative_RPY'
   Import_IMU_B.relativeNorm = 0.0F;
   Import_IMU_B.sinPitch = 0.0F;
-  Import_IMU_B.tauLeftPhysical = 0.0F;
   valid = false;
   if (rtIsInfF(static_cast<real32_T>(Import_IMU_B.In1.orientation.w)) ||
       rtIsNaNF(static_cast<real32_T>(Import_IMU_B.In1.orientation.w)) ||
@@ -840,12 +838,11 @@ void Import_IMU::step()
         Import_IMU_B.relativeX /= Import_IMU_B.relativeNorm;
         Import_IMU_B.relativeY /= Import_IMU_B.relativeNorm;
         Import_IMU_B.w /= Import_IMU_B.relativeNorm;
-        Import_IMU_B.tauLeftPhysical = Import_IMU_B.relativeY *
-          Import_IMU_B.relativeY;
+        Import_IMU_B.x = Import_IMU_B.relativeY * Import_IMU_B.relativeY;
         Import_IMU_B.relativeNorm = rt_atan2f_snf((Import_IMU_B.normSquared *
           Import_IMU_B.relativeX + Import_IMU_B.relativeY * Import_IMU_B.w) *
           2.0F, 1.0F - (Import_IMU_B.relativeX * Import_IMU_B.relativeX +
-                        Import_IMU_B.tauLeftPhysical) * 2.0F);
+                        Import_IMU_B.x) * 2.0F);
         Import_IMU_B.sinPitch = (Import_IMU_B.normSquared *
           Import_IMU_B.relativeY - Import_IMU_B.w * Import_IMU_B.relativeX) *
           2.0F;
@@ -857,20 +854,18 @@ void Import_IMU::step()
 
         Import_IMU_B.sinPitch = static_cast<real32_T>(asin(static_cast<real_T>
           (Import_IMU_B.sinPitch)));
-        Import_IMU_B.tauLeftPhysical = rt_atan2f_snf((Import_IMU_B.normSquared *
+        Import_IMU_B.normSquared = rt_atan2f_snf((Import_IMU_B.normSquared *
           Import_IMU_B.w + Import_IMU_B.relativeX * Import_IMU_B.relativeY) *
-          2.0F, 1.0F - (Import_IMU_B.w * Import_IMU_B.w +
-                        Import_IMU_B.tauLeftPhysical) * 2.0F);
+          2.0F, 1.0F - (Import_IMU_B.w * Import_IMU_B.w + Import_IMU_B.x) * 2.0F);
         if ((!rtIsInfF(Import_IMU_B.relativeNorm)) && (!rtIsNaNF
              (Import_IMU_B.relativeNorm)) && ((!rtIsInfF(Import_IMU_B.sinPitch))
              && (!rtIsNaNF(Import_IMU_B.sinPitch))) && ((!rtIsInfF
-              (Import_IMU_B.tauLeftPhysical)) && (!rtIsNaNF
-              (Import_IMU_B.tauLeftPhysical)))) {
+              (Import_IMU_B.normSquared)) && (!rtIsNaNF(Import_IMU_B.normSquared))))
+        {
           valid = true;
         } else {
           Import_IMU_B.relativeNorm = 0.0F;
           Import_IMU_B.sinPitch = 0.0F;
-          Import_IMU_B.tauLeftPhysical = 0.0F;
         }
       }
     }
@@ -896,7 +891,7 @@ void Import_IMU::step()
   // End of Outputs for SubSystem: '<S21>/Enabled Subsystem'
 
   // Gain: '<Root>/Gain'
-  Import_IMU_B.relativeY = Import_IMU_P.Gain_Gain * Import_IMU_B.In1_bi.velocity;
+  Import_IMU_B.relativeX = Import_IMU_P.Gain_Gain * Import_IMU_B.In1_bi.velocity;
 
   // MATLABSystem: '<S22>/SourceBlock'
   valid_bj = Sub_Import_IMU_315.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
@@ -914,7 +909,7 @@ void Import_IMU::step()
   // End of Outputs for SubSystem: '<S22>/Enabled Subsystem'
 
   // Gain: '<Root>/Gain1'
-  Import_IMU_B.w = Import_IMU_P.Gain1_Gain * Import_IMU_B.In1_b.velocity;
+  Import_IMU_B.relativeY = Import_IMU_P.Gain1_Gain * Import_IMU_B.In1_b.velocity;
 
   // MATLAB Function: '<Root>/Wheel_Pitch_Controller' incorporates:
   //   Constant: '<Root>/KdPitch'
@@ -929,26 +924,25 @@ void Import_IMU::step()
   //   MATLAB Function: '<Root>/Balance_Target_XY'
   //   MATLAB Function: '<Root>/IMU_Relative_RPY'
 
-  Import_IMU_B.relativeX = 0.0F;
-  wheelEnable_tmp = rtIsInfF(Import_IMU_B.sinPitch);
-  wheelEnable_tmp_0 = rtIsNaNF(Import_IMU_B.sinPitch);
-  wheelEnable_tmp_1 = rtIsInfF(Import_IMU_B.normSquared);
-  wheelEnable_tmp_2 = rtIsNaNF(Import_IMU_B.normSquared);
-  valid_bj = (enable_safe && (valid && ((!wheelEnable_tmp) &&
-    (!wheelEnable_tmp_0) && ((!wheelEnable_tmp_1) && (!wheelEnable_tmp_2) &&
+  rtb_valid_m = rtIsInfF(Import_IMU_B.sinPitch);
+  wheelEnable_tmp = rtIsNaNF(Import_IMU_B.sinPitch);
+  wheelEnable_tmp_0 = rtIsInfF(Import_IMU_B.normSquared);
+  wheelEnable_tmp_1 = rtIsNaNF(Import_IMU_B.normSquared);
+  valid_bj = (enable_safe && (valid && ((!rtb_valid_m) && (!wheelEnable_tmp) &&
+    ((!wheelEnable_tmp_0) && (!wheelEnable_tmp_1) && ((!rtIsInfF
+    (Import_IMU_B.relativeX)) && (!rtIsNaNF(Import_IMU_B.relativeX)) &&
     ((!rtIsInfF(Import_IMU_B.relativeY)) && (!rtIsNaNF(Import_IMU_B.relativeY)) &&
-     ((!rtIsInfF(Import_IMU_B.w)) && (!rtIsNaNF(Import_IMU_B.w)) && ((!rtIsInfF(
-    static_cast<real32_T>(Import_IMU_P.KpVelocity_Value))) && (!rtIsNaNF(
-    static_cast<real32_T>(Import_IMU_P.KpVelocity_Value))) && ((!rtIsInfF(
-    static_cast<real32_T>(Import_IMU_P.KpPitch_Value))) && (!rtIsNaNF(
-    static_cast<real32_T>(Import_IMU_P.KpPitch_Value))) && ((!rtIsInfF(
-    static_cast<real32_T>(Import_IMU_P.KdPitch_Value))) && (!rtIsNaNF(
-    static_cast<real32_T>(Import_IMU_P.KdPitch_Value))) && ((!rtIsInfF(
-    static_cast<real32_T>(Import_IMU_P.TorqueLimit_Value))) && (!rtIsNaNF(
-    static_cast<real32_T>(Import_IMU_P.TorqueLimit_Value))) &&
-    (static_cast<real32_T>(Import_IMU_P.TorqueLimit_Value) >= 0.0F)))))))))) &&
-              (static_cast<real32_T>(fabs(static_cast<real_T>
-    (Import_IMU_B.sinPitch))) < 0.34907F));
+     ((!rtIsInfF(static_cast<real32_T>(Import_IMU_P.KpVelocity_Value))) &&
+      (!rtIsNaNF(static_cast<real32_T>(Import_IMU_P.KpVelocity_Value))) &&
+      ((!rtIsInfF(static_cast<real32_T>(Import_IMU_P.KpPitch_Value))) &&
+       (!rtIsNaNF(static_cast<real32_T>(Import_IMU_P.KpPitch_Value))) &&
+       ((!rtIsInfF(static_cast<real32_T>(Import_IMU_P.KdPitch_Value))) &&
+        (!rtIsNaNF(static_cast<real32_T>(Import_IMU_P.KdPitch_Value))) &&
+        ((!rtIsInfF(static_cast<real32_T>(Import_IMU_P.TorqueLimit_Value))) && (
+    !rtIsNaNF(static_cast<real32_T>(Import_IMU_P.TorqueLimit_Value))) && (
+    static_cast<real32_T>(Import_IMU_P.TorqueLimit_Value) >= 0.0F)))))))))) && (
+    static_cast<real32_T>(fabs(static_cast<real_T>(Import_IMU_B.sinPitch))) <
+    0.34907F));
   if (!valid_bj) {
     Import_IMU_DW.torqueBlend = 0.0F;
     Import_IMU_DW.wasEnabled = false;
@@ -958,33 +952,10 @@ void Import_IMU::step()
     }
 
     Import_IMU_DW.wasEnabled = true;
-    Import_IMU_B.relativeX = (0.0F - (Import_IMU_B.relativeY + Import_IMU_B.w) *
-      0.5F) * static_cast<real32_T>(Import_IMU_P.KpVelocity_Value);
-    if (Import_IMU_B.relativeX > 0.05236F) {
-      Import_IMU_B.relativeX = 0.05236F;
-    } else if (Import_IMU_B.relativeX < -0.05236F) {
-      Import_IMU_B.relativeX = -0.05236F;
-    }
-
-    Import_IMU_B.relativeX = (Import_IMU_B.relativeX - Import_IMU_B.sinPitch) *
-      static_cast<real32_T>(Import_IMU_P.KpPitch_Value) - static_cast<real32_T>
-      (Import_IMU_P.KdPitch_Value) * Import_IMU_B.normSquared;
     Import_IMU_DW.torqueBlend += 0.015F;
     if (Import_IMU_DW.torqueBlend > 1.0F) {
       Import_IMU_DW.torqueBlend = 1.0F;
     }
-
-    if (Import_IMU_B.relativeX > static_cast<real32_T>
-        (Import_IMU_P.TorqueLimit_Value)) {
-      Import_IMU_B.relativeX = static_cast<real32_T>
-        (Import_IMU_P.TorqueLimit_Value);
-    } else if (Import_IMU_B.relativeX < -static_cast<real32_T>
-               (Import_IMU_P.TorqueLimit_Value)) {
-      Import_IMU_B.relativeX = -static_cast<real32_T>
-        (Import_IMU_P.TorqueLimit_Value);
-    }
-
-    Import_IMU_B.relativeX *= Import_IMU_DW.torqueBlend;
   }
 
   // DiscreteTransferFcn: '<Root>/LPF_GyroZ'
@@ -993,68 +964,37 @@ void Import_IMU::step()
 
   // MATLAB Function: '<Root>/Yaw_Hold_Controller' incorporates:
   //   Constant: '<Root>/KdYaw'
-  //   Constant: '<Root>/KpYaw'
   //   Constant: '<Root>/YawTorqueLimit'
   //   DataTypeConversion: '<Root>/Data Type Conversion27'
   //   DiscreteTransferFcn: '<Root>/LPF_GyroZ'
   //   MATLAB Function: '<Root>/Balance_Target_XY'
-  //   MATLAB Function: '<Root>/IMU_Relative_RPY'
 
-  captureEnable = (enable_safe && (valid && ((!rtIsInfF
-    (Import_IMU_B.tauLeftPhysical)) && (!rtIsNaNF(Import_IMU_B.tauLeftPhysical)))));
-  if (captureEnable && (!Import_IMU_DW.previousCaptureEnable)) {
-    Import_IMU_DW.yawReference = Import_IMU_B.tauLeftPhysical;
-  }
-
-  Import_IMU_DW.previousCaptureEnable = captureEnable;
-  tmp = !enable_safe;
-  if ((!captureEnable) || tmp || (rtIsInfF(Import_IMU_B.numAccum) || rtIsNaNF
-       (Import_IMU_B.numAccum) || (rtIsInf(Import_IMU_P.KpYaw_Value) || rtIsNaN
-        (Import_IMU_P.KpYaw_Value) || (rtIsInf(Import_IMU_P.KdYaw_Value) ||
-         rtIsNaN(Import_IMU_P.KdYaw_Value) || (rtIsInfF(static_cast<real32_T>
-           (Import_IMU_P.YawTorqueLimit_Value)) || rtIsNaNF(static_cast<real32_T>
-           (Import_IMU_P.YawTorqueLimit_Value)) || ((!(Import_IMU_P.KpYaw_Value >=
-             0.0)) || (!(Import_IMU_P.KdYaw_Value >= 0.0)) ||
-           (!(static_cast<real32_T>(Import_IMU_P.YawTorqueLimit_Value) >= 0.0F))))))))
-  {
-    Import_IMU_B.relativeY = 0.0F;
-  } else {
-    Import_IMU_B.tauLeftPhysical = Import_IMU_DW.yawReference -
-      Import_IMU_B.tauLeftPhysical;
-    while (Import_IMU_B.tauLeftPhysical > 3.14159274F) {
-      Import_IMU_B.tauLeftPhysical -= 6.28318548F;
-    }
-
-    while (Import_IMU_B.tauLeftPhysical < -3.14159274F) {
-      Import_IMU_B.tauLeftPhysical += 6.28318548F;
-    }
-
-    if (Import_IMU_B.tauLeftPhysical > 0.00872665F) {
-      Import_IMU_B.tauLeftPhysical -= 0.00872665F;
-    } else if (Import_IMU_B.tauLeftPhysical < -0.00872665F) {
-      Import_IMU_B.tauLeftPhysical += 0.00872665F;
-    } else {
-      Import_IMU_B.tauLeftPhysical = 0.0F;
-    }
-
+  Import_IMU_B.relativeX = 0.0F;
+  valid = ((!enable_safe) || (!valid));
+  if ((!valid) && ((!rtIsInfF(Import_IMU_B.numAccum)) && (!rtIsNaNF
+        (Import_IMU_B.numAccum))) && ((!rtIsInfF(static_cast<real32_T>
+         (Import_IMU_P.KdYaw_Value))) && (!rtIsNaNF(static_cast<real32_T>
+         (Import_IMU_P.KdYaw_Value)))) && ((!rtIsInfF(static_cast<real32_T>
+         (Import_IMU_P.YawTorqueLimit_Value))) && (!rtIsNaNF
+        (static_cast<real32_T>(Import_IMU_P.YawTorqueLimit_Value)))) && ((!(
+         static_cast<real32_T>(Import_IMU_P.KdYaw_Value) < 0.0F)) && (!(
+         static_cast<real32_T>(Import_IMU_P.YawTorqueLimit_Value) < 0.0F)))) {
     if (Import_IMU_B.numAccum > 0.02F) {
-      Import_IMU_B.relativeY = Import_IMU_B.numAccum - 0.02F;
+      Import_IMU_B.relativeX = Import_IMU_B.numAccum - 0.02F;
     } else if (Import_IMU_B.numAccum < -0.02F) {
-      Import_IMU_B.relativeY = Import_IMU_B.numAccum + 0.02F;
+      Import_IMU_B.relativeX = Import_IMU_B.numAccum + 0.02F;
     } else {
-      Import_IMU_B.relativeY = 0.0F;
+      Import_IMU_B.relativeX = 0.0F;
     }
 
-    Import_IMU_B.relativeY = static_cast<real32_T>(Import_IMU_P.KpYaw_Value) *
-      Import_IMU_B.tauLeftPhysical - static_cast<real32_T>
-      (Import_IMU_P.KdYaw_Value) * Import_IMU_B.relativeY;
-    if (Import_IMU_B.relativeY > static_cast<real32_T>
+    Import_IMU_B.relativeX *= -static_cast<real32_T>(Import_IMU_P.KdYaw_Value);
+    if (Import_IMU_B.relativeX > static_cast<real32_T>
         (Import_IMU_P.YawTorqueLimit_Value)) {
-      Import_IMU_B.relativeY = static_cast<real32_T>
+      Import_IMU_B.relativeX = static_cast<real32_T>
         (Import_IMU_P.YawTorqueLimit_Value);
-    } else if (Import_IMU_B.relativeY < -static_cast<real32_T>
+    } else if (Import_IMU_B.relativeX < -static_cast<real32_T>
                (Import_IMU_P.YawTorqueLimit_Value)) {
-      Import_IMU_B.relativeY = -static_cast<real32_T>
+      Import_IMU_B.relativeX = -static_cast<real32_T>
         (Import_IMU_P.YawTorqueLimit_Value);
     }
   }
@@ -1063,46 +1003,45 @@ void Import_IMU::step()
 
   // MATLAB Function: '<Root>/Wheel_Torque_Mixer' incorporates:
   //   Constant: '<Root>/Constant4'
+  //   Constant: '<Root>/Constant7'
   //   Constant: '<Root>/YawDirection'
 
-  Import_IMU_B.tauLeftPhysical = 0.0F;
+  Import_IMU_B.relativeY = 0.0F;
   Import_IMU_B.w = 0.0F;
-  if ((!rtIsInfF(Import_IMU_B.relativeX)) && (!rtIsNaNF(Import_IMU_B.relativeX))
-      && ((!rtIsInfF(Import_IMU_B.relativeY)) && (!rtIsNaNF
-        (Import_IMU_B.relativeY))) && ((!rtIsInfF(static_cast<real32_T>
-         (Import_IMU_P.Constant4_Value))) && (!rtIsNaNF(static_cast<real32_T>
-         (Import_IMU_P.Constant4_Value)))) && ((!rtIsInfF(static_cast<real32_T>
-         (Import_IMU_P.YawDirection_Value))) && (!rtIsNaNF(static_cast<real32_T>
-         (Import_IMU_P.YawDirection_Value)))) && (!(static_cast<real32_T>
-        (Import_IMU_P.Constant4_Value) < 0.0F))) {
-    if (Import_IMU_B.relativeX > static_cast<real32_T>
-        (Import_IMU_P.Constant4_Value)) {
-      Import_IMU_B.relativeX = static_cast<real32_T>
-        (Import_IMU_P.Constant4_Value);
-    } else if (Import_IMU_B.relativeX < -static_cast<real32_T>
-               (Import_IMU_P.Constant4_Value)) {
-      Import_IMU_B.relativeX = -static_cast<real32_T>
-        (Import_IMU_P.Constant4_Value);
+  if ((!rtIsInfF(-static_cast<real32_T>(Import_IMU_P.Constant7_Value))) &&
+      (!rtIsNaNF(-static_cast<real32_T>(Import_IMU_P.Constant7_Value))) &&
+      ((!rtIsInfF(Import_IMU_B.relativeX)) && (!rtIsNaNF(Import_IMU_B.relativeX)))
+      && ((!rtIsInfF(static_cast<real32_T>(Import_IMU_P.Constant4_Value))) &&
+          (!rtIsNaNF(static_cast<real32_T>(Import_IMU_P.Constant4_Value)))) &&
+      ((!rtIsInfF(static_cast<real32_T>(Import_IMU_P.YawDirection_Value))) &&
+       (!rtIsNaNF(static_cast<real32_T>(Import_IMU_P.YawDirection_Value)))) && (
+       !(static_cast<real32_T>(Import_IMU_P.Constant4_Value) < 0.0F))) {
+    if (-static_cast<real32_T>(Import_IMU_P.Constant7_Value) >
+        static_cast<real32_T>(Import_IMU_P.Constant4_Value)) {
+      Import_IMU_B.w = static_cast<real32_T>(Import_IMU_P.Constant4_Value);
+    } else if (-static_cast<real32_T>(Import_IMU_P.Constant7_Value) < -
+               static_cast<real32_T>(Import_IMU_P.Constant4_Value)) {
+      Import_IMU_B.w = -static_cast<real32_T>(Import_IMU_P.Constant4_Value);
+    } else {
+      Import_IMU_B.w = -static_cast<real32_T>(Import_IMU_P.Constant7_Value);
     }
 
-    Import_IMU_B.relativeY *= static_cast<real32_T>
+    Import_IMU_B.relativeX *= static_cast<real32_T>
       (Import_IMU_P.YawDirection_Value);
-    Import_IMU_B.tauLeftPhysical = static_cast<real32_T>
-      (Import_IMU_P.Constant4_Value) - static_cast<real32_T>(fabs
-      (static_cast<real_T>(Import_IMU_B.relativeX)));
-    if (Import_IMU_B.tauLeftPhysical < 0.0F) {
-      Import_IMU_B.tauLeftPhysical = 0.0F;
+    Import_IMU_B.relativeY = static_cast<real32_T>(Import_IMU_P.Constant4_Value)
+      - static_cast<real32_T>(fabs(static_cast<real_T>(Import_IMU_B.w)));
+    if (Import_IMU_B.relativeY < 0.0F) {
+      Import_IMU_B.relativeY = 0.0F;
     }
 
-    if (Import_IMU_B.relativeY > Import_IMU_B.tauLeftPhysical) {
-      Import_IMU_B.relativeY = Import_IMU_B.tauLeftPhysical;
-    } else if (Import_IMU_B.relativeY < -Import_IMU_B.tauLeftPhysical) {
-      Import_IMU_B.relativeY = -Import_IMU_B.tauLeftPhysical;
+    if (Import_IMU_B.relativeX > Import_IMU_B.relativeY) {
+      Import_IMU_B.relativeX = Import_IMU_B.relativeY;
+    } else if (Import_IMU_B.relativeX < -Import_IMU_B.relativeY) {
+      Import_IMU_B.relativeX = -Import_IMU_B.relativeY;
     }
 
-    Import_IMU_B.tauLeftPhysical = Import_IMU_B.relativeX -
-      Import_IMU_B.relativeY;
-    Import_IMU_B.w = Import_IMU_B.relativeX + Import_IMU_B.relativeY;
+    Import_IMU_B.relativeY = Import_IMU_B.w - Import_IMU_B.relativeX;
+    Import_IMU_B.w += Import_IMU_B.relativeX;
   }
 
   // End of MATLAB Function: '<Root>/Wheel_Torque_Mixer'
@@ -1122,13 +1061,13 @@ void Import_IMU::step()
   Import_IMU_B.BusCreator2.kp = Import_IMU_P.kp_Value;
   Import_IMU_B.BusCreator2.kd = Import_IMU_P.kd_Value;
   Import_IMU_B.BusCreator2.torque = Import_IMU_P.Left_wheel_Gain *
-    Import_IMU_B.tauLeftPhysical;
+    Import_IMU_B.relativeY;
 
   // MATLABSystem: '<S28>/SinkBlock'
   Pub_Import_IMU_344.publish(&Import_IMU_B.BusCreator2);
 
   // BusCreator: '<S15>/Bus Creator2' incorporates:
-  //   Constant: '<Root>/kd'
+  //   Constant: '<Root>/kd1'
   //   Constant: '<Root>/kp'
   //   Constant: '<Root>/p_des'
   //   Constant: '<Root>/v_des'
@@ -1140,7 +1079,7 @@ void Import_IMU::step()
   Import_IMU_B.BusCreator2.p_des = Import_IMU_P.p_des_Value;
   Import_IMU_B.BusCreator2.v_des = Import_IMU_P.v_des_Value;
   Import_IMU_B.BusCreator2.kp = Import_IMU_P.kp_Value;
-  Import_IMU_B.BusCreator2.kd = Import_IMU_P.kd_Value;
+  Import_IMU_B.BusCreator2.kd = Import_IMU_P.kd1_Value;
   Import_IMU_B.BusCreator2.torque = Import_IMU_P.Right_wheel_Gain *
     Import_IMU_B.w;
 
@@ -1173,7 +1112,7 @@ void Import_IMU::step()
 
   Import__Motor_Position_To_Joint(Import_IMU_B.In1_m.position,
     Import_IMU_P.CAL.qm0_LA, Import_IMU_P.CAL.qj0_LA, Import_IMU_P.CAL.sign_LA,
-    Import_IMU_P.CAL.ratio_LA, &Import_IMU_B.tauLeftPhysical);
+    Import_IMU_P.CAL.ratio_LA, &Import_IMU_B.relativeX);
 
   // MATLABSystem: '<S18>/SourceBlock'
   valid_bj = Sub_Import_IMU_2.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
@@ -1198,7 +1137,7 @@ void Import_IMU::step()
 
   Import__Motor_Position_To_Joint(Import_IMU_B.In1_j.position,
     Import_IMU_P.CAL.qm0_LB, Import_IMU_P.CAL.qj0_LB, Import_IMU_P.CAL.sign_LB,
-    Import_IMU_P.CAL.ratio_LB, &Import_IMU_B.relativeX);
+    Import_IMU_P.CAL.ratio_LB, &Import_IMU_B.relativeY);
 
   // MATLAB Function: '<Root>/FiveBar_FK_Left' incorporates:
   //   Constant: '<Root>/L1'
@@ -1207,10 +1146,10 @@ void Import_IMU::step()
   //   Constant: '<Root>/L4'
   //   Constant: '<Root>/L5'
 
-  Import_IMU_FiveBar_FK_Left(Import_IMU_B.tauLeftPhysical,
-    Import_IMU_B.relativeX, Import_IMU_P.L1, Import_IMU_P.L2, Import_IMU_P.L3,
-    Import_IMU_P.L4, Import_IMU_P.L5, &Import_IMU_B.xB_c, &Import_IMU_B.x,
-    &Import_IMU_B.relativeY, &Import_IMU_B.w, &valid_bj);
+  Import_IMU_FiveBar_FK_Left(Import_IMU_B.relativeX, Import_IMU_B.relativeY,
+    Import_IMU_P.L1, Import_IMU_P.L2, Import_IMU_P.L3, Import_IMU_P.L4,
+    Import_IMU_P.L5, &Import_IMU_B.xB_c, &Import_IMU_B.y, &Import_IMU_B.w,
+    &Import_IMU_B.x, &valid_bj);
 
   // MATLABSystem: '<S19>/SourceBlock'
   valid_bj = Sub_Import_IMU_3.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
@@ -1235,7 +1174,7 @@ void Import_IMU::step()
 
   Import__Motor_Position_To_Joint(Import_IMU_B.In1_a.position,
     Import_IMU_P.CAL.qm0_RA, Import_IMU_P.CAL.qj0_RA, Import_IMU_P.CAL.sign_RA,
-    Import_IMU_P.CAL.ratio_RA, &Import_IMU_B.relativeY);
+    Import_IMU_P.CAL.ratio_RA, &Import_IMU_B.w);
 
   // MATLABSystem: '<S20>/SourceBlock'
   valid_bj = Sub_Import_IMU_4.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
@@ -1260,7 +1199,7 @@ void Import_IMU::step()
 
   Import__Motor_Position_To_Joint(Import_IMU_B.In1_c3.position,
     Import_IMU_P.CAL.qm0_RB, Import_IMU_P.CAL.qj0_RB, Import_IMU_P.CAL.sign_RB,
-    Import_IMU_P.CAL.ratio_RB, &Import_IMU_B.w);
+    Import_IMU_P.CAL.ratio_RB, &Import_IMU_B.x);
 
   // MATLAB Function: '<Root>/FiveBar_FK_Right' incorporates:
   //   Constant: '<Root>/L1'
@@ -1269,9 +1208,9 @@ void Import_IMU::step()
   //   Constant: '<Root>/L4'
   //   Constant: '<Root>/L5'
 
-  Import_IMU_FiveBar_FK_Left(Import_IMU_B.relativeY, Import_IMU_B.w,
-    Import_IMU_P.L1, Import_IMU_P.L2, Import_IMU_P.L3, Import_IMU_P.L4,
-    Import_IMU_P.L5, &Import_IMU_B.xB, &Import_IMU_B.y, &Import_IMU_B.z,
+  Import_IMU_FiveBar_FK_Left(Import_IMU_B.w, Import_IMU_B.x, Import_IMU_P.L1,
+    Import_IMU_P.L2, Import_IMU_P.L3, Import_IMU_P.L4, Import_IMU_P.L5,
+    &Import_IMU_B.xB, &Import_IMU_B.z, &Import_IMU_B.leg_length,
     &Import_IMU_B.leg_angle, &valid_bj);
 
   // DiscreteTransferFcn: '<Root>/LPF_GyroX'
@@ -1287,27 +1226,28 @@ void Import_IMU::step()
   //   DiscreteTransferFcn: '<Root>/LPF_GyroY'
   //   MATLAB Function: '<Root>/IMU_Relative_RPY'
 
-  Import_IMU_B.z = Import_IMU_B.xB_c;
-  Import_IMU_B.yLeftCmd = Import_IMU_B.x;
+  Import_IMU_B.leg_length = Import_IMU_B.xB_c;
+  Import_IMU_B.yLeftCmd = Import_IMU_B.y;
   Import_IMU_B.leg_angle = Import_IMU_B.xB;
-  Import_IMU_B.homeBlend = Import_IMU_B.y;
-  if (tmp || (!valid) || (rtIsInfF(Import_IMU_B.xB_c) || rtIsNaNF
-                          (Import_IMU_B.xB_c) || (rtIsInfF(Import_IMU_B.x) ||
-        rtIsNaNF(Import_IMU_B.x) || (rtIsInfF(Import_IMU_B.xB) || rtIsNaNF
-         (Import_IMU_B.xB) || (rtIsInfF(Import_IMU_B.y) || rtIsNaNF
-          (Import_IMU_B.y) || (rtIsInfF(Import_IMU_B.relativeNorm) || rtIsNaNF
-           (Import_IMU_B.relativeNorm) || (wheelEnable_tmp || wheelEnable_tmp_0 ||
-            (rtIsInfF(Import_IMU_B.numAccum) || rtIsNaNF(Import_IMU_B.numAccum) ||
-             (wheelEnable_tmp_1 || wheelEnable_tmp_2))))))))) {
+  Import_IMU_B.homeBlend = Import_IMU_B.z;
+  if (valid || (rtIsInfF(Import_IMU_B.xB_c) || rtIsNaNF(Import_IMU_B.xB_c) ||
+                (rtIsInfF(Import_IMU_B.y) || rtIsNaNF(Import_IMU_B.y) ||
+                 (rtIsInfF(Import_IMU_B.xB) || rtIsNaNF(Import_IMU_B.xB) ||
+                  (rtIsInfF(Import_IMU_B.z) || rtIsNaNF(Import_IMU_B.z) ||
+                   (rtIsInfF(Import_IMU_B.relativeNorm) || rtIsNaNF
+                    (Import_IMU_B.relativeNorm) || (rtb_valid_m ||
+            wheelEnable_tmp || (rtIsInfF(Import_IMU_B.numAccum) || rtIsNaNF
+             (Import_IMU_B.numAccum) || (wheelEnable_tmp_0 || wheelEnable_tmp_1)))))))))
+  {
     Import_IMU_DW.previousEnable = false;
     Import_IMU_DW.toleranceStartTime = -1.0;
   } else {
     if (!Import_IMU_DW.previousEnable) {
       Import_IMU_DW.startTime = Import_IMU_B.Clock1;
       Import_IMU_DW.xLeftStart = Import_IMU_B.xB_c;
-      Import_IMU_DW.yLeftStart = Import_IMU_B.x;
+      Import_IMU_DW.yLeftStart = Import_IMU_B.y;
       Import_IMU_DW.xRightStart = Import_IMU_B.xB;
-      Import_IMU_DW.yRightStart = Import_IMU_B.y;
+      Import_IMU_DW.yRightStart = Import_IMU_B.z;
       Import_IMU_DW.toleranceStartTime = -1.0;
     }
 
@@ -1328,16 +1268,16 @@ void Import_IMU::step()
       Import_IMU_B.uBalance = 1.0;
     }
 
-    Import_IMU_B.z = static_cast<real32_T>(0.5 - cos(3.1415926535897931 *
-      Import_IMU_B.uBalance) * 0.5);
+    Import_IMU_B.leg_length = static_cast<real32_T>(0.5 - cos(3.1415926535897931
+      * Import_IMU_B.uBalance) * 0.5);
     Import_IMU_B.relativeNorm = (static_cast<real32_T>
       (Import_IMU_P.Constant_Value_dt) * Import_IMU_B.relativeNorm +
       static_cast<real32_T>(Import_IMU_P.Constant1_Value) *
-      Import_IMU_B.numAccum) * Import_IMU_B.z;
+      Import_IMU_B.numAccum) * Import_IMU_B.leg_length;
     Import_IMU_B.sinPitch = (static_cast<real32_T>(Import_IMU_P.Constant2_Value)
       * Import_IMU_B.sinPitch + static_cast<real32_T>
       (Import_IMU_P.Constant3_Value) * Import_IMU_B.normSquared) *
-      -Import_IMU_B.z;
+      -Import_IMU_B.leg_length;
     if (Import_IMU_B.relativeNorm > 0.3F) {
       Import_IMU_B.relativeNorm = 0.3F;
     } else if (Import_IMU_B.relativeNorm < -0.3F) {
@@ -1350,9 +1290,8 @@ void Import_IMU::step()
       Import_IMU_B.sinPitch = -0.003F;
     }
 
-    Import_IMU_B.z = ((0.035F - Import_IMU_DW.xLeftStart) *
-                      Import_IMU_B.homeBlend + Import_IMU_DW.xLeftStart) +
-      Import_IMU_B.sinPitch;
+    Import_IMU_B.leg_length = ((0.035F - Import_IMU_DW.xLeftStart) *
+      Import_IMU_B.homeBlend + Import_IMU_DW.xLeftStart) + Import_IMU_B.sinPitch;
     Import_IMU_B.leg_angle = ((0.035F - Import_IMU_DW.xRightStart) *
       Import_IMU_B.homeBlend + Import_IMU_DW.xRightStart) +
       Import_IMU_B.sinPitch;
@@ -1363,16 +1302,16 @@ void Import_IMU::step()
       Import_IMU_B.homeBlend + Import_IMU_DW.yRightStart) + 0.5F *
       Import_IMU_B.relativeNorm;
     if (Import_IMU_B.uHome >= 1.0) {
-      Import_IMU_B.relativeNorm = Import_IMU_B.xB_c - Import_IMU_B.z;
-      Import_IMU_B.sinPitch = Import_IMU_B.x - Import_IMU_B.yLeftCmd;
+      Import_IMU_B.relativeNorm = Import_IMU_B.xB_c - Import_IMU_B.leg_length;
+      Import_IMU_B.sinPitch = Import_IMU_B.y - Import_IMU_B.yLeftCmd;
       Import_IMU_B.normSquared = Import_IMU_B.xB - Import_IMU_B.leg_angle;
-      Import_IMU_B.x = Import_IMU_B.y - Import_IMU_B.homeBlend;
+      Import_IMU_B.y = Import_IMU_B.z - Import_IMU_B.homeBlend;
       if (static_cast<real32_T>(sqrt(static_cast<real_T>
             (Import_IMU_B.relativeNorm * Import_IMU_B.relativeNorm +
              Import_IMU_B.sinPitch * Import_IMU_B.sinPitch))) <= 0.003F) {
         if (static_cast<real32_T>(sqrt(static_cast<real_T>
               (Import_IMU_B.normSquared * Import_IMU_B.normSquared +
-               Import_IMU_B.x * Import_IMU_B.x))) <= 0.003F) {
+               Import_IMU_B.y * Import_IMU_B.y))) <= 0.003F) {
           if (Import_IMU_DW.toleranceStartTime < 0.0) {
             Import_IMU_DW.toleranceStartTime = Import_IMU_B.Clock1;
           }
@@ -1393,10 +1332,10 @@ void Import_IMU::step()
   //   Constant: '<Root>/L5'
   //   MATLAB Function: '<Root>/Balance_Target_XY'
 
-  Import_IMU_FiveBar_IK_Left(Import_IMU_B.z, Import_IMU_B.yLeftCmd,
-    Import_IMU_B.tauLeftPhysical, Import_IMU_B.relativeX, Import_IMU_P.L1,
+  Import_IMU_FiveBar_IK_Left(Import_IMU_B.leg_length, Import_IMU_B.yLeftCmd,
+    Import_IMU_B.relativeX, Import_IMU_B.relativeY, Import_IMU_P.L1,
     Import_IMU_P.L2, Import_IMU_P.L3, Import_IMU_P.L4, Import_IMU_P.L5,
-    &Import_IMU_B.relativeNorm, &Import_IMU_B.sinPitch, &valid);
+    &Import_IMU_B.relativeNorm, &Import_IMU_B.sinPitch, &rtb_valid_m);
 
   // MATLAB Function: '<S10>/Left_Joint_To_Motor_L'
   Import_IMU_B.normSquared = -0.629243851F - (Import_IMU_B.sinPitch -
@@ -1411,7 +1350,8 @@ void Import_IMU::step()
   Import_Motor_Target_Velocity_LA(-0.340847969F - (Import_IMU_B.relativeNorm -
     3.50454569F), enable_safe, Import_IMU_P.Constant29_Value,
     Import_IMU_P.Constant30_Value, Import_IMU_P.Constant31_Value,
-    &Import_IMU_B.sinPitch, &valid, &Import_IMU_DW.sf_Motor_Target_Velocity_LA);
+    &Import_IMU_B.sinPitch, &rtb_valid_m,
+    &Import_IMU_DW.sf_Motor_Target_Velocity_LA);
 
   // BusCreator: '<S10>/Bus Creator1' incorporates:
   //   Constant: '<Root>/A'
@@ -1445,13 +1385,12 @@ void Import_IMU::step()
   //   MATLAB Function: '<Root>/Balance_Target_XY'
 
   Import_IMU_FiveBar_IK_Left(Import_IMU_B.leg_angle, Import_IMU_B.homeBlend,
-    Import_IMU_B.relativeY, Import_IMU_B.w, Import_IMU_P.L1, Import_IMU_P.L2,
+    Import_IMU_B.w, Import_IMU_B.x, Import_IMU_P.L1, Import_IMU_P.L2,
     Import_IMU_P.L3, Import_IMU_P.L4, Import_IMU_P.L5, &Import_IMU_B.sinPitch,
-    &Import_IMU_B.relativeNorm, &valid);
+    &Import_IMU_B.relativeNorm, &rtb_valid_m);
 
   // MATLAB Function: '<S16>/Right_Joint_To_Motor_R'
-  Import_IMU_B.tauLeftPhysical = (Import_IMU_B.sinPitch - 2.24167967F) -
-    0.912680626F;
+  Import_IMU_B.relativeX = (Import_IMU_B.sinPitch - 2.24167967F) - 0.912680626F;
 
   // MATLAB Function: '<S16>/Motor_Target_Velocity_LB' incorporates:
   //   Constant: '<S16>/Constant29'
@@ -1462,7 +1401,8 @@ void Import_IMU::step()
   Import_Motor_Target_Velocity_LA((Import_IMU_B.relativeNorm - -0.362952948F) -
     0.60254097F, enable_safe, Import_IMU_P.Constant29_Value_j,
     Import_IMU_P.Constant30_Value_b, Import_IMU_P.Constant31_Value_e,
-    &Import_IMU_B.sinPitch, &valid, &Import_IMU_DW.sf_Motor_Target_Velocity_LB_b);
+    &Import_IMU_B.sinPitch, &rtb_valid_m,
+    &Import_IMU_DW.sf_Motor_Target_Velocity_LB_b);
 
   // BusCreator: '<S16>/Bus Creator2' incorporates:
   //   Constant: '<Root>/A'
@@ -1492,9 +1432,9 @@ void Import_IMU::step()
   //   Constant: '<S16>/Constant30'
   //   Constant: '<S16>/Constant31'
 
-  Import_Motor_Target_Velocity_LA(Import_IMU_B.tauLeftPhysical, enable_safe,
+  Import_Motor_Target_Velocity_LA(Import_IMU_B.relativeX, enable_safe,
     Import_IMU_P.Constant29_Value_j, Import_IMU_P.Constant30_Value_b,
-    Import_IMU_P.Constant31_Value_e, &Import_IMU_B.sinPitch, &valid,
+    Import_IMU_P.Constant31_Value_e, &Import_IMU_B.sinPitch, &rtb_valid_m,
     &Import_IMU_DW.sf_Motor_Target_Velocity_LA_l);
 
   // BusCreator: '<S16>/Bus Creator1' incorporates:
@@ -1507,7 +1447,7 @@ void Import_IMU::step()
   //   DataTypeConversion: '<S16>/Data Type Conversion48'
 
   Import_IMU_B.BusCreator2.enable = enable_safe;
-  Import_IMU_B.BusCreator2.p_des = Import_IMU_B.tauLeftPhysical;
+  Import_IMU_B.BusCreator2.p_des = Import_IMU_B.relativeX;
   Import_IMU_B.BusCreator2.v_des = Import_IMU_B.sinPitch;
   Import_IMU_B.BusCreator2.kp = static_cast<real32_T>
     (Import_IMU_P.Constant26_Value);
@@ -1525,7 +1465,7 @@ void Import_IMU::step()
 
   Import_Motor_Target_Velocity_LA(Import_IMU_B.normSquared, enable_safe,
     Import_IMU_P.Constant29_Value, Import_IMU_P.Constant30_Value,
-    Import_IMU_P.Constant31_Value, &Import_IMU_B.sinPitch, &valid,
+    Import_IMU_P.Constant31_Value, &Import_IMU_B.sinPitch, &rtb_valid_m,
     &Import_IMU_DW.sf_Motor_Target_Velocity_LB);
 
   // BusCreator: '<S10>/Bus Creator2' incorporates:

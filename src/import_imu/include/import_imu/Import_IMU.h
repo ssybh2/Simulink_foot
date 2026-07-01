@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.47
+// Model version                  : 1.66
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 12:27:08 2026
+// C/C++ source code generated on : Wed Jul  1 14:17:20 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -96,11 +96,10 @@ struct B_Import_IMU_T {
   real32_T sinPitch;
   real32_T yLeftCmd;
   real32_T homeBlend;
-  real32_T tauLeftPhysical;            // '<Root>/Wheel_Torque_Mixer'
   real32_T xB_c;
   real32_T xB;
+  real32_T leg_length;
   real32_T leg_angle;
-  uint32_T qY;
 };
 
 // Block states (default storage) for system '<Root>'
@@ -124,7 +123,6 @@ struct DW_Import_IMU_T {
   real32_T LPF_GyroY_states;           // '<Root>/LPF_GyroY'
   real32_T LPF_GyroZ_states;           // '<Root>/LPF_GyroZ'
   real32_T LPF_GyroX_states;           // '<Root>/LPF_GyroX'
-  real32_T yawReference;               // '<Root>/Yaw_Hold_Controller'
   real32_T torqueBlend;                // '<Root>/Wheel_Pitch_Controller'
   real32_T q0w;                        // '<Root>/IMU_Relative_RPY'
   real32_T q0x;                        // '<Root>/IMU_Relative_RPY'
@@ -135,7 +133,6 @@ struct DW_Import_IMU_T {
   real32_T xRightStart;                // '<Root>/Balance_Target_XY'
   real32_T yRightStart;                // '<Root>/Balance_Target_XY'
   uint32_T missedCount;                // '<S23>/RC_Safety_Gate'
-  boolean_T previousCaptureEnable;     // '<Root>/Yaw_Hold_Controller'
   boolean_T wasEnabled;                // '<Root>/Wheel_Pitch_Controller'
   boolean_T receivedOnce;              // '<S23>/RC_Safety_Gate'
   boolean_T seenDisable;               // '<S23>/RC_Safety_Gate'
@@ -244,13 +241,16 @@ struct P_Import_IMU_T_ {
   real_T TorqueLimit_Value;            // Expression: 0.1
                                           //  Referenced by: '<Root>/TorqueLimit'
 
-  real_T KpYaw_Value;                  // Expression: 0.5
+  real_T Constant7_Value;              // Expression: 0
+                                          //  Referenced by: '<Root>/Constant7'
+
+  real_T KpYaw_Value;                  // Expression: 0
                                           //  Referenced by: '<Root>/KpYaw'
 
   real_T KdYaw_Value;                  // Expression: 0.05
                                           //  Referenced by: '<Root>/KdYaw'
 
-  real_T YawTorqueLimit_Value;         // Expression: 0.5
+  real_T YawTorqueLimit_Value;         // Expression: 0.05
                                           //  Referenced by: '<Root>/YawTorqueLimit'
 
   real_T Constant4_Value;              // Expression: 2
@@ -326,6 +326,9 @@ struct P_Import_IMU_T_ {
 
   real32_T Right_wheel_Gain;           // Computed Parameter: Right_wheel_Gain
                                           //  Referenced by: '<Root>/Right_wheel'
+
+  real32_T kd1_Value;                  // Computed Parameter: kd1_Value
+                                          //  Referenced by: '<Root>/kd1'
 
   real32_T LPF_GyroX_NumCoef;          // Computed Parameter: LPF_GyroX_NumCoef
                                           //  Referenced by: '<Root>/LPF_GyroX'
@@ -461,9 +464,19 @@ extern volatile boolean_T runModel;
 //-
 //  These blocks were eliminated from the model due to optimizations:
 //
+//  Block '<Root>/Constant8' : Unused code path elimination
+//  Block '<Root>/Constant9' : Unused code path elimination
+//  Block '<Root>/Data Type Conversion28' : Unused code path elimination
 //  Block '<Root>/Display' : Unused code path elimination
 //  Block '<Root>/Display1' : Unused code path elimination
+//  Block '<Root>/Display10' : Unused code path elimination
 //  Block '<Root>/Display2' : Unused code path elimination
+//  Block '<Root>/Display3' : Unused code path elimination
+//  Block '<Root>/Display4' : Unused code path elimination
+//  Block '<Root>/Display5' : Unused code path elimination
+//  Block '<Root>/Display6' : Unused code path elimination
+//  Block '<Root>/Display7' : Unused code path elimination
+//  Block '<Root>/Display9' : Unused code path elimination
 //  Block '<S10>/Sum' : Unused code path elimination
 //  Block '<S10>/Sum1' : Unused code path elimination
 //  Block '<S10>/position_err_A' : Unused code path elimination
@@ -473,9 +486,13 @@ extern volatile boolean_T runModel;
 //  Block '<S16>/position_err_A' : Unused code path elimination
 //  Block '<S16>/position_err_B' : Unused code path elimination
 //  Block '<Root>/Scope' : Unused code path elimination
+//  Block '<Root>/Scope1' : Unused code path elimination
 //  Block '<Root>/Scope2' : Unused code path elimination
 //  Block '<Root>/Scope3' : Unused code path elimination
 //  Block '<Root>/Scope4' : Unused code path elimination
+//  Block '<Root>/Scope5' : Unused code path elimination
+//  Block '<Root>/Sum' : Unused code path elimination
+//  Block '<Root>/Switch1' : Unused code path elimination
 //  Block '<Root>/Data Type Conversion' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion1' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion14' : Eliminate redundant data type conversion
@@ -486,7 +503,6 @@ extern volatile boolean_T runModel;
 //  Block '<Root>/Data Type Conversion2' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion20' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion26' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion28' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion3' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion6' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion7' : Eliminate redundant data type conversion

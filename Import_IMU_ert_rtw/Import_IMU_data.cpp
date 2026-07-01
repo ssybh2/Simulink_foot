@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.47
+// Model version                  : 1.66
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 12:27:08 2026
+// C/C++ source code generated on : Wed Jul  1 14:17:20 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -849,20 +849,25 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.1,
 
-  // Expression: 0.5
+  // Expression: 0
+  //  Referenced by: '<Root>/Constant7'
+
+  0.0,
+
+  // Expression: 0
   //  Referenced by: '<Root>/KpYaw'
 
-  0.5,
+  0.0,
 
   // Expression: 0.05
   //  Referenced by: '<Root>/KdYaw'
 
   0.05,
 
-  // Expression: 0.5
+  // Expression: 0.05
   //  Referenced by: '<Root>/YawTorqueLimit'
 
-  0.5,
+  0.05,
 
   // Expression: 2
   //  Referenced by: '<Root>/Constant4'
@@ -932,7 +937,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   // Computed Parameter: Gain_Gain
   //  Referenced by: '<Root>/Gain'
 
-  1.0F,
+  -1.0F,
 
   // Computed Parameter: Gain1_Gain
   //  Referenced by: '<Root>/Gain1'
@@ -952,12 +957,12 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   // Computed Parameter: kp_Value
   //  Referenced by: '<Root>/kp'
 
-  0.0F,
+  0.01F,
 
   // Computed Parameter: kd_Value
   //  Referenced by: '<Root>/kd'
 
-  0.0F,
+  0.0052F,
 
   // Computed Parameter: LPF_GyroZ_NumCoef
   //  Referenced by: '<Root>/LPF_GyroZ'
@@ -983,6 +988,11 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   //  Referenced by: '<Root>/Right_wheel'
 
   1.0F,
+
+  // Computed Parameter: kd1_Value
+  //  Referenced by: '<Root>/kd1'
+
+  0.0091F,
 
   // Computed Parameter: LPF_GyroX_NumCoef
   //  Referenced by: '<Root>/LPF_GyroX'
