@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.112
+// Model version                  : 1.115
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 20:32:50 2026
+// C/C++ source code generated on : Wed Jul  1 21:03:07 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -370,16 +370,16 @@ void Import_IMU::SystemCore_setup_iufdy5ksql4lg(ros_slros2_internal_block_Sub_T 
   char_T b_zeroDelimTopic[26];
   static const char_T b_zeroDelimTopic_0[26] = "/ecat/sn2228252/app1/read";
 
-  // Start for MATLABSystem: '<S66>/SourceBlock'
+  // Start for MATLABSystem: '<S67>/SourceBlock'
   obj->isInitialized = 1;
   qos_profile = rmw_qos_profile_default;
 
-  // Start for MATLABSystem: '<S66>/SourceBlock'
+  // Start for MATLABSystem: '<S67>/SourceBlock'
   SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
                  RMW_QOS_POLICY_DURABILITY_VOLATILE,
                  RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   for (int32_T i = 0; i < 26; i++) {
-    // Start for MATLABSystem: '<S66>/SourceBlock'
+    // Start for MATLABSystem: '<S67>/SourceBlock'
     b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
@@ -466,16 +466,16 @@ void Import_IMU::Import_IMU_SystemCore_setup_i(ros_slros2_internal_block_Pub_T
   char_T b_zeroDelimTopic[27];
   static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app4/write";
 
-  // Start for MATLABSystem: '<S33>/SinkBlock'
+  // Start for MATLABSystem: '<S34>/SinkBlock'
   obj->isInitialized = 1;
   qos_profile = rmw_qos_profile_default;
 
-  // Start for MATLABSystem: '<S33>/SinkBlock'
+  // Start for MATLABSystem: '<S34>/SinkBlock'
   SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
                  RMW_QOS_POLICY_DURABILITY_VOLATILE,
                  RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S33>/SinkBlock'
+    // Start for MATLABSystem: '<S34>/SinkBlock'
     b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
@@ -490,16 +490,16 @@ void Import_IMU::Import_IM_SystemCore_setup_iufd(ros_slros2_internal_block_Pub_T
   char_T b_zeroDelimTopic[27];
   static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app7/write";
 
-  // Start for MATLABSystem: '<S43>/SinkBlock'
+  // Start for MATLABSystem: '<S44>/SinkBlock'
   obj->isInitialized = 1;
   qos_profile = rmw_qos_profile_default;
 
-  // Start for MATLABSystem: '<S43>/SinkBlock'
+  // Start for MATLABSystem: '<S44>/SinkBlock'
   SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
                  RMW_QOS_POLICY_DURABILITY_VOLATILE,
                  RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S43>/SinkBlock'
+    // Start for MATLABSystem: '<S44>/SinkBlock'
     b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
@@ -610,16 +610,16 @@ void Import_IMU::Import_IMU_SystemCore_setup_iu(ros_slros2_internal_block_Pub_T 
   char_T b_zeroDelimTopic[27];
   static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app2/write";
 
-  // Start for MATLABSystem: '<S37>/SinkBlock'
+  // Start for MATLABSystem: '<S38>/SinkBlock'
   obj->isInitialized = 1;
   qos_profile = rmw_qos_profile_default;
 
-  // Start for MATLABSystem: '<S37>/SinkBlock'
+  // Start for MATLABSystem: '<S38>/SinkBlock'
   SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
                  RMW_QOS_POLICY_DURABILITY_VOLATILE,
                  RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S37>/SinkBlock'
+    // Start for MATLABSystem: '<S38>/SinkBlock'
     b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
@@ -634,16 +634,16 @@ void Import_IMU::Import__SystemCore_setup_iufdy5(ros_slros2_internal_block_Pub_T
   char_T b_zeroDelimTopic[27];
   static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app6/write";
 
-  // Start for MATLABSystem: '<S47>/SinkBlock'
+  // Start for MATLABSystem: '<S48>/SinkBlock'
   obj->isInitialized = 1;
   qos_profile = rmw_qos_profile_default;
 
-  // Start for MATLABSystem: '<S47>/SinkBlock'
+  // Start for MATLABSystem: '<S48>/SinkBlock'
   SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
                  RMW_QOS_POLICY_DURABILITY_VOLATILE,
                  RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S47>/SinkBlock'
+    // Start for MATLABSystem: '<S48>/SinkBlock'
     b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
@@ -658,16 +658,16 @@ void Import_IMU::Import_I_SystemCore_setup_iufdy(ros_slros2_internal_block_Pub_T
   char_T b_zeroDelimTopic[27];
   static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app5/write";
 
-  // Start for MATLABSystem: '<S46>/SinkBlock'
+  // Start for MATLABSystem: '<S47>/SinkBlock'
   obj->isInitialized = 1;
   qos_profile = rmw_qos_profile_default;
 
-  // Start for MATLABSystem: '<S46>/SinkBlock'
+  // Start for MATLABSystem: '<S47>/SinkBlock'
   SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
                  RMW_QOS_POLICY_DURABILITY_VOLATILE,
                  RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S46>/SinkBlock'
+    // Start for MATLABSystem: '<S47>/SinkBlock'
     b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
@@ -682,16 +682,16 @@ void Import_IMU::Import_IMU_SystemCore_setup_iuf(ros_slros2_internal_block_Pub_T
   char_T b_zeroDelimTopic[27];
   static const char_T b_zeroDelimTopic_0[27] = "/ecat/sn2228252/app3/write";
 
-  // Start for MATLABSystem: '<S38>/SinkBlock'
+  // Start for MATLABSystem: '<S39>/SinkBlock'
   obj->isInitialized = 1;
   qos_profile = rmw_qos_profile_default;
 
-  // Start for MATLABSystem: '<S38>/SinkBlock'
+  // Start for MATLABSystem: '<S39>/SinkBlock'
   SET_QOS_VALUES(qos_profile, RMW_QOS_POLICY_HISTORY_KEEP_LAST, (size_t)1.0,
                  RMW_QOS_POLICY_DURABILITY_VOLATILE,
                  RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
   for (int32_T i = 0; i < 27; i++) {
-    // Start for MATLABSystem: '<S38>/SinkBlock'
+    // Start for MATLABSystem: '<S39>/SinkBlock'
     b_zeroDelimTopic[i] = b_zeroDelimTopic_0[i];
   }
 
@@ -703,7 +703,6 @@ void Import_IMU::Import_IMU_SystemCore_setup_iuf(ros_slros2_internal_block_Pub_T
 void Import_IMU::step()
 {
   int32_T tmp;
-  boolean_T b_varargout_1;
   boolean_T enable_safe;
   boolean_T rtb_valid_k;
   boolean_T rtb_valid_n;
@@ -711,19 +710,19 @@ void Import_IMU::step()
   boolean_T wheelEnable_tmp;
   boolean_T wheelEnable_tmp_0;
   boolean_T wheelEnable_tmp_1;
+  boolean_T wheelEnable_tmp_2;
 
-  // MATLABSystem: '<S66>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_104.getLatestMessage
-    (&Import_IMU_B.b_varargout_2_m);
+  // MATLABSystem: '<S67>/SourceBlock'
+  valid_b = Sub_Import_IMU_104.getLatestMessage(&Import_IMU_B.b_varargout_2_m);
 
-  // Outputs for Enabled SubSystem: '<S66>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S67>/Enable'
+  // Outputs for Enabled SubSystem: '<S67>/Enabled Subsystem' incorporates:
+  //   EnablePort: '<S68>/Enable'
 
   // MATLAB Function: '<S27>/RC_Safety_Gate' incorporates:
-  //   MATLABSystem: '<S66>/SourceBlock'
+  //   MATLABSystem: '<S67>/SourceBlock'
   //
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S67>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S68>/In1'
     Import_IMU_B.In1_c = Import_IMU_B.b_varargout_2_m;
     Import_IMU_DW.missedCount = 0U;
     Import_IMU_DW.receivedOnce = true;
@@ -736,7 +735,7 @@ void Import_IMU::step()
     Import_IMU_DW.missedCount = Import_IMU_B.qY;
   }
 
-  // End of Outputs for SubSystem: '<S66>/Enabled Subsystem'
+  // End of Outputs for SubSystem: '<S67>/Enabled Subsystem'
   enable_safe = (Import_IMU_DW.receivedOnce && (Import_IMU_DW.missedCount < 34U)
                  && (Import_IMU_B.In1_c.online != 0) &&
                  ((Import_IMU_B.In1_c.right_switch >= 1) &&
@@ -751,11 +750,12 @@ void Import_IMU::step()
   // MATLAB Function: '<S2>/RC_right_y_to_velocity' incorporates:
   //   MATLAB Function: '<Root>/Leg_X_Compensation'
   //   MATLAB Function: '<Root>/Yaw_Rate_Controller'
+  //   MATLAB Function: '<S2>/RC_right_x_to_roll_command'
 
   Import_IMU_B.rightY_s = Import_IMU_B.In1_c.right_y;
   Import_IMU_B.vCmd = 0.0F;
-  valid_b = !enable_safe;
-  if ((!valid_b) && ((!rtIsInfF(Import_IMU_B.In1_c.right_y)) && (!rtIsNaNF
+  rtb_valid_k = !enable_safe;
+  if ((!rtb_valid_k) && ((!rtIsInfF(Import_IMU_B.In1_c.right_y)) && (!rtIsNaNF
         (Import_IMU_B.In1_c.right_y)))) {
     if (Import_IMU_B.In1_c.right_y > 1.0F) {
       Import_IMU_B.rightY_s = 1.0F;
@@ -788,14 +788,14 @@ void Import_IMU::step()
   Import_IMU_B.Gain2 = Import_IMU_P.Gain2_Gain * Import_IMU_B.vCmd;
 
   // MATLABSystem: '<S8>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_74.getLatestMessage(&Import_IMU_B.b_varargout_2);
+  valid_b = Sub_Import_IMU_74.getLatestMessage(&Import_IMU_B.b_varargout_2);
 
   // Outputs for Enabled SubSystem: '<S8>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S32>/Enable'
+  //   EnablePort: '<S33>/Enable'
 
   // Start for MATLABSystem: '<S8>/SourceBlock'
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S32>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S33>/In1'
     Import_IMU_B.In1 = Import_IMU_B.b_varargout_2;
   }
 
@@ -916,15 +916,14 @@ void Import_IMU::step()
     Import_IMU_DW.LPF_GyroY_states;
 
   // MATLABSystem: '<S23>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_314.getLatestMessage
-    (&Import_IMU_B.b_varargout_2_c);
+  valid_b = Sub_Import_IMU_314.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
 
   // Outputs for Enabled SubSystem: '<S23>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S53>/Enable'
+  //   EnablePort: '<S54>/Enable'
 
   // Start for MATLABSystem: '<S23>/SourceBlock'
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S53>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S54>/In1'
     Import_IMU_B.In1_bi = Import_IMU_B.b_varargout_2_c;
   }
 
@@ -936,15 +935,14 @@ void Import_IMU::step()
     Import_IMU_B.In1_bi.velocity;
 
   // MATLABSystem: '<S24>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_315.getLatestMessage
-    (&Import_IMU_B.b_varargout_2_c);
+  valid_b = Sub_Import_IMU_315.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
 
   // Outputs for Enabled SubSystem: '<S24>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S54>/Enable'
+  //   EnablePort: '<S55>/Enable'
 
   // Start for MATLABSystem: '<S24>/SourceBlock'
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S54>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S55>/In1'
     Import_IMU_B.In1_b = Import_IMU_B.b_varargout_2_c;
   }
 
@@ -971,12 +969,12 @@ void Import_IMU::step()
   //   MATLAB Function: '<Root>/IMU_Relative_RPY'
 
   Import_IMU_B.w = 0.0F;
-  rtb_valid_k = rtIsInfF(Import_IMU_B.vCmd);
-  wheelEnable_tmp = rtIsNaNF(Import_IMU_B.vCmd);
-  wheelEnable_tmp_0 = rtIsInfF(Import_IMU_B.normSquared);
-  wheelEnable_tmp_1 = rtIsNaNF(Import_IMU_B.normSquared);
-  b_varargout_1 = (enable_safe && (rtb_valid_n && ((!rtb_valid_k) &&
-    (!wheelEnable_tmp) && ((!wheelEnable_tmp_0) && (!wheelEnable_tmp_1) &&
+  wheelEnable_tmp = rtIsInfF(Import_IMU_B.vCmd);
+  wheelEnable_tmp_0 = rtIsNaNF(Import_IMU_B.vCmd);
+  wheelEnable_tmp_1 = rtIsInfF(Import_IMU_B.normSquared);
+  wheelEnable_tmp_2 = rtIsNaNF(Import_IMU_B.normSquared);
+  valid_b = (enable_safe && (rtb_valid_n && ((!wheelEnable_tmp) &&
+    (!wheelEnable_tmp_0) && ((!wheelEnable_tmp_1) && (!wheelEnable_tmp_2) &&
     ((!rtIsInfF(Import_IMU_B.Gain2)) && (!rtIsNaNF(Import_IMU_B.Gain2)) &&
      ((!rtIsInfF(Import_IMU_B.relativeX)) && (!rtIsNaNF(Import_IMU_B.relativeX))
       && ((!rtIsInfF(Import_IMU_B.relativeY)) && (!rtIsNaNF
@@ -992,9 +990,9 @@ void Import_IMU::step()
     (Import_IMU_P.TorqueLimit_Value))) && (!rtIsNaNF(static_cast<real32_T>
     (Import_IMU_P.TorqueLimit_Value))) && (static_cast<real32_T>
     (Import_IMU_P.TorqueLimit_Value) >= 0.0F)))))))))))) &&
-                   (static_cast<real32_T>(fabs(static_cast<real_T>
-    (Import_IMU_B.vCmd))) < 0.34907F));
-  if (!b_varargout_1) {
+             (static_cast<real32_T>(fabs(static_cast<real_T>(Import_IMU_B.vCmd)))
+              < 0.34907F));
+  if (!valid_b) {
     Import_IMU_DW.torqueBlend = 0.0F;
     Import_IMU_DW.wasEnabled = false;
     Import_IMU_DW.wheelVelocityLeftFiltered = 0.0F;
@@ -1058,8 +1056,8 @@ void Import_IMU::step()
   Import_IMU_B.relativeY = Import_IMU_P.LPF_GyroZ_NumCoef *
     Import_IMU_DW.LPF_GyroZ_states;
 
-  // Switch: '<S60>/Switch' incorporates:
-  //   Gain: '<S60>/Gain'
+  // Switch: '<S61>/Switch' incorporates:
+  //   Gain: '<S61>/Gain'
 
   if (Import_IMU_B.Gain2 > Import_IMU_P.Switch_Threshold_g) {
     Import_IMU_B.x = Import_IMU_B.Gain2;
@@ -1070,27 +1068,27 @@ void Import_IMU::step()
   // Switch: '<S26>/Switch1' incorporates:
   //   Constant: '<S26>/Constant10'
   //   DiscreteTransferFcn: '<Root>/LPF_GyroZ'
-  //   Switch: '<S60>/Switch'
-  //   Switch: '<S64>/Switch'
+  //   Switch: '<S61>/Switch'
+  //   Switch: '<S65>/Switch'
 
   if (Import_IMU_B.x > Import_IMU_P.Switch1_Threshold) {
     Import_IMU_B.Switch1 = Import_IMU_P.Constant10_Value;
   } else {
     if (Import_IMU_B.relativeY > Import_IMU_P.Switch_Threshold_l) {
-      // Switch: '<S64>/Switch' incorporates:
+      // Switch: '<S65>/Switch' incorporates:
       //   DiscreteTransferFcn: '<Root>/LPF_GyroZ'
 
       Import_IMU_B.y = Import_IMU_B.relativeY;
     } else {
-      // Switch: '<S64>/Switch' incorporates:
+      // Switch: '<S65>/Switch' incorporates:
       //   DiscreteTransferFcn: '<Root>/LPF_GyroZ'
-      //   Gain: '<S64>/Gain'
+      //   Gain: '<S65>/Gain'
 
       Import_IMU_B.y = Import_IMU_P.Gain_Gain_d3 * Import_IMU_B.relativeY;
     }
 
-    // Switch: '<S62>/Switch' incorporates:
-    //   Gain: '<S62>/Gain'
+    // Switch: '<S63>/Switch' incorporates:
+    //   Gain: '<S63>/Gain'
     //   MATLAB Function: '<Root>/IMU_Relative_RPY'
 
     if (Import_IMU_B.vCmd > Import_IMU_P.Switch_Threshold_a) {
@@ -1099,9 +1097,9 @@ void Import_IMU::step()
       Import_IMU_B.x = Import_IMU_P.Gain_Gain_e * Import_IMU_B.vCmd;
     }
 
-    // Switch: '<S63>/Switch' incorporates:
+    // Switch: '<S64>/Switch' incorporates:
     //   DiscreteTransferFcn: '<Root>/LPF_GyroY'
-    //   Gain: '<S63>/Gain'
+    //   Gain: '<S64>/Gain'
 
     if (Import_IMU_B.normSquared > Import_IMU_P.Switch_Threshold_i) {
       Import_IMU_B.z = Import_IMU_B.normSquared;
@@ -1109,22 +1107,22 @@ void Import_IMU::step()
       Import_IMU_B.z = Import_IMU_P.Gain_Gain_d * Import_IMU_B.normSquared;
     }
 
-    // DeadZone: '<S61>/Dead Zone'
+    // DeadZone: '<S62>/Dead Zone'
     if (Import_IMU_B.y > Import_IMU_P.DeadZone_End_g) {
-      Import_IMU_B.leg_angle = Import_IMU_B.y - Import_IMU_P.DeadZone_End_g;
+      Import_IMU_B.xB = Import_IMU_B.y - Import_IMU_P.DeadZone_End_g;
     } else if (Import_IMU_B.y >= Import_IMU_P.DeadZone_Start_c) {
-      Import_IMU_B.leg_angle = 0.0F;
+      Import_IMU_B.xB = 0.0F;
     } else {
-      Import_IMU_B.leg_angle = Import_IMU_B.y - Import_IMU_P.DeadZone_Start_c;
+      Import_IMU_B.xB = Import_IMU_B.y - Import_IMU_P.DeadZone_Start_c;
     }
 
-    // Sum: '<S61>/Sum' incorporates:
-    //   DeadZone: '<S61>/Dead Zone'
-    //   Sum: '<S61>/Sum1'
-    //   Switch: '<S62>/Switch'
+    // Sum: '<S62>/Sum' incorporates:
+    //   DeadZone: '<S62>/Dead Zone'
+    //   Sum: '<S62>/Sum1'
     //   Switch: '<S63>/Switch'
+    //   Switch: '<S64>/Switch'
 
-    Import_IMU_B.y = (Import_IMU_B.x + Import_IMU_B.z) + Import_IMU_B.leg_angle;
+    Import_IMU_B.y = (Import_IMU_B.x + Import_IMU_B.z) + Import_IMU_B.xB;
 
     // DeadZone: '<S26>/Dead Zone'
     if (Import_IMU_B.y > Import_IMU_P.DeadZone_End_c) {
@@ -1160,7 +1158,7 @@ void Import_IMU::step()
   //   MATLAB Function: '<Root>/Balance_Target_XY'
 
   Import_IMU_B.z = 0.0F;
-  rtb_valid_n = (valid_b || (!rtb_valid_n));
+  rtb_valid_n = (rtb_valid_k || (!rtb_valid_n));
   if ((!rtb_valid_n) && ((!rtIsInfF(Import_IMU_B.relativeY)) && (!rtIsNaNF
         (Import_IMU_B.relativeY))) && ((!rtIsInfF(static_cast<real32_T>
          (Import_IMU_P.KdYaw_Value))) && (!rtIsNaNF(static_cast<real32_T>
@@ -1239,7 +1237,7 @@ void Import_IMU::step()
   //   Gain: '<Root>/Left_wheel'
   //   MATLAB Function: '<Root>/Wheel_Pitch_Controller'
 
-  Import_IMU_B.BusCreator2.enable = b_varargout_1;
+  Import_IMU_B.BusCreator2.enable = valid_b;
   Import_IMU_B.BusCreator2.p_des = Import_IMU_P.p_des_Value;
   Import_IMU_B.BusCreator2.v_des = Import_IMU_P.v_des_Value;
   Import_IMU_B.BusCreator2.kp = Import_IMU_P.kp_Value;
@@ -1247,11 +1245,11 @@ void Import_IMU::step()
   Import_IMU_B.BusCreator2.torque = Import_IMU_P.Left_wheel_Gain *
     Import_IMU_B.x;
 
-  // MATLABSystem: '<S33>/SinkBlock'
+  // MATLABSystem: '<S34>/SinkBlock'
   Pub_Import_IMU_344.publish(&Import_IMU_B.BusCreator2);
 
-  // Switch: '<S55>/Switch' incorporates:
-  //   Gain: '<S55>/Gain'
+  // Switch: '<S56>/Switch' incorporates:
+  //   Gain: '<S56>/Gain'
 
   if (!(Import_IMU_B.Gain2 > Import_IMU_P.Switch_Threshold_gc)) {
     Import_IMU_B.Gain2 *= Import_IMU_P.Gain_Gain_p;
@@ -1260,22 +1258,22 @@ void Import_IMU::step()
   // Switch: '<S25>/Switch1' incorporates:
   //   Constant: '<S25>/Constant10'
   //   DiscreteTransferFcn: '<Root>/LPF_GyroZ'
-  //   Switch: '<S55>/Switch'
-  //   Switch: '<S59>/Switch'
+  //   Switch: '<S56>/Switch'
+  //   Switch: '<S60>/Switch'
 
   if (Import_IMU_B.Gain2 > Import_IMU_P.Switch1_Threshold_j) {
     Import_IMU_B.Switch1 = Import_IMU_P.Constant10_Value_g;
   } else {
     if (!(Import_IMU_B.relativeY > Import_IMU_P.Switch_Threshold)) {
-      // Switch: '<S59>/Switch' incorporates:
+      // Switch: '<S60>/Switch' incorporates:
       //   DiscreteTransferFcn: '<Root>/LPF_GyroZ'
-      //   Gain: '<S59>/Gain'
+      //   Gain: '<S60>/Gain'
 
       Import_IMU_B.relativeY *= Import_IMU_P.Gain_Gain_b;
     }
 
-    // Switch: '<S57>/Switch' incorporates:
-    //   Gain: '<S57>/Gain'
+    // Switch: '<S58>/Switch' incorporates:
+    //   Gain: '<S58>/Gain'
     //   MATLAB Function: '<Root>/IMU_Relative_RPY'
 
     if (Import_IMU_B.vCmd > Import_IMU_P.Switch_Threshold_e) {
@@ -1284,9 +1282,9 @@ void Import_IMU::step()
       Import_IMU_B.x = Import_IMU_P.Gain_Gain * Import_IMU_B.vCmd;
     }
 
-    // Switch: '<S58>/Switch' incorporates:
+    // Switch: '<S59>/Switch' incorporates:
     //   DiscreteTransferFcn: '<Root>/LPF_GyroY'
-    //   Gain: '<S58>/Gain'
+    //   Gain: '<S59>/Gain'
 
     if (Import_IMU_B.normSquared > Import_IMU_P.Switch_Threshold_h) {
       Import_IMU_B.z = Import_IMU_B.normSquared;
@@ -1294,25 +1292,22 @@ void Import_IMU::step()
       Import_IMU_B.z = Import_IMU_P.Gain_Gain_h * Import_IMU_B.normSquared;
     }
 
-    // DeadZone: '<S56>/Dead Zone'
+    // DeadZone: '<S57>/Dead Zone'
     if (Import_IMU_B.relativeY > Import_IMU_P.DeadZone_End) {
-      Import_IMU_B.leg_angle = Import_IMU_B.relativeY -
-        Import_IMU_P.DeadZone_End;
+      Import_IMU_B.xB = Import_IMU_B.relativeY - Import_IMU_P.DeadZone_End;
     } else if (Import_IMU_B.relativeY >= Import_IMU_P.DeadZone_Start) {
-      Import_IMU_B.leg_angle = 0.0F;
+      Import_IMU_B.xB = 0.0F;
     } else {
-      Import_IMU_B.leg_angle = Import_IMU_B.relativeY -
-        Import_IMU_P.DeadZone_Start;
+      Import_IMU_B.xB = Import_IMU_B.relativeY - Import_IMU_P.DeadZone_Start;
     }
 
-    // Sum: '<S56>/Sum' incorporates:
-    //   DeadZone: '<S56>/Dead Zone'
-    //   Sum: '<S56>/Sum1'
-    //   Switch: '<S57>/Switch'
+    // Sum: '<S57>/Sum' incorporates:
+    //   DeadZone: '<S57>/Dead Zone'
+    //   Sum: '<S57>/Sum1'
     //   Switch: '<S58>/Switch'
+    //   Switch: '<S59>/Switch'
 
-    Import_IMU_B.relativeY = (Import_IMU_B.x + Import_IMU_B.z) +
-      Import_IMU_B.leg_angle;
+    Import_IMU_B.relativeY = (Import_IMU_B.x + Import_IMU_B.z) + Import_IMU_B.xB;
 
     // DeadZone: '<S25>/Dead Zone'
     if (Import_IMU_B.relativeY > Import_IMU_P.DeadZone_End_h) {
@@ -1348,7 +1343,7 @@ void Import_IMU::step()
   //   Gain: '<Root>/Right_wheel'
   //   MATLAB Function: '<Root>/Wheel_Pitch_Controller'
 
-  Import_IMU_B.BusCreator2.enable = b_varargout_1;
+  Import_IMU_B.BusCreator2.enable = valid_b;
   Import_IMU_B.BusCreator2.p_des = Import_IMU_P.p_des_Value;
   Import_IMU_B.BusCreator2.v_des = Import_IMU_P.v_des_Value;
   Import_IMU_B.BusCreator2.kp = Import_IMU_P.kp_Value;
@@ -1356,7 +1351,7 @@ void Import_IMU::step()
   Import_IMU_B.BusCreator2.torque = Import_IMU_P.Right_wheel_Gain *
     Import_IMU_B.y;
 
-  // MATLABSystem: '<S43>/SinkBlock'
+  // MATLABSystem: '<S44>/SinkBlock'
   Pub_Import_IMU_369.publish(&Import_IMU_B.BusCreator2);
 
   // MATLAB Function: '<Root>/Leg_X_Compensation' incorporates:
@@ -1365,8 +1360,8 @@ void Import_IMU::step()
   //   Constant: '<Root>/Constant7'
   //   MATLAB Function: '<Root>/Wheel_Pitch_Controller'
 
-  if (valid_b || (rtIsInfF(Import_IMU_B.relativeX) || rtIsNaNF
-                  (Import_IMU_B.relativeX) || (rtIsInfF(static_cast<real32_T>
+  if (rtb_valid_k || (rtIsInfF(Import_IMU_B.relativeX) || rtIsNaNF
+                      (Import_IMU_B.relativeX) || (rtIsInfF(static_cast<real32_T>
          (Import_IMU_P.Constant5_Value)) || rtIsNaNF(static_cast<real32_T>
          (Import_IMU_P.Constant5_Value)) || (rtIsInfF(static_cast<real32_T>
           (Import_IMU_P.Constant6_Value)) || rtIsNaNF(static_cast<real32_T>
@@ -1432,15 +1427,14 @@ void Import_IMU::step()
   Import_IMU_B.Switch1 = (&Import_IMU_M)->Timing.t[0];
 
   // MATLABSystem: '<S19>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_1.getLatestMessage
-    (&Import_IMU_B.b_varargout_2_c);
+  valid_b = Sub_Import_IMU_1.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
 
   // Outputs for Enabled SubSystem: '<S19>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S49>/Enable'
+  //   EnablePort: '<S50>/Enable'
 
   // Start for MATLABSystem: '<S19>/SourceBlock'
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S49>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S50>/In1'
     Import_IMU_B.In1_m = Import_IMU_B.b_varargout_2_c;
   }
 
@@ -1458,15 +1452,14 @@ void Import_IMU::step()
     Import_IMU_P.CAL.ratio_LA, &Import_IMU_B.Gain2);
 
   // MATLABSystem: '<S20>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_2.getLatestMessage
-    (&Import_IMU_B.b_varargout_2_c);
+  valid_b = Sub_Import_IMU_2.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
 
   // Outputs for Enabled SubSystem: '<S20>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S50>/Enable'
+  //   EnablePort: '<S51>/Enable'
 
   // Start for MATLABSystem: '<S20>/SourceBlock'
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S50>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S51>/In1'
     Import_IMU_B.In1_j = Import_IMU_B.b_varargout_2_c;
   }
 
@@ -1492,19 +1485,18 @@ void Import_IMU::step()
 
   Import_IMU_FiveBar_FK_Left(Import_IMU_B.Gain2, Import_IMU_B.relativeX,
     Import_IMU_P.L1, Import_IMU_P.L2, Import_IMU_P.L3, Import_IMU_P.L4,
-    Import_IMU_P.L5, &Import_IMU_B.xB_c, &Import_IMU_B.x,
-    &Import_IMU_B.relativeY, &Import_IMU_B.w, &valid_b);
+    Import_IMU_P.L5, &Import_IMU_B.z, &Import_IMU_B.x, &Import_IMU_B.relativeY,
+    &Import_IMU_B.w, &valid_b);
 
   // MATLABSystem: '<S21>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_3.getLatestMessage
-    (&Import_IMU_B.b_varargout_2_c);
+  valid_b = Sub_Import_IMU_3.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
 
   // Outputs for Enabled SubSystem: '<S21>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S51>/Enable'
+  //   EnablePort: '<S52>/Enable'
 
   // Start for MATLABSystem: '<S21>/SourceBlock'
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S51>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S52>/In1'
     Import_IMU_B.In1_a = Import_IMU_B.b_varargout_2_c;
   }
 
@@ -1522,15 +1514,14 @@ void Import_IMU::step()
     Import_IMU_P.CAL.ratio_RA, &Import_IMU_B.relativeY);
 
   // MATLABSystem: '<S22>/SourceBlock'
-  b_varargout_1 = Sub_Import_IMU_4.getLatestMessage
-    (&Import_IMU_B.b_varargout_2_c);
+  valid_b = Sub_Import_IMU_4.getLatestMessage(&Import_IMU_B.b_varargout_2_c);
 
   // Outputs for Enabled SubSystem: '<S22>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S52>/Enable'
+  //   EnablePort: '<S53>/Enable'
 
   // Start for MATLABSystem: '<S22>/SourceBlock'
-  if (b_varargout_1) {
-    // SignalConversion generated from: '<S52>/In1'
+  if (valid_b) {
+    // SignalConversion generated from: '<S53>/In1'
     Import_IMU_B.In1_c3 = Import_IMU_B.b_varargout_2_c;
   }
 
@@ -1556,8 +1547,77 @@ void Import_IMU::step()
 
   Import_IMU_FiveBar_FK_Left(Import_IMU_B.relativeY, Import_IMU_B.w,
     Import_IMU_P.L1, Import_IMU_P.L2, Import_IMU_P.L3, Import_IMU_P.L4,
-    Import_IMU_P.L5, &Import_IMU_B.xB, &Import_IMU_B.y, &Import_IMU_B.z,
+    Import_IMU_P.L5, &Import_IMU_B.xB, &Import_IMU_B.y, &Import_IMU_B.leg_length,
     &Import_IMU_B.leg_angle, &valid_b);
+
+  // MATLAB Function: '<S2>/RC_right_x_to_roll_command' incorporates:
+  //   Constant: '<S2>/Constant'
+  //   Constant: '<S2>/Constant1'
+
+  Import_IMU_B.leg_length = static_cast<real32_T>(fabs(static_cast<real_T>(
+    static_cast<real32_T>(Import_IMU_P.Constant_Value_fu))));
+  if (rtb_valid_k || (rtIsInfF(Import_IMU_B.In1_c.right_x) || rtIsNaNF
+                      (Import_IMU_B.In1_c.right_x) || (rtIsInfF
+        (Import_IMU_B.leg_length) || rtIsNaNF(Import_IMU_B.leg_length) ||
+        (rtIsInfF(static_cast<real32_T>(Import_IMU_P.Constant1_Value)) ||
+         rtIsNaNF(static_cast<real32_T>(Import_IMU_P.Constant1_Value)))))) {
+    Import_IMU_DW.rollCmdFiltered = 0.0F;
+    Import_IMU_DW.previousEnable_c = false;
+    Import_IMU_B.rollCmd = 0.0F;
+  } else {
+    if (!Import_IMU_DW.previousEnable_c) {
+      Import_IMU_DW.rollCmdFiltered = 0.0F;
+    }
+
+    Import_IMU_DW.previousEnable_c = true;
+    if (Import_IMU_B.In1_c.right_x > 1.0F) {
+      Import_IMU_B.leg_angle = 1.0F;
+    } else if (Import_IMU_B.In1_c.right_x < -1.0F) {
+      Import_IMU_B.leg_angle = -1.0F;
+    } else {
+      Import_IMU_B.leg_angle = Import_IMU_B.In1_c.right_x;
+    }
+
+    Import_IMU_B.stickMagnitude = static_cast<real32_T>(fabs(static_cast<real_T>
+      (Import_IMU_B.leg_angle)));
+    if (Import_IMU_B.stickMagnitude <= 0.08F) {
+      Import_IMU_B.leg_angle = 0.0F;
+    } else {
+      if (Import_IMU_B.leg_angle >= 0.0F) {
+        tmp = 1;
+      } else {
+        tmp = -1;
+      }
+
+      Import_IMU_B.leg_angle = (Import_IMU_B.stickMagnitude - 0.08F) *
+        static_cast<real32_T>(tmp) / 0.92F;
+    }
+
+    if (static_cast<real32_T>(Import_IMU_P.Constant1_Value) >= 0.0F) {
+      tmp = 1;
+    } else {
+      tmp = -1;
+    }
+
+    Import_IMU_B.leg_angle = ((static_cast<real32_T>(tmp) *
+      Import_IMU_B.leg_length * Import_IMU_B.leg_angle -
+      Import_IMU_DW.rollCmdFiltered) * 0.0566037744F +
+      Import_IMU_DW.rollCmdFiltered) - Import_IMU_DW.rollCmdFiltered;
+    if (Import_IMU_B.leg_angle > 0.0024F) {
+      Import_IMU_B.leg_angle = 0.0024F;
+    } else if (Import_IMU_B.leg_angle < -0.0024F) {
+      Import_IMU_B.leg_angle = -0.0024F;
+    }
+
+    Import_IMU_DW.rollCmdFiltered += Import_IMU_B.leg_angle;
+    if (Import_IMU_DW.rollCmdFiltered > Import_IMU_B.leg_length) {
+      Import_IMU_DW.rollCmdFiltered = Import_IMU_B.leg_length;
+    } else if (Import_IMU_DW.rollCmdFiltered < -Import_IMU_B.leg_length) {
+      Import_IMU_DW.rollCmdFiltered = -Import_IMU_B.leg_length;
+    }
+
+    Import_IMU_B.rollCmd = Import_IMU_DW.rollCmdFiltered;
+  }
 
   // DiscreteTransferFcn: '<Root>/LPF_GyroX'
   Import_IMU_B.numAccum = Import_IMU_P.LPF_GyroX_NumCoef *
@@ -1572,35 +1632,36 @@ void Import_IMU::step()
   //   DiscreteTransferFcn: '<Root>/LPF_GyroY'
   //   MATLAB Function: '<Root>/IMU_Relative_RPY'
 
-  Import_IMU_B.z = Import_IMU_B.xB_c;
-  Import_IMU_B.yLeftCmd = Import_IMU_B.x;
+  Import_IMU_B.leg_length = Import_IMU_B.z;
+  Import_IMU_B.stickMagnitude = Import_IMU_B.x;
   Import_IMU_B.leg_angle = Import_IMU_B.xB;
   Import_IMU_B.homeBlend = Import_IMU_B.y;
   if (rtb_valid_n || (rtIsInf(Import_IMU_B.Switch1) || rtIsNaN
-                      (Import_IMU_B.Switch1) || (rtIsInfF(Import_IMU_B.xB_c) ||
-        rtIsNaNF(Import_IMU_B.xB_c) || (rtIsInfF(Import_IMU_B.x) || rtIsNaNF
+                      (Import_IMU_B.Switch1) || (rtIsInfF(Import_IMU_B.z) ||
+        rtIsNaNF(Import_IMU_B.z) || (rtIsInfF(Import_IMU_B.x) || rtIsNaNF
          (Import_IMU_B.x) || (rtIsInfF(Import_IMU_B.xB) || rtIsNaNF
           (Import_IMU_B.xB) || (rtIsInfF(Import_IMU_B.y) || rtIsNaNF
            (Import_IMU_B.y) || (rtIsInfF(Import_IMU_B.rightY_s) || rtIsNaNF
-            (Import_IMU_B.rightY_s) || (rtb_valid_k || wheelEnable_tmp ||
-             (rtIsInfF(Import_IMU_B.numAccum) || rtIsNaNF(Import_IMU_B.numAccum)
-              || (wheelEnable_tmp_0 || wheelEnable_tmp_1 || (rtIsInfF
-                (Import_IMU_B.xVelocityComp) || rtIsNaNF
-                (Import_IMU_B.xVelocityComp) || (rtIsInfF(static_cast<real32_T>
+            (Import_IMU_B.rightY_s) || (rtIsInfF(Import_IMU_B.rollCmd) ||
+             rtIsNaNF(Import_IMU_B.rollCmd) || (wheelEnable_tmp ||
+              wheelEnable_tmp_0 || (rtIsInfF(Import_IMU_B.numAccum) || rtIsNaNF
+               (Import_IMU_B.numAccum) || (wheelEnable_tmp_1 ||
+                wheelEnable_tmp_2 || (rtIsInfF(Import_IMU_B.xVelocityComp) ||
+      rtIsNaNF(Import_IMU_B.xVelocityComp) || (rtIsInfF(static_cast<real32_T>
       (Import_IMU_P.Constant_Value_dt)) || rtIsNaNF(static_cast<real32_T>
       (Import_IMU_P.Constant_Value_dt)) || (rtIsInfF(static_cast<real32_T>
-      (Import_IMU_P.Constant1_Value)) || rtIsNaNF(static_cast<real32_T>
-      (Import_IMU_P.Constant1_Value)) || (rtIsInfF(static_cast<real32_T>
+      (Import_IMU_P.Constant1_Value_j)) || rtIsNaNF(static_cast<real32_T>
+      (Import_IMU_P.Constant1_Value_j)) || (rtIsInfF(static_cast<real32_T>
       (Import_IMU_P.Constant2_Value)) || rtIsNaNF(static_cast<real32_T>
       (Import_IMU_P.Constant2_Value)) || (rtIsInfF(static_cast<real32_T>
       (Import_IMU_P.Constant3_Value)) || rtIsNaNF(static_cast<real32_T>
-      (Import_IMU_P.Constant3_Value))))))))))))))))) {
+      (Import_IMU_P.Constant3_Value)))))))))))))))))) {
     Import_IMU_DW.previousEnable_d = false;
     Import_IMU_DW.toleranceStartTime = -1.0;
   } else {
     if (!Import_IMU_DW.previousEnable_d) {
       Import_IMU_DW.startTime = Import_IMU_B.Switch1;
-      Import_IMU_DW.xLeftStart = Import_IMU_B.xB_c;
+      Import_IMU_DW.xLeftStart = Import_IMU_B.z;
       Import_IMU_DW.yLeftStart = Import_IMU_B.x;
       Import_IMU_DW.xRightStart = Import_IMU_B.xB;
       Import_IMU_DW.yRightStart = Import_IMU_B.y;
@@ -1624,12 +1685,12 @@ void Import_IMU::step()
       Import_IMU_B.uBalance = 1.0;
     }
 
-    Import_IMU_B.z = static_cast<real32_T>(0.5 - cos(3.1415926535897931 *
-      Import_IMU_B.uBalance) * 0.5);
-    Import_IMU_B.rightY_s = (static_cast<real32_T>
-      (Import_IMU_P.Constant_Value_dt) * Import_IMU_B.rightY_s +
-      static_cast<real32_T>(Import_IMU_P.Constant1_Value) *
-      Import_IMU_B.numAccum) * Import_IMU_B.z;
+    Import_IMU_B.leg_length = static_cast<real32_T>(0.5 - cos(3.1415926535897931
+      * Import_IMU_B.uBalance) * 0.5);
+    Import_IMU_B.rightY_s = ((Import_IMU_B.rightY_s - Import_IMU_B.rollCmd) *
+      static_cast<real32_T>(Import_IMU_P.Constant_Value_dt) +
+      static_cast<real32_T>(Import_IMU_P.Constant1_Value_j) *
+      Import_IMU_B.numAccum) * Import_IMU_B.leg_length;
     if (Import_IMU_B.rightY_s > 0.3F) {
       Import_IMU_B.rightY_s = 0.3F;
     } else if (Import_IMU_B.rightY_s < -0.3F) {
@@ -1639,28 +1700,28 @@ void Import_IMU::step()
     Import_IMU_B.vCmd = (static_cast<real32_T>(Import_IMU_P.Constant2_Value) *
                          Import_IMU_B.vCmd + static_cast<real32_T>
                          (Import_IMU_P.Constant3_Value) *
-                         Import_IMU_B.normSquared) * -Import_IMU_B.z +
-      Import_IMU_B.homeBlend * Import_IMU_B.z * Import_IMU_B.xVelocityComp;
+                         Import_IMU_B.normSquared) * -Import_IMU_B.leg_length +
+      Import_IMU_B.homeBlend * Import_IMU_B.leg_length *
+      Import_IMU_B.xVelocityComp;
     if (Import_IMU_B.vCmd > 0.03F) {
       Import_IMU_B.vCmd = 0.03F;
     } else if (Import_IMU_B.vCmd < -0.03F) {
       Import_IMU_B.vCmd = -0.03F;
     }
 
-    Import_IMU_B.z = ((0.035F - Import_IMU_DW.xLeftStart) *
-                      Import_IMU_B.homeBlend + Import_IMU_DW.xLeftStart) +
-      Import_IMU_B.vCmd;
+    Import_IMU_B.leg_length = ((0.035F - Import_IMU_DW.xLeftStart) *
+      Import_IMU_B.homeBlend + Import_IMU_DW.xLeftStart) + Import_IMU_B.vCmd;
     Import_IMU_B.leg_angle = ((0.035F - Import_IMU_DW.xRightStart) *
       Import_IMU_B.homeBlend + Import_IMU_DW.xRightStart) + Import_IMU_B.vCmd;
-    Import_IMU_B.yLeftCmd = ((0.1F - Import_IMU_DW.yLeftStart) *
+    Import_IMU_B.stickMagnitude = ((0.1F - Import_IMU_DW.yLeftStart) *
       Import_IMU_B.homeBlend + Import_IMU_DW.yLeftStart) - 0.5F *
       Import_IMU_B.rightY_s;
     Import_IMU_B.homeBlend = ((0.1F - Import_IMU_DW.yRightStart) *
       Import_IMU_B.homeBlend + Import_IMU_DW.yRightStart) + 0.5F *
       Import_IMU_B.rightY_s;
     if (Import_IMU_B.uHome >= 1.0) {
-      Import_IMU_B.rightY_s = Import_IMU_B.xB_c - Import_IMU_B.z;
-      Import_IMU_B.vCmd = Import_IMU_B.x - Import_IMU_B.yLeftCmd;
+      Import_IMU_B.rightY_s = Import_IMU_B.z - Import_IMU_B.leg_length;
+      Import_IMU_B.vCmd = Import_IMU_B.x - Import_IMU_B.stickMagnitude;
       Import_IMU_B.normSquared = Import_IMU_B.xB - Import_IMU_B.leg_angle;
       Import_IMU_B.x = Import_IMU_B.y - Import_IMU_B.homeBlend;
       if (static_cast<real32_T>(sqrt(static_cast<real_T>(Import_IMU_B.rightY_s *
@@ -1689,10 +1750,10 @@ void Import_IMU::step()
   //   Constant: '<Root>/L5'
   //   MATLAB Function: '<Root>/Balance_Target_XY'
 
-  Import_IMU_FiveBar_IK_Left(Import_IMU_B.z, Import_IMU_B.yLeftCmd,
-    Import_IMU_B.Gain2, Import_IMU_B.relativeX, Import_IMU_P.L1, Import_IMU_P.L2,
-    Import_IMU_P.L3, Import_IMU_P.L4, Import_IMU_P.L5, &Import_IMU_B.rightY_s,
-    &Import_IMU_B.vCmd, &rtb_valid_k);
+  Import_IMU_FiveBar_IK_Left(Import_IMU_B.leg_length,
+    Import_IMU_B.stickMagnitude, Import_IMU_B.Gain2, Import_IMU_B.relativeX,
+    Import_IMU_P.L1, Import_IMU_P.L2, Import_IMU_P.L3, Import_IMU_P.L4,
+    Import_IMU_P.L5, &Import_IMU_B.rightY_s, &Import_IMU_B.vCmd, &rtb_valid_k);
 
   // MATLAB Function: '<S11>/Left_Joint_To_Motor_L'
   Import_IMU_B.normSquared = -0.629243851F - (Import_IMU_B.vCmd - 0.899913073F);
@@ -1728,7 +1789,7 @@ void Import_IMU::step()
     (Import_IMU_P.Constant27_Value);
   Import_IMU_B.BusCreator2.torque = static_cast<real32_T>(Import_IMU_P.A_Value);
 
-  // MATLABSystem: '<S37>/SinkBlock'
+  // MATLABSystem: '<S38>/SinkBlock'
   Pub_Import_IMU_208.publish(&Import_IMU_B.BusCreator2);
 
   // MATLAB Function: '<Root>/FiveBar_IK_Right' incorporates:
@@ -1779,7 +1840,7 @@ void Import_IMU::step()
     (Import_IMU_P.Constant27_Value);
   Import_IMU_B.BusCreator2.torque = static_cast<real32_T>(Import_IMU_P.A_Value);
 
-  // MATLABSystem: '<S47>/SinkBlock'
+  // MATLABSystem: '<S48>/SinkBlock'
   Pub_Import_IMU_246.publish(&Import_IMU_B.BusCreator2);
 
   // MATLAB Function: '<S18>/Motor_Target_Velocity_LA' incorporates:
@@ -1810,7 +1871,7 @@ void Import_IMU::step()
     (Import_IMU_P.Constant27_Value);
   Import_IMU_B.BusCreator2.torque = static_cast<real32_T>(Import_IMU_P.B_Value);
 
-  // MATLABSystem: '<S46>/SinkBlock'
+  // MATLABSystem: '<S47>/SinkBlock'
   Pub_Import_IMU_245.publish(&Import_IMU_B.BusCreator2);
 
   // MATLAB Function: '<S11>/Motor_Target_Velocity_LB' incorporates:
@@ -1841,7 +1902,7 @@ void Import_IMU::step()
     (Import_IMU_P.Constant27_Value);
   Import_IMU_B.BusCreator2.torque = static_cast<real32_T>(Import_IMU_P.B_Value);
 
-  // MATLABSystem: '<S38>/SinkBlock'
+  // MATLABSystem: '<S39>/SinkBlock'
   Pub_Import_IMU_209.publish(&Import_IMU_B.BusCreator2);
 
   // DataTypeConversion: '<Root>/Data Type Conversion25'
@@ -1927,20 +1988,20 @@ void Import_IMU::initialize()
   // InitializeConditions for DiscreteTransferFcn: '<Root>/LPF_GyroX'
   Import_IMU_DW.LPF_GyroX_states = Import_IMU_P.LPF_GyroX_InitialStates;
 
-  // SystemInitialize for Enabled SubSystem: '<S66>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S67>/In1' incorporates:
-  //   Outport: '<S67>/Out1'
+  // SystemInitialize for Enabled SubSystem: '<S67>/Enabled Subsystem'
+  // SystemInitialize for SignalConversion generated from: '<S68>/In1' incorporates:
+  //   Outport: '<S68>/Out1'
 
   Import_IMU_B.In1_c = Import_IMU_P.Out1_Y0_a;
 
-  // End of SystemInitialize for SubSystem: '<S66>/Enabled Subsystem'
+  // End of SystemInitialize for SubSystem: '<S67>/Enabled Subsystem'
 
   // SystemInitialize for MATLAB Function: '<S27>/RC_Safety_Gate'
   Import_IMU_DW.missedCount = 34U;
 
   // SystemInitialize for Enabled SubSystem: '<S8>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S32>/In1' incorporates:
-  //   Outport: '<S32>/Out1'
+  // SystemInitialize for SignalConversion generated from: '<S33>/In1' incorporates:
+  //   Outport: '<S33>/Out1'
 
   Import_IMU_B.In1 = Import_IMU_P.Out1_Y0;
 
@@ -1950,48 +2011,48 @@ void Import_IMU::initialize()
   Import_IMU_DW.q0w = 1.0F;
 
   // SystemInitialize for Enabled SubSystem: '<S23>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S53>/In1' incorporates:
-  //   Outport: '<S53>/Out1'
+  // SystemInitialize for SignalConversion generated from: '<S54>/In1' incorporates:
+  //   Outport: '<S54>/Out1'
 
   Import_IMU_B.In1_bi = Import_IMU_P.Out1_Y0_j;
 
   // End of SystemInitialize for SubSystem: '<S23>/Enabled Subsystem'
 
   // SystemInitialize for Enabled SubSystem: '<S24>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S54>/In1' incorporates:
-  //   Outport: '<S54>/Out1'
+  // SystemInitialize for SignalConversion generated from: '<S55>/In1' incorporates:
+  //   Outport: '<S55>/Out1'
 
   Import_IMU_B.In1_b = Import_IMU_P.Out1_Y0_p;
 
   // End of SystemInitialize for SubSystem: '<S24>/Enabled Subsystem'
 
   // SystemInitialize for Enabled SubSystem: '<S19>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S49>/In1' incorporates:
-  //   Outport: '<S49>/Out1'
+  // SystemInitialize for SignalConversion generated from: '<S50>/In1' incorporates:
+  //   Outport: '<S50>/Out1'
 
   Import_IMU_B.In1_m = Import_IMU_P.Out1_Y0_f;
 
   // End of SystemInitialize for SubSystem: '<S19>/Enabled Subsystem'
 
   // SystemInitialize for Enabled SubSystem: '<S20>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S50>/In1' incorporates:
-  //   Outport: '<S50>/Out1'
+  // SystemInitialize for SignalConversion generated from: '<S51>/In1' incorporates:
+  //   Outport: '<S51>/Out1'
 
   Import_IMU_B.In1_j = Import_IMU_P.Out1_Y0_e;
 
   // End of SystemInitialize for SubSystem: '<S20>/Enabled Subsystem'
 
   // SystemInitialize for Enabled SubSystem: '<S21>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S51>/In1' incorporates:
-  //   Outport: '<S51>/Out1'
+  // SystemInitialize for SignalConversion generated from: '<S52>/In1' incorporates:
+  //   Outport: '<S52>/Out1'
 
   Import_IMU_B.In1_a = Import_IMU_P.Out1_Y0_fs;
 
   // End of SystemInitialize for SubSystem: '<S21>/Enabled Subsystem'
 
   // SystemInitialize for Enabled SubSystem: '<S22>/Enabled Subsystem'
-  // SystemInitialize for SignalConversion generated from: '<S52>/In1' incorporates:
-  //   Outport: '<S52>/Out1'
+  // SystemInitialize for SignalConversion generated from: '<S53>/In1' incorporates:
+  //   Outport: '<S53>/Out1'
 
   Import_IMU_B.In1_c3 = Import_IMU_P.Out1_Y0_h;
 
@@ -2004,7 +2065,7 @@ void Import_IMU::initialize()
   Import_IMU_DW.yRightStart = 0.1F;
   Import_IMU_DW.toleranceStartTime = -1.0;
 
-  // Start for MATLABSystem: '<S66>/SourceBlock'
+  // Start for MATLABSystem: '<S67>/SourceBlock'
   SystemCore_setup_iufdy5ksql4lg(&Import_IMU_DW.obj);
 
   // Start for MATLABSystem: '<S8>/SourceBlock'
@@ -2016,10 +2077,10 @@ void Import_IMU::initialize()
   // Start for MATLABSystem: '<S24>/SourceBlock'
   I_SystemCore_setup_iufdy5ksql4l(&Import_IMU_DW.obj_g);
 
-  // Start for MATLABSystem: '<S33>/SinkBlock'
+  // Start for MATLABSystem: '<S34>/SinkBlock'
   Import_IMU_SystemCore_setup_i(&Import_IMU_DW.obj_b4);
 
-  // Start for MATLABSystem: '<S43>/SinkBlock'
+  // Start for MATLABSystem: '<S44>/SinkBlock'
   Import_IM_SystemCore_setup_iufd(&Import_IMU_DW.obj_p);
 
   // Start for MATLABSystem: '<S19>/SourceBlock'
@@ -2034,28 +2095,28 @@ void Import_IMU::initialize()
   // Start for MATLABSystem: '<S22>/SourceBlock'
   Imp_SystemCore_setup_iufdy5ksql(&Import_IMU_DW.obj_m);
 
-  // Start for MATLABSystem: '<S37>/SinkBlock'
+  // Start for MATLABSystem: '<S38>/SinkBlock'
   Import_IMU_SystemCore_setup_iu(&Import_IMU_DW.obj_pp);
 
-  // Start for MATLABSystem: '<S47>/SinkBlock'
+  // Start for MATLABSystem: '<S48>/SinkBlock'
   Import__SystemCore_setup_iufdy5(&Import_IMU_DW.obj_gc);
 
-  // Start for MATLABSystem: '<S46>/SinkBlock'
+  // Start for MATLABSystem: '<S47>/SinkBlock'
   Import_I_SystemCore_setup_iufdy(&Import_IMU_DW.obj_na);
 
-  // Start for MATLABSystem: '<S38>/SinkBlock'
+  // Start for MATLABSystem: '<S39>/SinkBlock'
   Import_IMU_SystemCore_setup_iuf(&Import_IMU_DW.obj_ff);
 }
 
 // Model terminate function
 void Import_IMU::terminate()
 {
-  // Terminate for MATLABSystem: '<S66>/SourceBlock'
+  // Terminate for MATLABSystem: '<S67>/SourceBlock'
   if (!Import_IMU_DW.obj.matlabCodegenIsDeleted) {
     Import_IMU_DW.obj.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S66>/SourceBlock'
+  // End of Terminate for MATLABSystem: '<S67>/SourceBlock'
 
   // Terminate for MATLABSystem: '<S8>/SourceBlock'
   if (!Import_IMU_DW.obj_f.matlabCodegenIsDeleted) {
@@ -2078,19 +2139,19 @@ void Import_IMU::terminate()
 
   // End of Terminate for MATLABSystem: '<S24>/SourceBlock'
 
-  // Terminate for MATLABSystem: '<S33>/SinkBlock'
+  // Terminate for MATLABSystem: '<S34>/SinkBlock'
   if (!Import_IMU_DW.obj_b4.matlabCodegenIsDeleted) {
     Import_IMU_DW.obj_b4.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S33>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S34>/SinkBlock'
 
-  // Terminate for MATLABSystem: '<S43>/SinkBlock'
+  // Terminate for MATLABSystem: '<S44>/SinkBlock'
   if (!Import_IMU_DW.obj_p.matlabCodegenIsDeleted) {
     Import_IMU_DW.obj_p.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S43>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S44>/SinkBlock'
 
   // Terminate for MATLABSystem: '<S19>/SourceBlock'
   if (!Import_IMU_DW.obj_n.matlabCodegenIsDeleted) {
@@ -2120,33 +2181,33 @@ void Import_IMU::terminate()
 
   // End of Terminate for MATLABSystem: '<S22>/SourceBlock'
 
-  // Terminate for MATLABSystem: '<S37>/SinkBlock'
+  // Terminate for MATLABSystem: '<S38>/SinkBlock'
   if (!Import_IMU_DW.obj_pp.matlabCodegenIsDeleted) {
     Import_IMU_DW.obj_pp.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S37>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S38>/SinkBlock'
 
-  // Terminate for MATLABSystem: '<S47>/SinkBlock'
+  // Terminate for MATLABSystem: '<S48>/SinkBlock'
   if (!Import_IMU_DW.obj_gc.matlabCodegenIsDeleted) {
     Import_IMU_DW.obj_gc.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S47>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S48>/SinkBlock'
 
-  // Terminate for MATLABSystem: '<S46>/SinkBlock'
+  // Terminate for MATLABSystem: '<S47>/SinkBlock'
   if (!Import_IMU_DW.obj_na.matlabCodegenIsDeleted) {
     Import_IMU_DW.obj_na.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S46>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S47>/SinkBlock'
 
-  // Terminate for MATLABSystem: '<S38>/SinkBlock'
+  // Terminate for MATLABSystem: '<S39>/SinkBlock'
   if (!Import_IMU_DW.obj_ff.matlabCodegenIsDeleted) {
     Import_IMU_DW.obj_ff.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S38>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S39>/SinkBlock'
 }
 
 // Constructor

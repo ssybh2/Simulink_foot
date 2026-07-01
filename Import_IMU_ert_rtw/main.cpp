@@ -4,9 +4,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.112
+// Model version                  : 1.115
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul 01 20:32:55 2026
+// C/C++ source code generated on : Wed Jul 01 21:03:12 2026
 //
 #include "ros2nodeinterface.h"
 rclcpp::Node::SharedPtr SLROSNodePtr;
