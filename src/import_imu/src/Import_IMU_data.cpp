@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.70
+// Model version                  : 1.73
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 15:21:06 2026
+// C/C++ source code generated on : Wed Jul  1 15:38:15 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -934,6 +934,11 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   -1.0F,
 
+  // Computed Parameter: Gain_Gain_b
+  //  Referenced by: '<S56>/Gain'
+
+  -1.0F,
+
   // Computed Parameter: LPF_GyroY_NumCoef
   //  Referenced by: '<Root>/LPF_GyroY'
 
@@ -1014,12 +1019,27 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.0F,
 
+  // Computed Parameter: Switch_Threshold_n
+  //  Referenced by: '<S56>/Switch'
+
+  0.0F,
+
   // Computed Parameter: DeadZone_Start
+  //  Referenced by: '<S27>/Dead Zone'
+
+  -0.009F,
+
+  // Computed Parameter: DeadZone_End
+  //  Referenced by: '<S27>/Dead Zone'
+
+  0.009F,
+
+  // Computed Parameter: DeadZone_Start_h
   //  Referenced by: '<Root>/Dead Zone'
 
   -0.007F,
 
-  // Computed Parameter: DeadZone_End
+  // Computed Parameter: DeadZone_End_h
   //  Referenced by: '<Root>/Dead Zone'
 
   0.007F,

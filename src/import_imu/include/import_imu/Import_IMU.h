@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.70
+// Model version                  : 1.73
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 15:21:06 2026
+// C/C++ source code generated on : Wed Jul  1 15:38:15 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -292,6 +292,9 @@ struct P_Import_IMU_T_ {
   real32_T Gain_Gain_h;                // Computed Parameter: Gain_Gain_h
                                           //  Referenced by: '<S55>/Gain'
 
+  real32_T Gain_Gain_b;                // Computed Parameter: Gain_Gain_b
+                                          //  Referenced by: '<S56>/Gain'
+
   real32_T LPF_GyroY_NumCoef;          // Computed Parameter: LPF_GyroY_NumCoef
                                           //  Referenced by: '<Root>/LPF_GyroY'
 
@@ -342,10 +345,19 @@ struct P_Import_IMU_T_ {
   real32_T Switch_Threshold_h;         // Computed Parameter: Switch_Threshold_h
                                           //  Referenced by: '<S55>/Switch'
 
+  real32_T Switch_Threshold_n;         // Computed Parameter: Switch_Threshold_n
+                                          //  Referenced by: '<S56>/Switch'
+
   real32_T DeadZone_Start;             // Computed Parameter: DeadZone_Start
-                                          //  Referenced by: '<Root>/Dead Zone'
+                                          //  Referenced by: '<S27>/Dead Zone'
 
   real32_T DeadZone_End;               // Computed Parameter: DeadZone_End
+                                          //  Referenced by: '<S27>/Dead Zone'
+
+  real32_T DeadZone_Start_h;           // Computed Parameter: DeadZone_Start_h
+                                          //  Referenced by: '<Root>/Dead Zone'
+
+  real32_T DeadZone_End_h;             // Computed Parameter: DeadZone_End_h
                                           //  Referenced by: '<Root>/Dead Zone'
 
   real32_T Switch2_Threshold;          // Computed Parameter: Switch2_Threshold
@@ -611,6 +623,7 @@ extern volatile boolean_T runModel;
 //  '<S53>'  : 'Import_IMU/Switch/Subscribe/Enabled Subsystem'
 //  '<S54>'  : 'Import_IMU/logic gate/absolute value1'
 //  '<S55>'  : 'Import_IMU/logic gate/absolute value2'
+//  '<S56>'  : 'Import_IMU/logic gate/absolute value3'
 
 #endif                                 // RTW_HEADER_Import_IMU_h_
 
