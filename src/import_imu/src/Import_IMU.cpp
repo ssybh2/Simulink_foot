@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.111
+// Model version                  : 1.112
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 20:25:24 2026
+// C/C++ source code generated on : Wed Jul  1 20:32:50 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -1630,10 +1630,10 @@ void Import_IMU::step()
       (Import_IMU_P.Constant_Value_dt) * Import_IMU_B.rightY_s +
       static_cast<real32_T>(Import_IMU_P.Constant1_Value) *
       Import_IMU_B.numAccum) * Import_IMU_B.z;
-    if (Import_IMU_B.rightY_s > 0.003F) {
-      Import_IMU_B.rightY_s = 0.003F;
-    } else if (Import_IMU_B.rightY_s < -0.003F) {
-      Import_IMU_B.rightY_s = -0.003F;
+    if (Import_IMU_B.rightY_s > 0.3F) {
+      Import_IMU_B.rightY_s = 0.3F;
+    } else if (Import_IMU_B.rightY_s < -0.3F) {
+      Import_IMU_B.rightY_s = -0.3F;
     }
 
     Import_IMU_B.vCmd = (static_cast<real32_T>(Import_IMU_P.Constant2_Value) *
