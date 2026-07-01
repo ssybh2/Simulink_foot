@@ -1,0 +1,486 @@
+[0.000000] (-) TimerEvent: {}
+[0.000287] (custom_msgs) JobQueued: {'identifier': 'custom_msgs', 'dependencies': OrderedDict()}
+[0.000328] (import_imu) JobQueued: {'identifier': 'import_imu', 'dependencies': OrderedDict([('custom_msgs', '/home/uonaim/matlab_ws/FOOT/install')])}
+[0.000548] (testing_dm_hby) JobQueued: {'identifier': 'testing_dm_hby', 'dependencies': OrderedDict([('custom_msgs', '/home/uonaim/matlab_ws/FOOT/install')])}
+[0.000645] (custom_msgs) JobStarted: {'identifier': 'custom_msgs'}
+[0.041902] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'cmake'}
+[0.042882] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'build'}
+[0.042947] (custom_msgs) Command: {'cmd': ['/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake', '--build', '/home/uonaim/matlab_ws/FOOT/build/custom_msgs', '--', '-j14', '-l14'], 'cwd': '/home/uonaim/matlab_ws/FOOT/build/custom_msgs', 'env': OrderedDict([('SUDO_GID', '1000'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARCH', 'glnxa64'), ('MAIL', '/var/mail/root'), ('CUSTOM_LD_LIBRARY_PATH', ''), ('USER', 'root'), ('LOCAL_PYTHON_VENV_PATH', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('MEMKIND_HEAP_MANAGER', 'TBB'), ('CUSTOM_AMENT_PREFIX_PATH', ''), ('KMP_HANDLE_SIGNALS', '0'), ('SHLVL', '2'), ('ICU_TIMEZONE_FILES_DIR', '/usr/local/MATLAB/R2023b/bin/icutzdata'), ('LD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:/usr/local/MATLAB/R2023b/sys/opengl/lib/glnxa64:/usr/local/MATLAB/R2023b/sys/os/glnxa64:/usr/local/MATLAB/R2023b/bin/glnxa64:/root/.MathWorks/cRdHyR7QwVUi_xWfrkSUa0wupotHwscVQEmScJoFWX4/bin/glnxa64:/usr/local/MATLAB/R2023b/extern/lib/glnxa64:/usr/local/MATLAB/R2023b/cefclient/sys/os/glnxa64:/usr/local/MATLAB/R2023b/runtime/glnxa64:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/uonaim/softdrone_ws/install/soft_drone_msgs/lib:/home/uonaim/softdrone_ws/install/soem/lib:/home/uonaim/softdrone_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BASEMATLABPATH', ''), ('HOME', '/root'), ('AUTOMOUNT_MAP', ''), ('OLDPWD', '/usr/local/MATLAB/R2023b'), ('MW_LD_SHIM', '/usr/local/MATLAB/R2023b/bin/glnxa64/ld_shim.so.2.35.ubuntu_22_04'), ('ROS_PYTHON_VERSION', '3'), ('KMP_BLOCKTIME', '1'), ('PS1', '(venv)'), ('LIBVA_MESSAGING_LEVEL', '0'), ('DBUS_SESSION_BUS_ADDRESS', 'disabled:'), ('COLORTERM', 'truecolor'), ('CUSTOM_SITE_PACKAGES_PATH', ''), ('COLCON_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SUDO_UID', '1000'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/root/.matlab/R2023b/ros2/glnxa64/venv/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/pkgconfig'), ('TERM', 'dumb'), ('LC_All', 'en_US.UTF-8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('TOOLBOX', '/usr/local/MATLAB/R2023b/toolbox'), ('MKL_DOMAIN_NUM_THREADS', ''), ('KMP_INIT_AT_FORK', 'false'), ('DISPLAY', ':1001'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PRE_LD_PRELOAD', ''), ('VIRTUAL_ENV_PROMPT', '(venv)'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XAUTHORITY', '/home/uonaim/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SUDO_COMMAND', '/usr/bin/su'), ('ROS_DOMAIN_ID', '24'), ('AMENT_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SHELL', '/bin/bash'), ('CMAKE_PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin'), ('XFILESEARCHPATH', '/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/locale/%L/%T/%N%S:'), ('SUDO_USER', 'uonaim'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('OSG_LD_LIBRARY_PATH', '/usr/local/MATLAB/R2023b/sys/openscenegraph/lib/glnxa64'), ('VIRTUAL_ENV', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('CUSTOM_PATH', ''), ('KMP_STACKSIZE', '512k'), ('PWD', '/home/uonaim/matlab_ws/FOOT/build/custom_msgs'), ('DYLD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:'), ('MKL_NUM_THREADS', ''), ('MW_PATCH_OFFSETS', '0000117000002EA0'), ('PYTHONPATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/python3.9/site-packages:/root/.matlab/R2023b/ros2/glnxa64/venv/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_controller/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_msgs/local/lib/python3.10/dist-packages:/home/uonaim/softdrone_ws/install/imu_processor_pkg/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/custom_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2')]), 'shell': False}
+[0.056194] (custom_msgs) StdoutLine: {'line': b'[0/1] Re-running CMake...\n'}
+[0.070982] (custom_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake/cmake)\n'}
+[0.099684] (-) TimerEvent: {}
+[0.175458] (custom_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake_ros/cmake)\n'}
+[0.178347] (custom_msgs) StdoutLine: {'line': b'-- Found rosidl_typesupport_c: 2.0.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_c/cmake)\n'}
+[0.178726] (custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.181901] (custom_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_adapter/cmake)\n'}
+[0.199796] (-) TimerEvent: {}
+[0.216290] (custom_msgs) StdoutLine: {'line': b'-- Found rosidl_typesupport_cpp: 2.0.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_typesupport_cpp/cmake)\n'}
+[0.216675] (custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.240493] (custom_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_default_generators/cmake)\n'}
+[0.243365] (custom_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/builtin_interfaces/cmake)\n'}
+[0.260459] (custom_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/std_msgs/cmake)\n'}
+[0.299906] (-) TimerEvent: {}
+[0.400346] (-) TimerEvent: {}
+[0.500648] (-) TimerEvent: {}
+[0.601014] (-) TimerEvent: {}
+[0.672732] (custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.701129] (-) TimerEvent: {}
+[0.801421] (-) TimerEvent: {}
+[0.844428] (custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.850641] (custom_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.869052] (custom_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[0.876070] (custom_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/uonaim/matlab_ws/FOOT/build/custom_msgs\n'}
+[0.887144] (custom_msgs) StdoutLine: {'line': b'ninja: no work to do.\n'}
+[0.889101] (custom_msgs) CommandEnded: {'returncode': 0}
+[0.901519] (-) TimerEvent: {}
+[0.910348] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'install'}
+[0.915184] (custom_msgs) Command: {'cmd': ['/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake', '--install', '/home/uonaim/matlab_ws/FOOT/build/custom_msgs'], 'cwd': '/home/uonaim/matlab_ws/FOOT/build/custom_msgs', 'env': OrderedDict([('SUDO_GID', '1000'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARCH', 'glnxa64'), ('MAIL', '/var/mail/root'), ('CUSTOM_LD_LIBRARY_PATH', ''), ('USER', 'root'), ('LOCAL_PYTHON_VENV_PATH', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('MEMKIND_HEAP_MANAGER', 'TBB'), ('CUSTOM_AMENT_PREFIX_PATH', ''), ('KMP_HANDLE_SIGNALS', '0'), ('SHLVL', '2'), ('ICU_TIMEZONE_FILES_DIR', '/usr/local/MATLAB/R2023b/bin/icutzdata'), ('LD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:/usr/local/MATLAB/R2023b/sys/opengl/lib/glnxa64:/usr/local/MATLAB/R2023b/sys/os/glnxa64:/usr/local/MATLAB/R2023b/bin/glnxa64:/root/.MathWorks/cRdHyR7QwVUi_xWfrkSUa0wupotHwscVQEmScJoFWX4/bin/glnxa64:/usr/local/MATLAB/R2023b/extern/lib/glnxa64:/usr/local/MATLAB/R2023b/cefclient/sys/os/glnxa64:/usr/local/MATLAB/R2023b/runtime/glnxa64:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/uonaim/softdrone_ws/install/soft_drone_msgs/lib:/home/uonaim/softdrone_ws/install/soem/lib:/home/uonaim/softdrone_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BASEMATLABPATH', ''), ('HOME', '/root'), ('AUTOMOUNT_MAP', ''), ('OLDPWD', '/usr/local/MATLAB/R2023b'), ('MW_LD_SHIM', '/usr/local/MATLAB/R2023b/bin/glnxa64/ld_shim.so.2.35.ubuntu_22_04'), ('ROS_PYTHON_VERSION', '3'), ('KMP_BLOCKTIME', '1'), ('PS1', '(venv)'), ('LIBVA_MESSAGING_LEVEL', '0'), ('DBUS_SESSION_BUS_ADDRESS', 'disabled:'), ('COLORTERM', 'truecolor'), ('CUSTOM_SITE_PACKAGES_PATH', ''), ('COLCON_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SUDO_UID', '1000'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/root/.matlab/R2023b/ros2/glnxa64/venv/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/pkgconfig'), ('TERM', 'dumb'), ('LC_All', 'en_US.UTF-8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('TOOLBOX', '/usr/local/MATLAB/R2023b/toolbox'), ('MKL_DOMAIN_NUM_THREADS', ''), ('KMP_INIT_AT_FORK', 'false'), ('DISPLAY', ':1001'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PRE_LD_PRELOAD', ''), ('VIRTUAL_ENV_PROMPT', '(venv)'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XAUTHORITY', '/home/uonaim/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SUDO_COMMAND', '/usr/bin/su'), ('ROS_DOMAIN_ID', '24'), ('AMENT_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SHELL', '/bin/bash'), ('CMAKE_PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin'), ('XFILESEARCHPATH', '/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/locale/%L/%T/%N%S:'), ('SUDO_USER', 'uonaim'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('OSG_LD_LIBRARY_PATH', '/usr/local/MATLAB/R2023b/sys/openscenegraph/lib/glnxa64'), ('VIRTUAL_ENV', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('CUSTOM_PATH', ''), ('KMP_STACKSIZE', '512k'), ('PWD', '/home/uonaim/matlab_ws/FOOT/build/custom_msgs'), ('DYLD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:'), ('MKL_NUM_THREADS', ''), ('MW_PATCH_OFFSETS', '0000117000002EA0'), ('PYTHONPATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/python3.9/site-packages:/root/.matlab/R2023b/ros2/glnxa64/venv/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_controller/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_msgs/local/lib/python3.10/dist-packages:/home/uonaim/softdrone_ws/install/imu_processor_pkg/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/custom_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2')]), 'shell': False}
+[0.920343] (custom_msgs) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.920495] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/rosidl_interfaces/custom_msgs\n'}
+[0.920588] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs\n'}
+[0.920686] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg\n'}
+[0.920765] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/read_djirc.h\n'}
+[0.920846] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/read_dm_motor.h\n'}
+[0.921019] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/write_dm_motor_mit_control.h\n'}
+[0.921146] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.921240] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__struct.h\n'}
+[0.921318] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__functions.h\n'}
+[0.921392] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__functions.h\n'}
+[0.921514] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__type_support.h\n'}
+[0.921589] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__functions.c\n'}
+[0.921659] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__struct.h\n'}
+[0.921728] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__functions.c\n'}
+[0.921793] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__type_support.h\n'}
+[0.921876] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__functions.h\n'}
+[0.921977] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__functions.c\n'}
+[0.922082] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__struct.h\n'}
+[0.922173] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__type_support.h\n'}
+[0.922262] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.922362] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/library_path.sh\n'}
+[0.922417] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/library_path.dsv\n'}
+[0.922467] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_generator_c.so\n'}
+[0.922526] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs\n'}
+[0.922577] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg\n'}
+[0.922626] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.922677] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.922736] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_fastrtps_c.h\n'}
+[0.922802] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__rosidl_typesupport_fastrtps_c.h\n'}
+[0.922893] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__rosidl_typesupport_fastrtps_c.h\n'}
+[0.922943] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.922996] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs\n'}
+[0.923077] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg\n'}
+[0.923119] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.923179] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.923217] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__type_support.c\n'}
+[0.923272] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__type_support.c\n'}
+[0.923318] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_introspection_c.h\n'}
+[0.923365] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__rosidl_typesupport_introspection_c.h\n'}
+[0.923423] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__type_support.c\n'}
+[0.923470] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__rosidl_typesupport_introspection_c.h\n'}
+[0.923519] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.923575] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_c.so\n'}
+[0.923620] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs\n'}
+[0.923672] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg\n'}
+[0.923717] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/read_dm_motor.hpp\n'}
+[0.923753] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.923812] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__builder.hpp\n'}
+[0.923849] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__traits.hpp\n'}
+[0.923902] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__struct.hpp\n'}
+[0.923942] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__builder.hpp\n'}
+[0.923990] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__traits.hpp\n'}
+[0.924039] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__struct.hpp\n'}
+[0.924087] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__struct.hpp\n'}
+[0.924145] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__traits.hpp\n'}
+[0.924193] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__builder.hpp\n'}
+[0.924239] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/read_djirc.hpp\n'}
+[0.924283] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/write_dm_motor_mit_control.hpp\n'}
+[0.924338] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs\n'}
+[0.924382] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg\n'}
+[0.924437] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.924482] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.924518] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.924567] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/dds_fastrtps\n'}
+[0.924611] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.924648] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.924693] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.924740] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs\n'}
+[0.924776] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg\n'}
+[0.924823] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.924870] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.924917] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.924960] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__type_support.cpp\n'}
+[0.924997] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/write_dm_motor_mit_control__type_support.cpp\n'}
+[0.925044] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_dm_motor__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.925092] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/include/custom_msgs/custom_msgs/msg/detail/read_djirc__type_support.cpp\n'}
+[0.925139] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.925196] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/libcustom_msgs__rosidl_typesupport_cpp.so\n'}
+[0.925234] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/ReadDJIRC.idl\n'}
+[0.925278] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/ReadDmMotor.idl\n'}
+[0.925316] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/WriteDmMotorMITControl.idl\n'}
+[0.925352] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/ReadDJIRC.msg\n'}
+[0.925402] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/ReadDmMotor.msg\n'}
+[0.925476] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/msg/WriteDmMotorMITControl.msg\n'}
+[0.925529] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/package_run_dependencies/custom_msgs\n'}
+[0.925572] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/parent_prefix_path/custom_msgs\n'}
+[0.925611] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/ament_prefix_path.sh\n'}
+[0.925663] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/ament_prefix_path.dsv\n'}
+[0.925711] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/path.sh\n'}
+[0.925760] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/environment/path.dsv\n'}
+[0.925809] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.bash\n'}
+[0.925847] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.sh\n'}
+[0.925895] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.zsh\n'}
+[0.925954] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/local_setup.dsv\n'}
+[0.926009] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.dsv\n'}
+[0.926159] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/packages/custom_msgs\n'}
+[0.926273] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake\n'}
+[0.926327] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-release.cmake\n'}
+[0.926435] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.926487] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[0.926596] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.926646] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[0.926746] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.926816] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-release.cmake\n'}
+[0.926903] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.927004] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.927073] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[0.927168] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.927227] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[0.927325] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.927378] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-release.cmake\n'}
+[0.927440] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.927494] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.927547] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.927600] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.927655] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.927710] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.927757] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.927813] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgsConfig.cmake\n'}
+[0.927863] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake/custom_msgsConfig-version.cmake\n'}
+[0.927910] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/package.xml\n'}
+[0.929664] (custom_msgs) CommandEnded: {'returncode': 0}
+[1.001650] (-) TimerEvent: {}
+[1.002940] (custom_msgs) JobEnded: {'identifier': 'custom_msgs', 'rc': 0}
+[1.013631] (import_imu) JobStarted: {'identifier': 'import_imu'}
+[1.019258] (testing_dm_hby) JobStarted: {'identifier': 'testing_dm_hby'}
+[1.035135] (import_imu) JobProgress: {'identifier': 'import_imu', 'progress': 'cmake'}
+[1.036434] (import_imu) JobProgress: {'identifier': 'import_imu', 'progress': 'build'}
+[1.036806] (import_imu) Command: {'cmd': ['/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake', '--build', '/home/uonaim/matlab_ws/FOOT/build/import_imu', '--', '-j14', '-l14'], 'cwd': '/home/uonaim/matlab_ws/FOOT/build/import_imu', 'env': OrderedDict([('SUDO_GID', '1000'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARCH', 'glnxa64'), ('MAIL', '/var/mail/root'), ('CUSTOM_LD_LIBRARY_PATH', ''), ('USER', 'root'), ('LOCAL_PYTHON_VENV_PATH', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('MEMKIND_HEAP_MANAGER', 'TBB'), ('CUSTOM_AMENT_PREFIX_PATH', ''), ('KMP_HANDLE_SIGNALS', '0'), ('SHLVL', '2'), ('ICU_TIMEZONE_FILES_DIR', '/usr/local/MATLAB/R2023b/bin/icutzdata'), ('LD_LIBRARY_PATH', '/home/uonaim/matlab_ws/FOOT/install/lib:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:/usr/local/MATLAB/R2023b/sys/opengl/lib/glnxa64:/usr/local/MATLAB/R2023b/sys/os/glnxa64:/usr/local/MATLAB/R2023b/bin/glnxa64:/root/.MathWorks/cRdHyR7QwVUi_xWfrkSUa0wupotHwscVQEmScJoFWX4/bin/glnxa64:/usr/local/MATLAB/R2023b/extern/lib/glnxa64:/usr/local/MATLAB/R2023b/cefclient/sys/os/glnxa64:/usr/local/MATLAB/R2023b/runtime/glnxa64:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/uonaim/softdrone_ws/install/soft_drone_msgs/lib:/home/uonaim/softdrone_ws/install/soem/lib:/home/uonaim/softdrone_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BASEMATLABPATH', ''), ('HOME', '/root'), ('AUTOMOUNT_MAP', ''), ('OLDPWD', '/usr/local/MATLAB/R2023b'), ('MW_LD_SHIM', '/usr/local/MATLAB/R2023b/bin/glnxa64/ld_shim.so.2.35.ubuntu_22_04'), ('ROS_PYTHON_VERSION', '3'), ('KMP_BLOCKTIME', '1'), ('PS1', '(venv)'), ('LIBVA_MESSAGING_LEVEL', '0'), ('DBUS_SESSION_BUS_ADDRESS', 'disabled:'), ('COLORTERM', 'truecolor'), ('CUSTOM_SITE_PACKAGES_PATH', ''), ('COLCON_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SUDO_UID', '1000'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/root/.matlab/R2023b/ros2/glnxa64/venv/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/pkgconfig'), ('TERM', 'dumb'), ('LC_All', 'en_US.UTF-8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('TOOLBOX', '/usr/local/MATLAB/R2023b/toolbox'), ('MKL_DOMAIN_NUM_THREADS', ''), ('KMP_INIT_AT_FORK', 'false'), ('DISPLAY', ':1001'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PRE_LD_PRELOAD', ''), ('VIRTUAL_ENV_PROMPT', '(venv)'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XAUTHORITY', '/home/uonaim/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SUDO_COMMAND', '/usr/bin/su'), ('ROS_DOMAIN_ID', '24'), ('AMENT_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SHELL', '/bin/bash'), ('CMAKE_PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin'), ('XFILESEARCHPATH', '/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/locale/%L/%T/%N%S:'), ('SUDO_USER', 'uonaim'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('OSG_LD_LIBRARY_PATH', '/usr/local/MATLAB/R2023b/sys/openscenegraph/lib/glnxa64'), ('VIRTUAL_ENV', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('CUSTOM_PATH', ''), ('KMP_STACKSIZE', '512k'), ('PWD', '/home/uonaim/matlab_ws/FOOT/build/import_imu'), ('DYLD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:'), ('MKL_NUM_THREADS', ''), ('MW_PATCH_OFFSETS', '0000117000002EA0'), ('PYTHONPATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/python3.9/site-packages:/root/.matlab/R2023b/ros2/glnxa64/venv/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_controller/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_msgs/local/lib/python3.10/dist-packages:/home/uonaim/softdrone_ws/install/imu_processor_pkg/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/custom_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2:')]), 'shell': False}
+[1.042677] (testing_dm_hby) JobProgress: {'identifier': 'testing_dm_hby', 'progress': 'cmake'}
+[1.043515] (testing_dm_hby) JobProgress: {'identifier': 'testing_dm_hby', 'progress': 'build'}
+[1.044047] (testing_dm_hby) Command: {'cmd': ['/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake', '--build', '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby', '--', '-j14', '-l14'], 'cwd': '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby', 'env': OrderedDict([('SUDO_GID', '1000'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARCH', 'glnxa64'), ('MAIL', '/var/mail/root'), ('CUSTOM_LD_LIBRARY_PATH', ''), ('USER', 'root'), ('LOCAL_PYTHON_VENV_PATH', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('MEMKIND_HEAP_MANAGER', 'TBB'), ('CUSTOM_AMENT_PREFIX_PATH', ''), ('KMP_HANDLE_SIGNALS', '0'), ('SHLVL', '2'), ('ICU_TIMEZONE_FILES_DIR', '/usr/local/MATLAB/R2023b/bin/icutzdata'), ('LD_LIBRARY_PATH', '/home/uonaim/matlab_ws/FOOT/install/lib:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:/usr/local/MATLAB/R2023b/sys/opengl/lib/glnxa64:/usr/local/MATLAB/R2023b/sys/os/glnxa64:/usr/local/MATLAB/R2023b/bin/glnxa64:/root/.MathWorks/cRdHyR7QwVUi_xWfrkSUa0wupotHwscVQEmScJoFWX4/bin/glnxa64:/usr/local/MATLAB/R2023b/extern/lib/glnxa64:/usr/local/MATLAB/R2023b/cefclient/sys/os/glnxa64:/usr/local/MATLAB/R2023b/runtime/glnxa64:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/uonaim/softdrone_ws/install/soft_drone_msgs/lib:/home/uonaim/softdrone_ws/install/soem/lib:/home/uonaim/softdrone_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BASEMATLABPATH', ''), ('HOME', '/root'), ('AUTOMOUNT_MAP', ''), ('OLDPWD', '/usr/local/MATLAB/R2023b'), ('MW_LD_SHIM', '/usr/local/MATLAB/R2023b/bin/glnxa64/ld_shim.so.2.35.ubuntu_22_04'), ('ROS_PYTHON_VERSION', '3'), ('KMP_BLOCKTIME', '1'), ('PS1', '(venv)'), ('LIBVA_MESSAGING_LEVEL', '0'), ('DBUS_SESSION_BUS_ADDRESS', 'disabled:'), ('COLORTERM', 'truecolor'), ('CUSTOM_SITE_PACKAGES_PATH', ''), ('COLCON_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SUDO_UID', '1000'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/root/.matlab/R2023b/ros2/glnxa64/venv/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/pkgconfig'), ('TERM', 'dumb'), ('LC_All', 'en_US.UTF-8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('TOOLBOX', '/usr/local/MATLAB/R2023b/toolbox'), ('MKL_DOMAIN_NUM_THREADS', ''), ('KMP_INIT_AT_FORK', 'false'), ('DISPLAY', ':1001'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PRE_LD_PRELOAD', ''), ('VIRTUAL_ENV_PROMPT', '(venv)'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XAUTHORITY', '/home/uonaim/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SUDO_COMMAND', '/usr/bin/su'), ('ROS_DOMAIN_ID', '24'), ('AMENT_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SHELL', '/bin/bash'), ('CMAKE_PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin'), ('XFILESEARCHPATH', '/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/locale/%L/%T/%N%S:'), ('SUDO_USER', 'uonaim'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('OSG_LD_LIBRARY_PATH', '/usr/local/MATLAB/R2023b/sys/openscenegraph/lib/glnxa64'), ('VIRTUAL_ENV', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('CUSTOM_PATH', ''), ('KMP_STACKSIZE', '512k'), ('PWD', '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby'), ('DYLD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:'), ('MKL_NUM_THREADS', ''), ('MW_PATCH_OFFSETS', '0000117000002EA0'), ('PYTHONPATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/python3.9/site-packages:/root/.matlab/R2023b/ros2/glnxa64/venv/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_controller/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_msgs/local/lib/python3.10/dist-packages:/home/uonaim/softdrone_ws/install/imu_processor_pkg/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/custom_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2:')]), 'shell': False}
+[1.047610] (import_imu) StdoutLine: {'line': b'[0/1] Re-running CMake...\n'}
+[1.057123] (testing_dm_hby) StdoutLine: {'line': b'ninja: no work to do.\n'}
+[1.059078] (testing_dm_hby) CommandEnded: {'returncode': 0}
+[1.061884] (import_imu) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake/cmake)\n'}
+[1.078465] (testing_dm_hby) JobProgress: {'identifier': 'testing_dm_hby', 'progress': 'install'}
+[1.078904] (testing_dm_hby) Command: {'cmd': ['/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake', '--install', '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby'], 'cwd': '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby', 'env': OrderedDict([('SUDO_GID', '1000'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARCH', 'glnxa64'), ('MAIL', '/var/mail/root'), ('CUSTOM_LD_LIBRARY_PATH', ''), ('USER', 'root'), ('LOCAL_PYTHON_VENV_PATH', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('MEMKIND_HEAP_MANAGER', 'TBB'), ('CUSTOM_AMENT_PREFIX_PATH', ''), ('KMP_HANDLE_SIGNALS', '0'), ('SHLVL', '2'), ('ICU_TIMEZONE_FILES_DIR', '/usr/local/MATLAB/R2023b/bin/icutzdata'), ('LD_LIBRARY_PATH', '/home/uonaim/matlab_ws/FOOT/install/lib:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:/usr/local/MATLAB/R2023b/sys/opengl/lib/glnxa64:/usr/local/MATLAB/R2023b/sys/os/glnxa64:/usr/local/MATLAB/R2023b/bin/glnxa64:/root/.MathWorks/cRdHyR7QwVUi_xWfrkSUa0wupotHwscVQEmScJoFWX4/bin/glnxa64:/usr/local/MATLAB/R2023b/extern/lib/glnxa64:/usr/local/MATLAB/R2023b/cefclient/sys/os/glnxa64:/usr/local/MATLAB/R2023b/runtime/glnxa64:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/uonaim/softdrone_ws/install/soft_drone_msgs/lib:/home/uonaim/softdrone_ws/install/soem/lib:/home/uonaim/softdrone_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BASEMATLABPATH', ''), ('HOME', '/root'), ('AUTOMOUNT_MAP', ''), ('OLDPWD', '/usr/local/MATLAB/R2023b'), ('MW_LD_SHIM', '/usr/local/MATLAB/R2023b/bin/glnxa64/ld_shim.so.2.35.ubuntu_22_04'), ('ROS_PYTHON_VERSION', '3'), ('KMP_BLOCKTIME', '1'), ('PS1', '(venv)'), ('LIBVA_MESSAGING_LEVEL', '0'), ('DBUS_SESSION_BUS_ADDRESS', 'disabled:'), ('COLORTERM', 'truecolor'), ('CUSTOM_SITE_PACKAGES_PATH', ''), ('COLCON_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SUDO_UID', '1000'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/root/.matlab/R2023b/ros2/glnxa64/venv/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/pkgconfig'), ('TERM', 'dumb'), ('LC_All', 'en_US.UTF-8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('TOOLBOX', '/usr/local/MATLAB/R2023b/toolbox'), ('MKL_DOMAIN_NUM_THREADS', ''), ('KMP_INIT_AT_FORK', 'false'), ('DISPLAY', ':1001'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PRE_LD_PRELOAD', ''), ('VIRTUAL_ENV_PROMPT', '(venv)'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XAUTHORITY', '/home/uonaim/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SUDO_COMMAND', '/usr/bin/su'), ('ROS_DOMAIN_ID', '24'), ('AMENT_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SHELL', '/bin/bash'), ('CMAKE_PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin'), ('XFILESEARCHPATH', '/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/locale/%L/%T/%N%S:'), ('SUDO_USER', 'uonaim'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('OSG_LD_LIBRARY_PATH', '/usr/local/MATLAB/R2023b/sys/openscenegraph/lib/glnxa64'), ('VIRTUAL_ENV', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('CUSTOM_PATH', ''), ('KMP_STACKSIZE', '512k'), ('PWD', '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby'), ('DYLD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:'), ('MKL_NUM_THREADS', ''), ('MW_PATCH_OFFSETS', '0000117000002EA0'), ('PYTHONPATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/python3.9/site-packages:/root/.matlab/R2023b/ros2/glnxa64/venv/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_controller/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_msgs/local/lib/python3.10/dist-packages:/home/uonaim/softdrone_ws/install/imu_processor_pkg/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/custom_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2:')]), 'shell': False}
+[1.083112] (testing_dm_hby) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.083307] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/testing_dm_hby/testing_DM_hby\n'}
+[1.083430] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/package_run_dependencies/testing_dm_hby\n'}
+[1.083535] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/parent_prefix_path/testing_dm_hby\n'}
+[1.083627] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/ament_prefix_path.sh\n'}
+[1.083722] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/ament_prefix_path.dsv\n'}
+[1.083802] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/path.sh\n'}
+[1.083881] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/path.dsv\n'}
+[1.083947] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.bash\n'}
+[1.084011] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.sh\n'}
+[1.084098] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.zsh\n'}
+[1.084184] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.dsv\n'}
+[1.084281] (testing_dm_hby) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.dsv\n'}
+[1.084347] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/packages/testing_dm_hby\n'}
+[1.084391] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.084439] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/cmake/testing_dm_hbyConfig.cmake\n'}
+[1.084476] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/cmake/testing_dm_hbyConfig-version.cmake\n'}
+[1.084513] (testing_dm_hby) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.xml\n'}
+[1.085351] (testing_dm_hby) CommandEnded: {'returncode': 0}
+[1.101753] (-) TimerEvent: {}
+[1.154650] (testing_dm_hby) JobEnded: {'identifier': 'testing_dm_hby', 'rc': 0}
+[1.160939] (import_imu) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/ament_cmake_ros/cmake)\n'}
+[1.163630] (import_imu) StdoutLine: {'line': b'-- Found custom_msgs: 0.0.0 (/home/uonaim/matlab_ws/FOOT/install/share/custom_msgs/cmake)\n'}
+[1.191138] (import_imu) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_generator_c/cmake)\n'}
+[1.193931] (import_imu) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_adapter/cmake)\n'}
+[1.200259] (import_imu) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rosidl_generator_cpp/cmake)\n'}
+[1.201828] (-) TimerEvent: {}
+[1.211814] (import_imu) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.227761] (import_imu) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.301992] (-) TimerEvent: {}
+[1.309734] (import_imu) StdoutLine: {'line': b'-- Found rclcpp: 16.0.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rclcpp/cmake)\n'}
+[1.348628] (import_imu) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rmw_implementation_cmake/cmake)\n'}
+[1.349835] (import_imu) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.373606] (import_imu) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.402117] (-) TimerEvent: {}
+[1.463130] (import_imu) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/share/sensor_msgs/cmake)\n'}
+[1.502242] (-) TimerEvent: {}
+[1.602568] (-) TimerEvent: {}
+[1.619767] (import_imu) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.633879] (import_imu) StdoutLine: {'line': b'-- Generating done\n'}
+[1.641381] (import_imu) StdoutLine: {'line': b'-- Build files have been written to: /home/uonaim/matlab_ws/FOOT/build/import_imu\n'}
+[1.689285] (import_imu) StdoutLine: {'line': b'[1/10] Building CXX object CMakeFiles/Import_IMU.dir/src/rt_nonfinite.cpp.o\n'}
+[1.702694] (-) TimerEvent: {}
+[1.803048] (-) TimerEvent: {}
+[1.903367] (-) TimerEvent: {}
+[2.003714] (-) TimerEvent: {}
+[2.104021] (-) TimerEvent: {}
+[2.204382] (-) TimerEvent: {}
+[2.304778] (-) TimerEvent: {}
+[2.405128] (-) TimerEvent: {}
+[2.505540] (-) TimerEvent: {}
+[2.605852] (-) TimerEvent: {}
+[2.706183] (-) TimerEvent: {}
+[2.806489] (-) TimerEvent: {}
+[2.906803] (-) TimerEvent: {}
+[3.007118] (-) TimerEvent: {}
+[3.107423] (-) TimerEvent: {}
+[3.207752] (-) TimerEvent: {}
+[3.308099] (-) TimerEvent: {}
+[3.408438] (-) TimerEvent: {}
+[3.508833] (-) TimerEvent: {}
+[3.609189] (-) TimerEvent: {}
+[3.709539] (-) TimerEvent: {}
+[3.809903] (-) TimerEvent: {}
+[3.910281] (-) TimerEvent: {}
+[4.010799] (-) TimerEvent: {}
+[4.111187] (-) TimerEvent: {}
+[4.211581] (-) TimerEvent: {}
+[4.311948] (-) TimerEvent: {}
+[4.412485] (-) TimerEvent: {}
+[4.512943] (-) TimerEvent: {}
+[4.613382] (-) TimerEvent: {}
+[4.713738] (-) TimerEvent: {}
+[4.814190] (-) TimerEvent: {}
+[4.914518] (-) TimerEvent: {}
+[4.953294] (import_imu) StdoutLine: {'line': b'[2/10] Building CXX object CMakeFiles/Import_IMU.dir/src/slros2_initialize.cpp.o\n'}
+[5.014646] (-) TimerEvent: {}
+[5.115004] (-) TimerEvent: {}
+[5.215419] (-) TimerEvent: {}
+[5.315764] (-) TimerEvent: {}
+[5.416084] (-) TimerEvent: {}
+[5.516379] (-) TimerEvent: {}
+[5.616683] (-) TimerEvent: {}
+[5.716995] (-) TimerEvent: {}
+[5.817356] (-) TimerEvent: {}
+[5.917726] (-) TimerEvent: {}
+[6.018084] (-) TimerEvent: {}
+[6.118441] (-) TimerEvent: {}
+[6.218804] (-) TimerEvent: {}
+[6.319163] (-) TimerEvent: {}
+[6.419479] (-) TimerEvent: {}
+[6.519872] (-) TimerEvent: {}
+[6.620243] (-) TimerEvent: {}
+[6.720656] (-) TimerEvent: {}
+[6.821154] (-) TimerEvent: {}
+[6.921663] (-) TimerEvent: {}
+[7.022029] (-) TimerEvent: {}
+[7.122372] (-) TimerEvent: {}
+[7.222767] (-) TimerEvent: {}
+[7.323180] (-) TimerEvent: {}
+[7.423582] (-) TimerEvent: {}
+[7.524014] (-) TimerEvent: {}
+[7.624458] (-) TimerEvent: {}
+[7.724865] (-) TimerEvent: {}
+[7.825209] (-) TimerEvent: {}
+[7.925530] (-) TimerEvent: {}
+[8.025861] (-) TimerEvent: {}
+[8.126194] (-) TimerEvent: {}
+[8.226542] (-) TimerEvent: {}
+[8.326948] (-) TimerEvent: {}
+[8.389251] (import_imu) StdoutLine: {'line': b'[3/10] Building CXX object CMakeFiles/Import_IMU.dir/src/slros_busmsg_conversion.cpp.o\n'}
+[8.389558] (import_imu) StdoutLine: {'line': b'In file included from /home/uonaim/matlab_ws/FOOT/src/import_imu/include/import_imu/slros_busmsg_conversion.h:14,\n'}
+[8.389638] (import_imu) StdoutLine: {'line': b'                 from /home/uonaim/matlab_ws/FOOT/src/import_imu/src/slros_busmsg_conversion.cpp:1:\n'}
+[8.389710] (import_imu) StdoutLine: {'line': b'/home/uonaim/matlab_ws/FOOT/src/import_imu/include/import_imu/slros_msgconvert_utils.h: In instantiation of \xe2\x80\x98void convertToBusFixedPrimitiveArray(BusType&, const MsgType&, const slros::ROSPropertyWarnStatus&) [with BusType = double [9]; MsgType = std::array<double, 9>]\xe2\x80\x99:\n'}
+[8.389786] (import_imu) StdoutLine: {'line': b'/home/uonaim/matlab_ws/FOOT/src/import_imu/src/slros_busmsg_conversion.cpp:234:128:   required from here\n'}
+[8.389846] (import_imu) StdoutLine: {'line': b'/home/uonaim/matlab_ws/FOOT/src/import_imu/include/import_imu/slros_msgconvert_utils.h:543:81: warning: unused parameter \xe2\x80\x98warnStatus\xe2\x80\x99 [-Wunused-parameter]\n'}
+[8.389912] (import_imu) StdoutLine: {'line': b'  543 |                                             const slros::ROSPropertyWarnStatus& warnStatus) {\n'}
+[8.389974] (import_imu) StdoutLine: {'line': b'      |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~\n'}
+[8.418977] (import_imu) StdoutLine: {'line': b'[4/10] Building CXX object CMakeFiles/Import_IMU.dir/src/rtGetNaN.cpp.o\n'}
+[8.421151] (import_imu) StdoutLine: {'line': b'[5/10] Building CXX object CMakeFiles/Import_IMU.dir/src/rtGetInf.cpp.o\n'}
+[8.427115] (-) TimerEvent: {}
+[8.527472] (-) TimerEvent: {}
+[8.627806] (-) TimerEvent: {}
+[8.728177] (-) TimerEvent: {}
+[8.828578] (-) TimerEvent: {}
+[8.928989] (-) TimerEvent: {}
+[9.029397] (-) TimerEvent: {}
+[9.129772] (-) TimerEvent: {}
+[9.230140] (-) TimerEvent: {}
+[9.330471] (-) TimerEvent: {}
+[9.430854] (-) TimerEvent: {}
+[9.531293] (-) TimerEvent: {}
+[9.631722] (-) TimerEvent: {}
+[9.732075] (-) TimerEvent: {}
+[9.832425] (-) TimerEvent: {}
+[9.932781] (-) TimerEvent: {}
+[10.033137] (-) TimerEvent: {}
+[10.133503] (-) TimerEvent: {}
+[10.233934] (-) TimerEvent: {}
+[10.334324] (-) TimerEvent: {}
+[10.434639] (-) TimerEvent: {}
+[10.534996] (-) TimerEvent: {}
+[10.635410] (-) TimerEvent: {}
+[10.735799] (-) TimerEvent: {}
+[10.836163] (-) TimerEvent: {}
+[10.936500] (-) TimerEvent: {}
+[11.036866] (-) TimerEvent: {}
+[11.137364] (-) TimerEvent: {}
+[11.237779] (-) TimerEvent: {}
+[11.338213] (-) TimerEvent: {}
+[11.438596] (-) TimerEvent: {}
+[11.538983] (-) TimerEvent: {}
+[11.639402] (-) TimerEvent: {}
+[11.739724] (-) TimerEvent: {}
+[11.840064] (-) TimerEvent: {}
+[11.940389] (-) TimerEvent: {}
+[11.988757] (import_imu) StdoutLine: {'line': b'[6/10] Building CXX object CMakeFiles/Import_IMU.dir/src/main.cpp.o\n'}
+[12.040528] (-) TimerEvent: {}
+[12.140849] (-) TimerEvent: {}
+[12.194639] (import_imu) StdoutLine: {'line': b'[7/10] Building CXX object CMakeFiles/Import_IMU.dir/src/Import_IMU_data.cpp.o\n'}
+[12.240959] (-) TimerEvent: {}
+[12.341310] (-) TimerEvent: {}
+[12.441664] (-) TimerEvent: {}
+[12.542035] (-) TimerEvent: {}
+[12.642356] (-) TimerEvent: {}
+[12.648000] (import_imu) StdoutLine: {'line': b'[8/10] Building CXX object CMakeFiles/Import_IMU.dir/src/ros2nodeinterface.cpp.o\n'}
+[12.742474] (-) TimerEvent: {}
+[12.842798] (-) TimerEvent: {}
+[12.943154] (-) TimerEvent: {}
+[13.043507] (-) TimerEvent: {}
+[13.143844] (-) TimerEvent: {}
+[13.244203] (-) TimerEvent: {}
+[13.344540] (-) TimerEvent: {}
+[13.444943] (-) TimerEvent: {}
+[13.545275] (-) TimerEvent: {}
+[13.645583] (-) TimerEvent: {}
+[13.745905] (-) TimerEvent: {}
+[13.846248] (-) TimerEvent: {}
+[13.946566] (-) TimerEvent: {}
+[14.046917] (-) TimerEvent: {}
+[14.147285] (-) TimerEvent: {}
+[14.247640] (-) TimerEvent: {}
+[14.348081] (-) TimerEvent: {}
+[14.448583] (-) TimerEvent: {}
+[14.548933] (-) TimerEvent: {}
+[14.649310] (-) TimerEvent: {}
+[14.749670] (-) TimerEvent: {}
+[14.850063] (-) TimerEvent: {}
+[14.950414] (-) TimerEvent: {}
+[15.050783] (-) TimerEvent: {}
+[15.151181] (-) TimerEvent: {}
+[15.251551] (-) TimerEvent: {}
+[15.351929] (-) TimerEvent: {}
+[15.452306] (-) TimerEvent: {}
+[15.552666] (-) TimerEvent: {}
+[15.653054] (-) TimerEvent: {}
+[15.753389] (-) TimerEvent: {}
+[15.853772] (-) TimerEvent: {}
+[15.954176] (-) TimerEvent: {}
+[16.054581] (-) TimerEvent: {}
+[16.154962] (-) TimerEvent: {}
+[16.255349] (-) TimerEvent: {}
+[16.355647] (-) TimerEvent: {}
+[16.456016] (-) TimerEvent: {}
+[16.556458] (-) TimerEvent: {}
+[16.656817] (-) TimerEvent: {}
+[16.757185] (-) TimerEvent: {}
+[16.857495] (-) TimerEvent: {}
+[16.957822] (-) TimerEvent: {}
+[17.058194] (-) TimerEvent: {}
+[17.158567] (-) TimerEvent: {}
+[17.258922] (-) TimerEvent: {}
+[17.359322] (-) TimerEvent: {}
+[17.459719] (-) TimerEvent: {}
+[17.560112] (-) TimerEvent: {}
+[17.660483] (-) TimerEvent: {}
+[17.760843] (-) TimerEvent: {}
+[17.861236] (-) TimerEvent: {}
+[17.961631] (-) TimerEvent: {}
+[18.061947] (-) TimerEvent: {}
+[18.162256] (-) TimerEvent: {}
+[18.262576] (-) TimerEvent: {}
+[18.362883] (-) TimerEvent: {}
+[18.463215] (-) TimerEvent: {}
+[18.563577] (-) TimerEvent: {}
+[18.663925] (-) TimerEvent: {}
+[18.764228] (-) TimerEvent: {}
+[18.864535] (-) TimerEvent: {}
+[18.964885] (-) TimerEvent: {}
+[19.065244] (-) TimerEvent: {}
+[19.165607] (-) TimerEvent: {}
+[19.265951] (-) TimerEvent: {}
+[19.366295] (-) TimerEvent: {}
+[19.466645] (-) TimerEvent: {}
+[19.566996] (-) TimerEvent: {}
+[19.667358] (-) TimerEvent: {}
+[19.767702] (-) TimerEvent: {}
+[19.868136] (-) TimerEvent: {}
+[19.968562] (-) TimerEvent: {}
+[20.069022] (-) TimerEvent: {}
+[20.169339] (-) TimerEvent: {}
+[20.269654] (-) TimerEvent: {}
+[20.370000] (-) TimerEvent: {}
+[20.470388] (-) TimerEvent: {}
+[20.570720] (-) TimerEvent: {}
+[20.671064] (-) TimerEvent: {}
+[20.771365] (-) TimerEvent: {}
+[20.871657] (-) TimerEvent: {}
+[20.971975] (-) TimerEvent: {}
+[21.072358] (-) TimerEvent: {}
+[21.172674] (-) TimerEvent: {}
+[21.273039] (-) TimerEvent: {}
+[21.373355] (-) TimerEvent: {}
+[21.473693] (-) TimerEvent: {}
+[21.574070] (-) TimerEvent: {}
+[21.674461] (-) TimerEvent: {}
+[21.774775] (-) TimerEvent: {}
+[21.875124] (-) TimerEvent: {}
+[21.975439] (-) TimerEvent: {}
+[22.075775] (-) TimerEvent: {}
+[22.176138] (-) TimerEvent: {}
+[22.276511] (-) TimerEvent: {}
+[22.376917] (-) TimerEvent: {}
+[22.477305] (-) TimerEvent: {}
+[22.577661] (-) TimerEvent: {}
+[22.678006] (-) TimerEvent: {}
+[22.778444] (-) TimerEvent: {}
+[22.878869] (-) TimerEvent: {}
+[22.979388] (-) TimerEvent: {}
+[23.079838] (-) TimerEvent: {}
+[23.180306] (-) TimerEvent: {}
+[23.280730] (-) TimerEvent: {}
+[23.381185] (-) TimerEvent: {}
+[23.481639] (-) TimerEvent: {}
+[23.582027] (-) TimerEvent: {}
+[23.682402] (-) TimerEvent: {}
+[23.774980] (import_imu) StdoutLine: {'line': b'[9/10] Building CXX object CMakeFiles/Import_IMU.dir/src/Import_IMU.cpp.o\n'}
+[23.782500] (-) TimerEvent: {}
+[23.882829] (-) TimerEvent: {}
+[23.983260] (-) TimerEvent: {}
+[24.083654] (-) TimerEvent: {}
+[24.184020] (-) TimerEvent: {}
+[24.284386] (-) TimerEvent: {}
+[24.384741] (-) TimerEvent: {}
+[24.443574] (import_imu) StdoutLine: {'line': b'[10/10] Linking CXX executable Import_IMU\n'}
+[24.446624] (import_imu) CommandEnded: {'returncode': 0}
+[24.468400] (import_imu) JobProgress: {'identifier': 'import_imu', 'progress': 'install'}
+[24.468817] (import_imu) Command: {'cmd': ['/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake', '--install', '/home/uonaim/matlab_ws/FOOT/build/import_imu'], 'cwd': '/home/uonaim/matlab_ws/FOOT/build/import_imu', 'env': OrderedDict([('SUDO_GID', '1000'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ARCH', 'glnxa64'), ('MAIL', '/var/mail/root'), ('CUSTOM_LD_LIBRARY_PATH', ''), ('USER', 'root'), ('LOCAL_PYTHON_VENV_PATH', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('MEMKIND_HEAP_MANAGER', 'TBB'), ('CUSTOM_AMENT_PREFIX_PATH', ''), ('KMP_HANDLE_SIGNALS', '0'), ('SHLVL', '2'), ('ICU_TIMEZONE_FILES_DIR', '/usr/local/MATLAB/R2023b/bin/icutzdata'), ('LD_LIBRARY_PATH', '/home/uonaim/matlab_ws/FOOT/install/lib:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:/usr/local/MATLAB/R2023b/sys/opengl/lib/glnxa64:/usr/local/MATLAB/R2023b/sys/os/glnxa64:/usr/local/MATLAB/R2023b/bin/glnxa64:/root/.MathWorks/cRdHyR7QwVUi_xWfrkSUa0wupotHwscVQEmScJoFWX4/bin/glnxa64:/usr/local/MATLAB/R2023b/extern/lib/glnxa64:/usr/local/MATLAB/R2023b/cefclient/sys/os/glnxa64:/usr/local/MATLAB/R2023b/runtime/glnxa64:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/uonaim/softdrone_ws/install/soft_drone_msgs/lib:/home/uonaim/softdrone_ws/install/soem/lib:/home/uonaim/softdrone_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BASEMATLABPATH', ''), ('HOME', '/root'), ('AUTOMOUNT_MAP', ''), ('OLDPWD', '/usr/local/MATLAB/R2023b'), ('MW_LD_SHIM', '/usr/local/MATLAB/R2023b/bin/glnxa64/ld_shim.so.2.35.ubuntu_22_04'), ('ROS_PYTHON_VERSION', '3'), ('KMP_BLOCKTIME', '1'), ('PS1', '(venv)'), ('LIBVA_MESSAGING_LEVEL', '0'), ('DBUS_SESSION_BUS_ADDRESS', 'disabled:'), ('COLORTERM', 'truecolor'), ('CUSTOM_SITE_PACKAGES_PATH', ''), ('COLCON_PREFIX_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SUDO_UID', '1000'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/root/.matlab/R2023b/ros2/glnxa64/venv/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/pkgconfig'), ('TERM', 'dumb'), ('LC_All', 'en_US.UTF-8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/root/.matlab/R2023b/ros2/glnxa64/venv/bin:/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('TOOLBOX', '/usr/local/MATLAB/R2023b/toolbox'), ('MKL_DOMAIN_NUM_THREADS', ''), ('KMP_INIT_AT_FORK', 'false'), ('DISPLAY', ':1001'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PRE_LD_PRELOAD', ''), ('VIRTUAL_ENV_PROMPT', '(venv)'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XAUTHORITY', '/home/uonaim/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SUDO_COMMAND', '/usr/bin/su'), ('ROS_DOMAIN_ID', '24'), ('AMENT_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install::/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2'), ('SHELL', '/bin/bash'), ('CMAKE_PATH', '/usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin'), ('XFILESEARCHPATH', '/usr/local/MATLAB/R2023b/sys/java/jre/glnxa64/jre/lib/locale/%L/%T/%N%S:'), ('SUDO_USER', 'uonaim'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('OSG_LD_LIBRARY_PATH', '/usr/local/MATLAB/R2023b/sys/openscenegraph/lib/glnxa64'), ('VIRTUAL_ENV', '/root/.matlab/R2023b/ros2/glnxa64/venv'), ('CUSTOM_PATH', ''), ('KMP_STACKSIZE', '512k'), ('PWD', '/home/uonaim/matlab_ws/FOOT/build/import_imu'), ('DYLD_LIBRARY_PATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib:'), ('MKL_NUM_THREADS', ''), ('MW_PATCH_OFFSETS', '0000117000002EA0'), ('PYTHONPATH', ':/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2/lib/python3.9/site-packages:/root/.matlab/R2023b/ros2/glnxa64/venv/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_controller/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/soft_drone_msgs/local/lib/python3.10/dist-packages:/home/uonaim/softdrone_ws/install/imu_processor_pkg/lib/python3.10/site-packages:/home/uonaim/softdrone_ws/install/custom_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2:')]), 'shell': False}
+[24.473518] (import_imu) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[24.473731] (import_imu) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/lib/import_imu/Import_IMU\n'}
+[24.477984] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/package_run_dependencies/import_imu\n'}
+[24.478140] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/parent_prefix_path/import_imu\n'}
+[24.478233] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/ament_prefix_path.sh\n'}
+[24.478304] (import_imu) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/ament_prefix_path.dsv\n'}
+[24.478381] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/path.sh\n'}
+[24.478464] (import_imu) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/environment/path.dsv\n'}
+[24.478595] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.bash\n'}
+[24.478714] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.sh\n'}
+[24.478801] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.zsh\n'}
+[24.478895] (import_imu) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/local_setup.dsv\n'}
+[24.478956] (import_imu) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.dsv\n'}
+[24.479140] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/packages/import_imu\n'}
+[24.479211] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[24.479262] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/cmake/import_imuConfig.cmake\n'}
+[24.479317] (import_imu) StdoutLine: {'line': b'-- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/cmake/import_imuConfig-version.cmake\n'}
+[24.479368] (import_imu) StdoutLine: {'line': b'-- Installing: /home/uonaim/matlab_ws/FOOT/install/share/import_imu/package.xml\n'}
+[24.481563] (import_imu) CommandEnded: {'returncode': 0}
+[24.489305] (-) TimerEvent: {}
+[24.554340] (import_imu) JobEnded: {'identifier': 'import_imu', 'rc': 0}
+[24.555088] (-) EventReactorShutdown: {}

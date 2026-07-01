@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.91
+// Model version                  : 1.111
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 18:27:50 2026
+// C/C++ source code generated on : Wed Jul  1 20:25:24 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -219,7 +219,7 @@ struct struct_DZAeZYKomWJ9aajLaQqeiD
 
 #endif
 
-// Custom Type definition for MATLABSystem: '<S64>/SourceBlock'
+// Custom Type definition for MATLABSystem: '<S66>/SourceBlock'
 #include "rmw/qos_profiles.h"
 #ifndef struct_ros_slros2_internal_block_Sub_T
 #define struct_ros_slros2_internal_block_Sub_T

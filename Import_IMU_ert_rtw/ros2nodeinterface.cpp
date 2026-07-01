@@ -4,9 +4,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.91
+// Model version                  : 1.111
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul 01 18:27:55 2026
+// C/C++ source code generated on : Wed Jul 01 20:25:29 2026
 //
 #ifdef _MSC_VER
 #pragma warning(push)
