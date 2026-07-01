@@ -1,0 +1,23 @@
+[0.026s] Invoking command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby -- -j14 -l14
+[0.037s] ninja: no work to do.
+[0.039s] Invoked command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby -- -j14 -l14
+[0.060s] Invoking command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby
+[0.063s] -- Install configuration: "Release"
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/lib/testing_dm_hby/testing_DM_hby
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/package_run_dependencies/testing_dm_hby
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/parent_prefix_path/testing_dm_hby
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/ament_prefix_path.sh
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/ament_prefix_path.dsv
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/path.sh
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/environment/path.dsv
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.bash
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.sh
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.zsh
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/local_setup.dsv
+[0.063s] -- Installing: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.dsv
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/ament_index/resource_index/packages/testing_dm_hby
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.063s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/cmake/testing_dm_hbyConfig.cmake
+[0.064s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/cmake/testing_dm_hbyConfig-version.cmake
+[0.064s] -- Up-to-date: /home/uonaim/matlab_ws/FOOT/install/share/testing_dm_hby/package.xml
+[0.070s] Invoked command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby' returned '0': AMENT_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uonaim/matlab_ws/FOOT/install:/usr/local/MATLAB/R2023b/sys/ros2/glnxa64/ros2: LD_LIBRARY_PATH=/home/uonaim/matlab_ws/FOOT/install/lib${LD_LIBRARY_PATH} PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby

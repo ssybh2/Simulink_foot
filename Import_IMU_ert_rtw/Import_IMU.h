@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.66
+// Model version                  : 1.70
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 14:17:20 2026
+// C/C++ source code generated on : Wed Jul  1 15:21:06 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -66,16 +66,16 @@ struct DW_Motor_Target_Velocity_LA_I_T {
 
 // Block signals (default storage)
 struct B_Import_IMU_T {
-  SL_Bus_sensor_msgs_Imu In1;          // '<S27>/In1'
+  SL_Bus_sensor_msgs_Imu In1;          // '<S28>/In1'
   SL_Bus_sensor_msgs_Imu b_varargout_2;
-  SL_Bus_custom_msgs_ReadDJIRC In1_c;  // '<S52>/In1'
+  SL_Bus_custom_msgs_ReadDJIRC In1_c;  // '<S53>/In1'
   SL_Bus_custom_msgs_ReadDJIRC b_varargout_2_m;
-  SL_Bus_custom_msgs_ReadDmMotor In1_b;// '<S49>/In1'
-  SL_Bus_custom_msgs_ReadDmMotor In1_bi;// '<S48>/In1'
-  SL_Bus_custom_msgs_ReadDmMotor In1_c3;// '<S47>/In1'
-  SL_Bus_custom_msgs_ReadDmMotor In1_a;// '<S46>/In1'
-  SL_Bus_custom_msgs_ReadDmMotor In1_j;// '<S45>/In1'
-  SL_Bus_custom_msgs_ReadDmMotor In1_m;// '<S44>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_b;// '<S50>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_bi;// '<S49>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_c3;// '<S48>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_a;// '<S47>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_j;// '<S46>/In1'
+  SL_Bus_custom_msgs_ReadDmMotor In1_m;// '<S45>/In1'
   SL_Bus_custom_msgs_ReadDmMotor b_varargout_2_c;
   SL_Bus_custom_msgs_WriteDmMotorMITControl BusCreator2;// '<S9>/Bus Creator2'
   real_T uHome;
@@ -104,7 +104,7 @@ struct B_Import_IMU_T {
 
 // Block states (default storage) for system '<Root>'
 struct DW_Import_IMU_T {
-  ros_slros2_internal_block_Sub_T obj; // '<S51>/SourceBlock'
+  ros_slros2_internal_block_Sub_T obj; // '<S52>/SourceBlock'
   ros_slros2_internal_block_Sub_T obj_g;// '<S22>/SourceBlock'
   ros_slros2_internal_block_Sub_T obj_b;// '<S21>/SourceBlock'
   ros_slros2_internal_block_Sub_T obj_m;// '<S20>/SourceBlock'
@@ -112,12 +112,12 @@ struct DW_Import_IMU_T {
   ros_slros2_internal_block_Sub_T obj_gv;// '<S18>/SourceBlock'
   ros_slros2_internal_block_Sub_T obj_n;// '<S17>/SourceBlock'
   ros_slros2_internal_block_Sub_T obj_f;// '<S7>/SourceBlock'
-  ros_slros2_internal_block_Pub_T obj_gc;// '<S42>/SinkBlock'
-  ros_slros2_internal_block_Pub_T obj_na;// '<S41>/SinkBlock'
-  ros_slros2_internal_block_Pub_T obj_p;// '<S38>/SinkBlock'
-  ros_slros2_internal_block_Pub_T obj_ff;// '<S33>/SinkBlock'
-  ros_slros2_internal_block_Pub_T obj_pp;// '<S32>/SinkBlock'
-  ros_slros2_internal_block_Pub_T obj_b4;// '<S28>/SinkBlock'
+  ros_slros2_internal_block_Pub_T obj_gc;// '<S43>/SinkBlock'
+  ros_slros2_internal_block_Pub_T obj_na;// '<S42>/SinkBlock'
+  ros_slros2_internal_block_Pub_T obj_p;// '<S39>/SinkBlock'
+  ros_slros2_internal_block_Pub_T obj_ff;// '<S34>/SinkBlock'
+  ros_slros2_internal_block_Pub_T obj_pp;// '<S33>/SinkBlock'
+  ros_slros2_internal_block_Pub_T obj_b4;// '<S29>/SinkBlock'
   real_T startTime;                    // '<Root>/Balance_Target_XY'
   real_T toleranceStartTime;           // '<Root>/Balance_Target_XY'
   real32_T LPF_GyroY_states;           // '<Root>/LPF_GyroY'
@@ -182,34 +182,34 @@ struct P_Import_IMU_T_ {
                                           //  Referenced by: '<Root>/L5'
 
   SL_Bus_sensor_msgs_Imu Out1_Y0;      // Computed Parameter: Out1_Y0
-                                          //  Referenced by: '<S27>/Out1'
+                                          //  Referenced by: '<S28>/Out1'
 
   SL_Bus_sensor_msgs_Imu Constant_Value;// Computed Parameter: Constant_Value
                                            //  Referenced by: '<S7>/Constant'
 
   SL_Bus_custom_msgs_ReadDJIRC Out1_Y0_a;// Computed Parameter: Out1_Y0_a
-                                            //  Referenced by: '<S52>/Out1'
+                                            //  Referenced by: '<S53>/Out1'
 
   SL_Bus_custom_msgs_ReadDJIRC Constant_Value_f;// Computed Parameter: Constant_Value_f
-                                                   //  Referenced by: '<S51>/Constant'
+                                                   //  Referenced by: '<S52>/Constant'
 
   SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_f;// Computed Parameter: Out1_Y0_f
-                                              //  Referenced by: '<S44>/Out1'
-
-  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_e;// Computed Parameter: Out1_Y0_e
                                               //  Referenced by: '<S45>/Out1'
 
+  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_e;// Computed Parameter: Out1_Y0_e
+                                              //  Referenced by: '<S46>/Out1'
+
   SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_fs;// Computed Parameter: Out1_Y0_fs
-                                               //  Referenced by: '<S46>/Out1'
+                                               //  Referenced by: '<S47>/Out1'
 
   SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_h;// Computed Parameter: Out1_Y0_h
-                                              //  Referenced by: '<S47>/Out1'
-
-  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_j;// Computed Parameter: Out1_Y0_j
                                               //  Referenced by: '<S48>/Out1'
 
-  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_p;// Computed Parameter: Out1_Y0_p
+  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_j;// Computed Parameter: Out1_Y0_j
                                               //  Referenced by: '<S49>/Out1'
+
+  SL_Bus_custom_msgs_ReadDmMotor Out1_Y0_p;// Computed Parameter: Out1_Y0_p
+                                              //  Referenced by: '<S50>/Out1'
 
   SL_Bus_custom_msgs_ReadDmMotor Constant_Value_o;// Computed Parameter: Constant_Value_o
                                                      //  Referenced by: '<S21>/Constant'
@@ -229,6 +229,9 @@ struct P_Import_IMU_T_ {
   SL_Bus_custom_msgs_ReadDmMotor Constant_Value_dl;// Computed Parameter: Constant_Value_dl
                                                       //  Referenced by: '<S20>/Constant'
 
+  real_T Constant10_Value;             // Expression: 0
+                                          //  Referenced by: '<Root>/Constant10'
+
   real_T KpVelocity_Value;             // Expression: 0
                                           //  Referenced by: '<Root>/KpVelocity'
 
@@ -240,9 +243,6 @@ struct P_Import_IMU_T_ {
 
   real_T TorqueLimit_Value;            // Expression: 0.1
                                           //  Referenced by: '<Root>/TorqueLimit'
-
-  real_T Constant7_Value;              // Expression: 0
-                                          //  Referenced by: '<Root>/Constant7'
 
   real_T KpYaw_Value;                  // Expression: 0
                                           //  Referenced by: '<Root>/KpYaw'
@@ -283,6 +283,15 @@ struct P_Import_IMU_T_ {
   real_T B_Value;                      // Expression: 0.24
                                           //  Referenced by: '<Root>/B'
 
+  real32_T kd1_Value;                  // Computed Parameter: kd1_Value
+                                          //  Referenced by: '<Root>/kd1'
+
+  real32_T Gain_Gain;                  // Computed Parameter: Gain_Gain
+                                          //  Referenced by: '<S54>/Gain'
+
+  real32_T Gain_Gain_h;                // Computed Parameter: Gain_Gain_h
+                                          //  Referenced by: '<S55>/Gain'
+
   real32_T LPF_GyroY_NumCoef;          // Computed Parameter: LPF_GyroY_NumCoef
                                           //  Referenced by: '<Root>/LPF_GyroY'
 
@@ -293,7 +302,7 @@ struct P_Import_IMU_T_ {
                                   // Computed Parameter: LPF_GyroY_InitialStates
                                      //  Referenced by: '<Root>/LPF_GyroY'
 
-  real32_T Gain_Gain;                  // Computed Parameter: Gain_Gain
+  real32_T Gain_Gain_n;                // Computed Parameter: Gain_Gain_n
                                           //  Referenced by: '<Root>/Gain'
 
   real32_T Gain1_Gain;                 // Computed Parameter: Gain1_Gain
@@ -327,8 +336,20 @@ struct P_Import_IMU_T_ {
   real32_T Right_wheel_Gain;           // Computed Parameter: Right_wheel_Gain
                                           //  Referenced by: '<Root>/Right_wheel'
 
-  real32_T kd1_Value;                  // Computed Parameter: kd1_Value
-                                          //  Referenced by: '<Root>/kd1'
+  real32_T Switch_Threshold;           // Computed Parameter: Switch_Threshold
+                                          //  Referenced by: '<S54>/Switch'
+
+  real32_T Switch_Threshold_h;         // Computed Parameter: Switch_Threshold_h
+                                          //  Referenced by: '<S55>/Switch'
+
+  real32_T DeadZone_Start;             // Computed Parameter: DeadZone_Start
+                                          //  Referenced by: '<Root>/Dead Zone'
+
+  real32_T DeadZone_End;               // Computed Parameter: DeadZone_End
+                                          //  Referenced by: '<Root>/Dead Zone'
+
+  real32_T Switch2_Threshold;          // Computed Parameter: Switch2_Threshold
+                                          //  Referenced by: '<Root>/Switch2'
 
   real32_T LPF_GyroX_NumCoef;          // Computed Parameter: LPF_GyroX_NumCoef
                                           //  Referenced by: '<Root>/LPF_GyroX'
@@ -464,9 +485,7 @@ extern volatile boolean_T runModel;
 //-
 //  These blocks were eliminated from the model due to optimizations:
 //
-//  Block '<Root>/Constant8' : Unused code path elimination
-//  Block '<Root>/Constant9' : Unused code path elimination
-//  Block '<Root>/Data Type Conversion28' : Unused code path elimination
+//  Block '<Root>/Constant6' : Unused code path elimination
 //  Block '<Root>/Display' : Unused code path elimination
 //  Block '<Root>/Display1' : Unused code path elimination
 //  Block '<Root>/Display10' : Unused code path elimination
@@ -492,7 +511,18 @@ extern volatile boolean_T runModel;
 //  Block '<Root>/Scope4' : Unused code path elimination
 //  Block '<Root>/Scope5' : Unused code path elimination
 //  Block '<Root>/Sum' : Unused code path elimination
-//  Block '<Root>/Switch1' : Unused code path elimination
+//  Block '<Root>/Switch3' : Unused code path elimination
+//  Block '<Root>/have pitch' : Unused code path elimination
+//  Block '<Root>/have pitch1' : Unused code path elimination
+//  Block '<Root>/have yaw' : Unused code path elimination
+//  Block '<Root>/have yaw1' : Unused code path elimination
+//  Block '<Root>/kd2' : Unused code path elimination
+//  Block '<Root>/kd3' : Unused code path elimination
+//  Block '<Root>/kd5' : Unused code path elimination
+//  Block '<Root>/no pitch' : Unused code path elimination
+//  Block '<Root>/no pitch ' : Unused code path elimination
+//  Block '<Root>/no yaw' : Unused code path elimination
+//  Block '<Root>/no yaw1' : Unused code path elimination
 //  Block '<Root>/Data Type Conversion' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion1' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion14' : Eliminate redundant data type conversion
@@ -503,6 +533,7 @@ extern volatile boolean_T runModel;
 //  Block '<Root>/Data Type Conversion2' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion20' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion26' : Eliminate redundant data type conversion
+//  Block '<Root>/Data Type Conversion28' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion3' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion6' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion7' : Eliminate redundant data type conversion
@@ -551,32 +582,35 @@ extern volatile boolean_T runModel;
 //  '<S24>'  : 'Import_IMU/Wheel_Pitch_Controller'
 //  '<S25>'  : 'Import_IMU/Wheel_Torque_Mixer'
 //  '<S26>'  : 'Import_IMU/Yaw_Hold_Controller'
-//  '<S27>'  : 'Import_IMU/IMU/Enabled Subsystem'
-//  '<S28>'  : 'Import_IMU/Left/Publish'
-//  '<S29>'  : 'Import_IMU/Left_leg/Left_Joint_To_Motor_L'
-//  '<S30>'  : 'Import_IMU/Left_leg/Motor_Target_Velocity_LA'
-//  '<S31>'  : 'Import_IMU/Left_leg/Motor_Target_Velocity_LB'
-//  '<S32>'  : 'Import_IMU/Left_leg/Publish1'
-//  '<S33>'  : 'Import_IMU/Left_leg/Publish2'
-//  '<S34>'  : 'Import_IMU/Motor_To_Joint_LA/Motor_Position_To_Joint'
-//  '<S35>'  : 'Import_IMU/Motor_To_Joint_LB/Motor_Position_To_Joint'
-//  '<S36>'  : 'Import_IMU/Motor_To_Joint_RA/Motor_Position_To_Joint'
-//  '<S37>'  : 'Import_IMU/Motor_To_Joint_RB/Motor_Position_To_Joint'
-//  '<S38>'  : 'Import_IMU/Right/Publish'
-//  '<S39>'  : 'Import_IMU/Right_leg/Motor_Target_Velocity_LA'
-//  '<S40>'  : 'Import_IMU/Right_leg/Motor_Target_Velocity_LB'
-//  '<S41>'  : 'Import_IMU/Right_leg/Publish1'
-//  '<S42>'  : 'Import_IMU/Right_leg/Publish2'
-//  '<S43>'  : 'Import_IMU/Right_leg/Right_Joint_To_Motor_R'
-//  '<S44>'  : 'Import_IMU/Subscribe_Motor1_LA/Enabled Subsystem'
-//  '<S45>'  : 'Import_IMU/Subscribe_Motor2_LB/Enabled Subsystem'
-//  '<S46>'  : 'Import_IMU/Subscribe_Motor3_RA/Enabled Subsystem'
-//  '<S47>'  : 'Import_IMU/Subscribe_Motor4_RB/Enabled Subsystem'
-//  '<S48>'  : 'Import_IMU/Subscribe_Wheel_Left/Enabled Subsystem'
-//  '<S49>'  : 'Import_IMU/Subscribe_Wheel_Right/Enabled Subsystem'
-//  '<S50>'  : 'Import_IMU/Switch/RC_Safety_Gate'
-//  '<S51>'  : 'Import_IMU/Switch/Subscribe'
-//  '<S52>'  : 'Import_IMU/Switch/Subscribe/Enabled Subsystem'
+//  '<S27>'  : 'Import_IMU/logic gate'
+//  '<S28>'  : 'Import_IMU/IMU/Enabled Subsystem'
+//  '<S29>'  : 'Import_IMU/Left/Publish'
+//  '<S30>'  : 'Import_IMU/Left_leg/Left_Joint_To_Motor_L'
+//  '<S31>'  : 'Import_IMU/Left_leg/Motor_Target_Velocity_LA'
+//  '<S32>'  : 'Import_IMU/Left_leg/Motor_Target_Velocity_LB'
+//  '<S33>'  : 'Import_IMU/Left_leg/Publish1'
+//  '<S34>'  : 'Import_IMU/Left_leg/Publish2'
+//  '<S35>'  : 'Import_IMU/Motor_To_Joint_LA/Motor_Position_To_Joint'
+//  '<S36>'  : 'Import_IMU/Motor_To_Joint_LB/Motor_Position_To_Joint'
+//  '<S37>'  : 'Import_IMU/Motor_To_Joint_RA/Motor_Position_To_Joint'
+//  '<S38>'  : 'Import_IMU/Motor_To_Joint_RB/Motor_Position_To_Joint'
+//  '<S39>'  : 'Import_IMU/Right/Publish'
+//  '<S40>'  : 'Import_IMU/Right_leg/Motor_Target_Velocity_LA'
+//  '<S41>'  : 'Import_IMU/Right_leg/Motor_Target_Velocity_LB'
+//  '<S42>'  : 'Import_IMU/Right_leg/Publish1'
+//  '<S43>'  : 'Import_IMU/Right_leg/Publish2'
+//  '<S44>'  : 'Import_IMU/Right_leg/Right_Joint_To_Motor_R'
+//  '<S45>'  : 'Import_IMU/Subscribe_Motor1_LA/Enabled Subsystem'
+//  '<S46>'  : 'Import_IMU/Subscribe_Motor2_LB/Enabled Subsystem'
+//  '<S47>'  : 'Import_IMU/Subscribe_Motor3_RA/Enabled Subsystem'
+//  '<S48>'  : 'Import_IMU/Subscribe_Motor4_RB/Enabled Subsystem'
+//  '<S49>'  : 'Import_IMU/Subscribe_Wheel_Left/Enabled Subsystem'
+//  '<S50>'  : 'Import_IMU/Subscribe_Wheel_Right/Enabled Subsystem'
+//  '<S51>'  : 'Import_IMU/Switch/RC_Safety_Gate'
+//  '<S52>'  : 'Import_IMU/Switch/Subscribe'
+//  '<S53>'  : 'Import_IMU/Switch/Subscribe/Enabled Subsystem'
+//  '<S54>'  : 'Import_IMU/logic gate/absolute value1'
+//  '<S55>'  : 'Import_IMU/logic gate/absolute value2'
 
 #endif                                 // RTW_HEADER_Import_IMU_h_
 
