@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.45
+// Model version                  : 1.47
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 17:47:28 2026
+// C/C++ source code generated on : Wed Jul  1 12:27:08 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -995,12 +995,7 @@ void Import_IMU::step()
   //   Constant: '<Root>/KdYaw'
   //   Constant: '<Root>/KpYaw'
   //   Constant: '<Root>/YawTorqueLimit'
-  //   DataTypeConversion: '<Root>/Data Type Conversion26'
   //   DataTypeConversion: '<Root>/Data Type Conversion27'
-  //   DataTypeConversion: '<Root>/Data Type Conversion28'
-  //   DataTypeConversion: '<Root>/Data Type Conversion31'
-  //   DataTypeConversion: '<Root>/Data Type Conversion32'
-  //   DataTypeConversion: '<Root>/Data Type Conversion33'
   //   DiscreteTransferFcn: '<Root>/LPF_GyroZ'
   //   MATLAB Function: '<Root>/Balance_Target_XY'
   //   MATLAB Function: '<Root>/IMU_Relative_RPY'
@@ -1014,16 +1009,14 @@ void Import_IMU::step()
   Import_IMU_DW.previousCaptureEnable = captureEnable;
   tmp = !enable_safe;
   if ((!captureEnable) || tmp || (rtIsInfF(Import_IMU_B.numAccum) || rtIsNaNF
-       (Import_IMU_B.numAccum) || (rtIsInfF(static_cast<real32_T>
-         (Import_IMU_P.KpYaw_Value)) || rtIsNaNF(static_cast<real32_T>
-         (Import_IMU_P.KpYaw_Value)) || (rtIsInfF(static_cast<real32_T>
-          (Import_IMU_P.KdYaw_Value)) || rtIsNaNF(static_cast<real32_T>
-          (Import_IMU_P.KdYaw_Value)) || (rtIsInfF(static_cast<real32_T>
+       (Import_IMU_B.numAccum) || (rtIsInf(Import_IMU_P.KpYaw_Value) || rtIsNaN
+        (Import_IMU_P.KpYaw_Value) || (rtIsInf(Import_IMU_P.KdYaw_Value) ||
+         rtIsNaN(Import_IMU_P.KdYaw_Value) || (rtIsInfF(static_cast<real32_T>
            (Import_IMU_P.YawTorqueLimit_Value)) || rtIsNaNF(static_cast<real32_T>
-           (Import_IMU_P.YawTorqueLimit_Value)) || ((!(static_cast<real32_T>
-             (Import_IMU_P.KpYaw_Value) >= 0.0F)) || (!(static_cast<real32_T>
-             (Import_IMU_P.KdYaw_Value) >= 0.0F)) || (!(static_cast<real32_T>
-             (Import_IMU_P.YawTorqueLimit_Value) >= 0.0F)))))))) {
+           (Import_IMU_P.YawTorqueLimit_Value)) || ((!(Import_IMU_P.KpYaw_Value >=
+             0.0)) || (!(Import_IMU_P.KdYaw_Value >= 0.0)) ||
+           (!(static_cast<real32_T>(Import_IMU_P.YawTorqueLimit_Value) >= 0.0F))))))))
+  {
     Import_IMU_B.relativeY = 0.0F;
   } else {
     Import_IMU_B.tauLeftPhysical = Import_IMU_DW.yawReference -
@@ -1071,8 +1064,6 @@ void Import_IMU::step()
   // MATLAB Function: '<Root>/Wheel_Torque_Mixer' incorporates:
   //   Constant: '<Root>/Constant4'
   //   Constant: '<Root>/YawDirection'
-  //   DataTypeConversion: '<Root>/Data Type Conversion36'
-  //   DataTypeConversion: '<Root>/Data Type Conversion37'
 
   Import_IMU_B.tauLeftPhysical = 0.0F;
   Import_IMU_B.w = 0.0F;

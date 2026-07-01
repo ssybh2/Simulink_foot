@@ -1,5 +1,5 @@
 // Copyright 2022-2023 The MathWorks, Inc.
-// Generated 30-Jun-2026 17:47:33
+// Generated 01-Jul-2026 12:27:16
 #include "slros2_initialize.h"
 // Import_IMU/Left/Publish
 SimulinkPublisher<custom_msgs::msg::WriteDmMotorMITControl,SL_Bus_custom_msgs_WriteDmMotorMITControl> Pub_Import_IMU_344;

@@ -1,0 +1,6 @@
+
+# Simulink generated cache
+slprj/
+*.slxc
+*.autosave
+*.asv

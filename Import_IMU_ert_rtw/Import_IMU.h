@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.45
+// Model version                  : 1.47
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jun 30 17:47:28 2026
+// C/C++ source code generated on : Wed Jul  1 12:27:08 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -485,11 +485,9 @@ extern volatile boolean_T runModel;
 //  Block '<Root>/Data Type Conversion18' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion2' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion20' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion29' : Eliminate redundant data type conversion
+//  Block '<Root>/Data Type Conversion26' : Eliminate redundant data type conversion
+//  Block '<Root>/Data Type Conversion28' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion3' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion30' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion34' : Eliminate redundant data type conversion
-//  Block '<Root>/Data Type Conversion35' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion6' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion7' : Eliminate redundant data type conversion
 //  Block '<Root>/Data Type Conversion8' : Eliminate redundant data type conversion
