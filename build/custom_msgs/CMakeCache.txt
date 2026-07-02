@@ -137,8 +137,8 @@ CMAKE_INSTALL_PREFIX:PATH=/home/uonaim/matlab_ws/FOOT/install
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
-//No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:UNINITIALIZED=/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64/ninja
+//Program used to build from build.ninja files.
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/local/MATLAB/R2023b/toolbox/shared/coder/ninja/glnxa64/ninja
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -490,6 +490,8 @@ CMAKE_HOME_DIRECTORY:INTERNAL=/home/uonaim/matlab_ws/FOOT/src/custom_msgs
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_MAKE_PROGRAM
+CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
 CMAKE_MODULE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_DEBUG

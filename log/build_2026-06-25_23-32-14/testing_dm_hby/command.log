@@ -1,4 +1,0 @@
-Invoking command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby -- -j14 -l14
-Invoked command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby' returned '0': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --build /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby -- -j14 -l14
-Invoking command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby
-Invoked command in '/home/uonaim/matlab_ws/FOOT/build/testing_dm_hby' returned '0': PS1=(venv) VIRTUAL_ENV_PROMPT=(venv) /usr/local/MATLAB/R2023b/bin/glnxa64/cmake/bin/cmake --install /home/uonaim/matlab_ws/FOOT/build/testing_dm_hby

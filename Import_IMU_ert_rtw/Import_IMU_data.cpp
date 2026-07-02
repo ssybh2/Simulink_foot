@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.115
+// Model version                  : 1.149
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Wed Jul  1 21:03:07 2026
+// C/C++ source code generated on : Thu Jul  2 17:36:59 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -84,7 +84,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   0.07F,
 
   // Computed Parameter: Out1_Y0
-  //  Referenced by: '<S33>/Out1'
+  //  Referenced by: '<S37>/Out1'
 
   {
     {
@@ -202,7 +202,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_a
-  //  Referenced by: '<S68>/Out1'
+  //  Referenced by: '<S72>/Out1'
 
   {
     {
@@ -258,7 +258,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Constant_Value_f
-  //  Referenced by: '<S67>/Constant'
+  //  Referenced by: '<S71>/Constant'
 
   {
     {
@@ -314,178 +314,6 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   },
 
   // Computed Parameter: Out1_Y0_f
-  //  Referenced by: '<S50>/Out1'
-
-  {
-    {
-      {
-        0,                             // sec
-        0U                             // nanosec
-      },                               // stamp
-
-      {
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U }
-      ,                                // frame_id
-
-      {
-        0U,                            // CurrentLength
-        0U                             // ReceivedLength
-      }                                // frame_id_SL_Info
-    },                                 // header
-    0U,                                // online
-    0U,                                // disabled
-    0U,                                // enabled
-    0U,                                // overvoltage
-    0U,                                // undervoltage
-    0U,                                // overcurrent
-    0U,                                // mos_overtemperature
-    0U,                                // rotor_overtemperature
-    0U,                                // communication_lost
-    0U,                                // overload
-    0.0F,                              // position
-    0.0F,                              // velocity
-    0.0F,                              // torque
-    0U,                                // mos_temperature
-    0U                                 // rotor_temperature
-  },
-
-  // Computed Parameter: Out1_Y0_e
-  //  Referenced by: '<S51>/Out1'
-
-  {
-    {
-      {
-        0,                             // sec
-        0U                             // nanosec
-      },                               // stamp
-
-      {
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U }
-      ,                                // frame_id
-
-      {
-        0U,                            // CurrentLength
-        0U                             // ReceivedLength
-      }                                // frame_id_SL_Info
-    },                                 // header
-    0U,                                // online
-    0U,                                // disabled
-    0U,                                // enabled
-    0U,                                // overvoltage
-    0U,                                // undervoltage
-    0U,                                // overcurrent
-    0U,                                // mos_overtemperature
-    0U,                                // rotor_overtemperature
-    0U,                                // communication_lost
-    0U,                                // overload
-    0.0F,                              // position
-    0.0F,                              // velocity
-    0.0F,                              // torque
-    0U,                                // mos_temperature
-    0U                                 // rotor_temperature
-  },
-
-  // Computed Parameter: Out1_Y0_fs
-  //  Referenced by: '<S52>/Out1'
-
-  {
-    {
-      {
-        0,                             // sec
-        0U                             // nanosec
-      },                               // stamp
-
-      {
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U }
-      ,                                // frame_id
-
-      {
-        0U,                            // CurrentLength
-        0U                             // ReceivedLength
-      }                                // frame_id_SL_Info
-    },                                 // header
-    0U,                                // online
-    0U,                                // disabled
-    0U,                                // enabled
-    0U,                                // overvoltage
-    0U,                                // undervoltage
-    0U,                                // overcurrent
-    0U,                                // mos_overtemperature
-    0U,                                // rotor_overtemperature
-    0U,                                // communication_lost
-    0U,                                // overload
-    0.0F,                              // position
-    0.0F,                              // velocity
-    0.0F,                              // torque
-    0U,                                // mos_temperature
-    0U                                 // rotor_temperature
-  },
-
-  // Computed Parameter: Out1_Y0_h
-  //  Referenced by: '<S53>/Out1'
-
-  {
-    {
-      {
-        0,                             // sec
-        0U                             // nanosec
-      },                               // stamp
-
-      {
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
-        0U, 0U }
-      ,                                // frame_id
-
-      {
-        0U,                            // CurrentLength
-        0U                             // ReceivedLength
-      }                                // frame_id_SL_Info
-    },                                 // header
-    0U,                                // online
-    0U,                                // disabled
-    0U,                                // enabled
-    0U,                                // overvoltage
-    0U,                                // undervoltage
-    0U,                                // overcurrent
-    0U,                                // mos_overtemperature
-    0U,                                // rotor_overtemperature
-    0U,                                // communication_lost
-    0U,                                // overload
-    0.0F,                              // position
-    0.0F,                              // velocity
-    0.0F,                              // torque
-    0U,                                // mos_temperature
-    0U                                 // rotor_temperature
-  },
-
-  // Computed Parameter: Out1_Y0_j
   //  Referenced by: '<S54>/Out1'
 
   {
@@ -528,8 +356,180 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
     0U                                 // rotor_temperature
   },
 
-  // Computed Parameter: Out1_Y0_p
+  // Computed Parameter: Out1_Y0_e
   //  Referenced by: '<S55>/Out1'
+
+  {
+    {
+      {
+        0,                             // sec
+        0U                             // nanosec
+      },                               // stamp
+
+      {
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U }
+      ,                                // frame_id
+
+      {
+        0U,                            // CurrentLength
+        0U                             // ReceivedLength
+      }                                // frame_id_SL_Info
+    },                                 // header
+    0U,                                // online
+    0U,                                // disabled
+    0U,                                // enabled
+    0U,                                // overvoltage
+    0U,                                // undervoltage
+    0U,                                // overcurrent
+    0U,                                // mos_overtemperature
+    0U,                                // rotor_overtemperature
+    0U,                                // communication_lost
+    0U,                                // overload
+    0.0F,                              // position
+    0.0F,                              // velocity
+    0.0F,                              // torque
+    0U,                                // mos_temperature
+    0U                                 // rotor_temperature
+  },
+
+  // Computed Parameter: Out1_Y0_fs
+  //  Referenced by: '<S56>/Out1'
+
+  {
+    {
+      {
+        0,                             // sec
+        0U                             // nanosec
+      },                               // stamp
+
+      {
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U }
+      ,                                // frame_id
+
+      {
+        0U,                            // CurrentLength
+        0U                             // ReceivedLength
+      }                                // frame_id_SL_Info
+    },                                 // header
+    0U,                                // online
+    0U,                                // disabled
+    0U,                                // enabled
+    0U,                                // overvoltage
+    0U,                                // undervoltage
+    0U,                                // overcurrent
+    0U,                                // mos_overtemperature
+    0U,                                // rotor_overtemperature
+    0U,                                // communication_lost
+    0U,                                // overload
+    0.0F,                              // position
+    0.0F,                              // velocity
+    0.0F,                              // torque
+    0U,                                // mos_temperature
+    0U                                 // rotor_temperature
+  },
+
+  // Computed Parameter: Out1_Y0_h
+  //  Referenced by: '<S57>/Out1'
+
+  {
+    {
+      {
+        0,                             // sec
+        0U                             // nanosec
+      },                               // stamp
+
+      {
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U }
+      ,                                // frame_id
+
+      {
+        0U,                            // CurrentLength
+        0U                             // ReceivedLength
+      }                                // frame_id_SL_Info
+    },                                 // header
+    0U,                                // online
+    0U,                                // disabled
+    0U,                                // enabled
+    0U,                                // overvoltage
+    0U,                                // undervoltage
+    0U,                                // overcurrent
+    0U,                                // mos_overtemperature
+    0U,                                // rotor_overtemperature
+    0U,                                // communication_lost
+    0U,                                // overload
+    0.0F,                              // position
+    0.0F,                              // velocity
+    0.0F,                              // torque
+    0U,                                // mos_temperature
+    0U                                 // rotor_temperature
+  },
+
+  // Computed Parameter: Out1_Y0_j
+  //  Referenced by: '<S58>/Out1'
+
+  {
+    {
+      {
+        0,                             // sec
+        0U                             // nanosec
+      },                               // stamp
+
+      {
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U,
+        0U, 0U }
+      ,                                // frame_id
+
+      {
+        0U,                            // CurrentLength
+        0U                             // ReceivedLength
+      }                                // frame_id_SL_Info
+    },                                 // header
+    0U,                                // online
+    0U,                                // disabled
+    0U,                                // enabled
+    0U,                                // overvoltage
+    0U,                                // undervoltage
+    0U,                                // overcurrent
+    0U,                                // mos_overtemperature
+    0U,                                // rotor_overtemperature
+    0U,                                // communication_lost
+    0U,                                // overload
+    0.0F,                              // position
+    0.0F,                              // velocity
+    0.0F,                              // torque
+    0U,                                // mos_temperature
+    0U                                 // rotor_temperature
+  },
+
+  // Computed Parameter: Out1_Y0_p
+  //  Referenced by: '<S59>/Out1'
 
   {
     {
@@ -829,6 +829,16 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
     0U                                 // rotor_temperature
   },
 
+  // Expression: -1
+  //  Referenced by: '<S31>/Constant5'
+
+  -1.0,
+
+  // Expression: 1
+  //  Referenced by: '<S31>/Constant'
+
+  1.0,
+
   // Expression: 0.02
   //  Referenced by: '<Root>/KpVelocity'
 
@@ -839,15 +849,15 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.0,
 
-  // Expression: 0.2
+  // Expression: 2
   //  Referenced by: '<Root>/KpPitch'
 
-  0.2,
+  2.0,
 
-  // Expression: 0.05
+  // Expression: 0.09
   //  Referenced by: '<Root>/KdPitch'
 
-  0.05,
+  0.09,
 
   // Expression: 0.1
   //  Referenced by: '<Root>/TorqueLimit'
@@ -859,20 +869,20 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.0,
 
-  // Expression: 0.2
+  // Expression: 2
   //  Referenced by: '<Root>/KpYaw'
 
-  0.2,
+  2.0,
 
   // Expression: 0.02
   //  Referenced by: '<Root>/KdYaw'
 
   0.02,
 
-  // Expression: 0.05
+  // Expression: 0.5
   //  Referenced by: '<Root>/YawTorqueLimit'
 
-  0.05,
+  0.5,
 
   // Expression: 2
   //  Referenced by: '<Root>/Constant4'
@@ -884,20 +894,10 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   1.0,
 
-  // Expression: 0
-  //  Referenced by: '<S25>/Constant10'
-
-  0.0,
-
-  // Expression: -1
-  //  Referenced by: '<Root>/Constant5'
-
-  -1.0,
-
-  // Expression: 0.01
+  // Expression: 0.1
   //  Referenced by: '<Root>/Constant6'
 
-  0.01,
+  0.1,
 
   // Expression: 0.03
   //  Referenced by: '<Root>/Constant7'
@@ -954,48 +954,53 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.24,
 
+  // Expression: 0
+  //  Referenced by: '<S25>/Constant10'
+
+  0.0,
+
   // Computed Parameter: kd1_Value
   //  Referenced by: '<S25>/kd1'
 
   0.00907F,
 
   // Computed Parameter: Gain_Gain
-  //  Referenced by: '<S58>/Gain'
+  //  Referenced by: '<S62>/Gain'
 
   -1.0F,
 
   // Computed Parameter: Gain_Gain_h
-  //  Referenced by: '<S59>/Gain'
+  //  Referenced by: '<S63>/Gain'
 
   -1.0F,
 
   // Computed Parameter: Gain_Gain_b
-  //  Referenced by: '<S60>/Gain'
+  //  Referenced by: '<S64>/Gain'
 
   -1.0F,
 
   // Computed Parameter: Switch_Threshold
-  //  Referenced by: '<S60>/Switch'
+  //  Referenced by: '<S64>/Switch'
 
   0.0F,
 
   // Computed Parameter: DeadZone_Start
-  //  Referenced by: '<S57>/Dead Zone'
+  //  Referenced by: '<S61>/Dead Zone'
 
   -0.009F,
 
   // Computed Parameter: DeadZone_End
-  //  Referenced by: '<S57>/Dead Zone'
+  //  Referenced by: '<S61>/Dead Zone'
 
   0.009F,
 
   // Computed Parameter: Switch_Threshold_h
-  //  Referenced by: '<S59>/Switch'
+  //  Referenced by: '<S63>/Switch'
 
   0.0F,
 
   // Computed Parameter: Switch_Threshold_e
-  //  Referenced by: '<S58>/Switch'
+  //  Referenced by: '<S62>/Switch'
 
   0.0F,
 
@@ -1015,7 +1020,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   0.0F,
 
   // Computed Parameter: Gain_Gain_p
-  //  Referenced by: '<S56>/Gain'
+  //  Referenced by: '<S60>/Gain'
 
   -1.0F,
 
@@ -1025,42 +1030,42 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   0.007F,
 
   // Computed Parameter: Gain_Gain_e
-  //  Referenced by: '<S63>/Gain'
+  //  Referenced by: '<S67>/Gain'
 
   -1.0F,
 
   // Computed Parameter: Gain_Gain_d
-  //  Referenced by: '<S64>/Gain'
+  //  Referenced by: '<S68>/Gain'
 
   -1.0F,
 
   // Computed Parameter: Gain_Gain_d3
-  //  Referenced by: '<S65>/Gain'
+  //  Referenced by: '<S69>/Gain'
 
   -1.0F,
 
   // Computed Parameter: Switch_Threshold_l
-  //  Referenced by: '<S65>/Switch'
+  //  Referenced by: '<S69>/Switch'
 
   0.0F,
 
   // Computed Parameter: DeadZone_Start_c
-  //  Referenced by: '<S62>/Dead Zone'
+  //  Referenced by: '<S66>/Dead Zone'
 
   -0.009F,
 
   // Computed Parameter: DeadZone_End_g
-  //  Referenced by: '<S62>/Dead Zone'
+  //  Referenced by: '<S66>/Dead Zone'
 
   0.009F,
 
   // Computed Parameter: Switch_Threshold_i
-  //  Referenced by: '<S64>/Switch'
+  //  Referenced by: '<S68>/Switch'
 
   0.0F,
 
   // Computed Parameter: Switch_Threshold_a
-  //  Referenced by: '<S63>/Switch'
+  //  Referenced by: '<S67>/Switch'
 
   0.0F,
 
@@ -1080,7 +1085,72 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   0.0F,
 
   // Computed Parameter: Gain_Gain_j
-  //  Referenced by: '<S61>/Gain'
+  //  Referenced by: '<S65>/Gain'
+
+  -1.0F,
+
+  // Computed Parameter: Gain_Gain_j1
+  //  Referenced by: '<S73>/Gain'
+
+  -1.0F,
+
+  // Computed Parameter: DeadZone1_Start
+  //  Referenced by: '<S34>/Dead Zone1'
+
+  -0.1F,
+
+  // Computed Parameter: DeadZone1_End
+  //  Referenced by: '<S34>/Dead Zone1'
+
+  0.1F,
+
+  // Computed Parameter: Gain_Gain_i
+  //  Referenced by: '<S76>/Gain'
+
+  -1.0F,
+
+  // Computed Parameter: Switch_Threshold_p
+  //  Referenced by: '<S76>/Switch'
+
+  0.0F,
+
+  // Computed Parameter: Switch_Threshold_b
+  //  Referenced by: '<S34>/Switch'
+
+  0.0F,
+
+  // Computed Parameter: Gain_Gain_c
+  //  Referenced by: '<S74>/Gain'
+
+  -1.0F,
+
+  // Computed Parameter: Switch_Threshold_o
+  //  Referenced by: '<S74>/Switch'
+
+  0.0F,
+
+  // Computed Parameter: Switch1_Threshold
+  //  Referenced by: '<S34>/Switch1'
+
+  0.1F,
+
+  // Computed Parameter: Gain_Gain_b5
+  //  Referenced by: '<S75>/Gain'
+
+  -1.0F,
+
+  // Computed Parameter: Switch_Threshold_n
+  //  Referenced by: '<S75>/Switch'
+
+  0.0F,
+
+  // Computed Parameter: Switch2_Threshold_p
+  //  Referenced by: '<S34>/Switch2'
+
+  0.0F,
+
+  // Computed Parameter: Gain_Gain_m
+  //  Referenced by: '<S77>/Gain'
 
   -1.0F,
 
@@ -1103,6 +1173,16 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   //  Referenced by: '<Root>/LPF_GyroY'
 
   0.0F,
+
+  // Computed Parameter: DeadZone2_Start
+  //  Referenced by: '<Root>/Dead Zone2'
+
+  -0.004F,
+
+  // Computed Parameter: DeadZone2_End
+  //  Referenced by: '<Root>/Dead Zone2'
+
+  0.004F,
 
   // Computed Parameter: Gain_Gain_n
   //  Referenced by: '<Root>/Gain'
@@ -1130,7 +1210,7 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   0.0F,
 
   // Computed Parameter: Switch_Threshold_g
-  //  Referenced by: '<S61>/Switch'
+  //  Referenced by: '<S65>/Switch'
 
   0.0F,
 
@@ -1149,10 +1229,40 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   0.0F,
 
-  // Computed Parameter: Switch1_Threshold
+  // Computed Parameter: Switch1_Threshold_i
   //  Referenced by: '<S26>/Switch1'
 
   0.05F,
+
+  // Computed Parameter: DeadZone2_Start_l
+  //  Referenced by: '<S34>/Dead Zone2'
+
+  -0.03F,
+
+  // Computed Parameter: DeadZone2_End_m
+  //  Referenced by: '<S34>/Dead Zone2'
+
+  0.03F,
+
+  // Computed Parameter: Switch_Threshold_lr
+  //  Referenced by: '<S77>/Switch'
+
+  0.0F,
+
+  // Computed Parameter: DeadZone_Start_g
+  //  Referenced by: '<S34>/Dead Zone'
+
+  -0.1F,
+
+  // Computed Parameter: DeadZone_End_hm
+  //  Referenced by: '<S34>/Dead Zone'
+
+  0.1F,
+
+  // Computed Parameter: Switch3_Threshold
+  //  Referenced by: '<S34>/Switch3'
+
+  0.0F,
 
   // Computed Parameter: Left_wheel_Gain
   //  Referenced by: '<Root>/Left_wheel'
@@ -1164,15 +1274,15 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
 
   -1.0F,
 
-  // Computed Parameter: Switch_Threshold_gc
-  //  Referenced by: '<S56>/Switch'
+  // Computed Parameter: Switch_Threshold_pw
+  //  Referenced by: '<S73>/Switch'
 
   0.0F,
 
-  // Computed Parameter: Switch1_Threshold_j
-  //  Referenced by: '<S25>/Switch1'
+  // Computed Parameter: Switch1_Threshold_l
+  //  Referenced by: '<S31>/Switch1'
 
-  0.05F,
+  0.0F,
 
   // Computed Parameter: LPF_GyroX_NumCoef
   //  Referenced by: '<Root>/LPF_GyroX'
@@ -1217,7 +1327,17 @@ P_Import_IMU_T Import_IMU::Import_IMU_P = {
   // Expression: single(0.5)
   //  Referenced by: '<S18>/Constant31'
 
-  0.5F
+  0.5F,
+
+  // Computed Parameter: Switch_Threshold_gc
+  //  Referenced by: '<S60>/Switch'
+
+  0.0F,
+
+  // Computed Parameter: Switch1_Threshold_j
+  //  Referenced by: '<S25>/Switch1'
+
+  0.05F
 };
 
 //
