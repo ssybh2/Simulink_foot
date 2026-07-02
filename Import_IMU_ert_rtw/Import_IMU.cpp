@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.149
+// Model version                  : 1.155
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Thu Jul  2 17:36:59 2026
+// C/C++ source code generated on : Thu Jul  2 22:07:11 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -1011,7 +1011,7 @@ void Import_IMU::step()
     (Import_IMU_P.TorqueLimit_Value))) && (static_cast<real32_T>
     (Import_IMU_P.TorqueLimit_Value) >= 0.0F)))))))))))) &&
                  (static_cast<real32_T>(fabs(static_cast<real_T>
-    (Import_IMU_B.vCmd))) < 0.34907F));
+    (Import_IMU_B.vCmd))) < 0.7F));
   if (!wheelEnable) {
     Import_IMU_DW.torqueBlend = 0.0F;
     Import_IMU_DW.wasEnabled = false;
@@ -1034,9 +1034,9 @@ void Import_IMU::step()
       Import_IMU_DW.velocityFilterInitialized = true;
     } else {
       Import_IMU_DW.wheelVelocityLeftFiltered += (Import_IMU_B.relativeX -
-        Import_IMU_DW.wheelVelocityLeftFiltered) * 0.00459418073F;
+        Import_IMU_DW.wheelVelocityLeftFiltered) * 0.0566037744F;
       Import_IMU_DW.wheelVelocityRightFiltered += (Import_IMU_B.w -
-        Import_IMU_DW.wheelVelocityRightFiltered) * 0.00459418073F;
+        Import_IMU_DW.wheelVelocityRightFiltered) * 0.0566037744F;
     }
 
     Import_IMU_B.relativeX = (Import_IMU_DW.wheelVelocityLeftFiltered +
