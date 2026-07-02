@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'Import_IMU'.
 //
-// Model version                  : 1.155
+// Model version                  : 1.160
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Thu Jul  2 22:07:11 2026
+// C/C++ source code generated on : Thu Jul  2 22:25:37 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -133,6 +133,7 @@ struct DW_Import_IMU_T {
   real32_T torqueBlend;                // '<Root>/Wheel_Pitch_Controller'
   real32_T wheelVelocityLeftFiltered;  // '<Root>/Wheel_Pitch_Controller'
   real32_T wheelVelocityRightFiltered; // '<Root>/Wheel_Pitch_Controller'
+  real32_T velocityIntegralTerm;       // '<Root>/Wheel_Pitch_Controller'
   real32_T xFiltered;                  // '<Root>/Leg_X_Compensation'
   real32_T xOutput;                    // '<Root>/Leg_X_Compensation'
   real32_T q0w;                        // '<Root>/IMU_Relative_RPY'
@@ -264,6 +265,9 @@ struct P_Import_IMU_T_ {
 
   real_T TorqueLimit_Value;            // Expression: 0.1
                                           //  Referenced by: '<Root>/TorqueLimit'
+
+  real_T Constant5_Value_j;            // Expression: 0
+                                          //  Referenced by: '<Root>/Constant5'
 
   real_T Constant10_Value;             // Expression: 0
                                           //  Referenced by: '<S26>/Constant10'
